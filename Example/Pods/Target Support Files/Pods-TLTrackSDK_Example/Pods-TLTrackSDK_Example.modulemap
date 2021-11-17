@@ -1,0 +1,6 @@
+framework module Pods_TLTrackSDK_Example {
+  umbrella header "Pods-TLTrackSDK_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

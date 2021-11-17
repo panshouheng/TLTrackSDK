@@ -1,0 +1,6 @@
+framework module TLTrackSDK {
+  umbrella header "TLTrackSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
