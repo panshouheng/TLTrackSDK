@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'TLTrackSDK_Example' do
+  pod 'TLTrackSDK', :path => '../'
+
+  target 'TLTrackSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
