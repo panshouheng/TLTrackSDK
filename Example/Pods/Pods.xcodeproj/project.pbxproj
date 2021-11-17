@@ -7,28 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103146634627B3534BDC31B8F1B6F62A /* UIGestureRecognizer+SensorsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 06468AE31A52258A2C854E5780427F13 /* UIGestureRecognizer+SensorsData.m */; };
+		11CC117DF09F74C73F91A95C26CD34C7 /* UIGestureRecognizer+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 72842606DCE345E6CB79F49A085A6816 /* UIGestureRecognizer+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15173BE499FC1545DD22E6C845432084 /* UITableView+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A31BBCE55F38ED76D5D860C801DABDA /* UITableView+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AB8E6889478A1F5A57A5ED21803FFA3 /* Pods-TLTrackSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0ED1D705C974A59A7CE9EA307253AE /* Pods-TLTrackSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C511DE977F688752550C097872D548C /* Pods-TLTrackSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1732A1253DF1487B4E606F1937A545C /* Pods-TLTrackSDK_Tests-dummy.m */; };
-		22AE55DA7B835770C3274635B5846B75 /* NSObject+SASwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = B21638587AF05791DCDB310C81A29E03 /* NSObject+SASwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2193720176BC04193629BF568026BD35 /* UIViewController+SensorsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 910B8E4C577E3550BAD82640BF9AC1EF /* UIViewController+SensorsData.m */; };
+		3628D217B4DBAD926FAB99CA94A4F677 /* SensorsAnalyticsDynamicDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EDAA3B8E9CD932C62F29B13528C49C8 /* SensorsAnalyticsDynamicDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378C6C33787828FE137F8814B7AD3843 /* UIScrollView+SensorsData.m in Sources */ = {isa = PBXBuildFile; fileRef = D68BB3934151B1A0618B6656EAAD80D2 /* UIScrollView+SensorsData.m */; };
+		3A2F79FEAB18393E68C63D32718991EC /* UICollectionView+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CCBDC4E351073B386B514F8EEFB0D39 /* UICollectionView+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CA48B87ED80B44F472CD8257E98B567 /* SensorsAnalyticsKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0EC89D52D224F35FC48E7721C4667 /* SensorsAnalyticsKeychainItem.m */; };
+		3CCDA244DE61A03F46856766000ECBE5 /* SensorsAnalyticsKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 772D49E59B8F94B18440975C00BCA19F /* SensorsAnalyticsKeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4327DD7217EBB67E115392AC0B5B7953 /* SensorsAnalyticsDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF299DB29BDB2E34004E4A68FD2E2DD /* SensorsAnalyticsDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54BBAE6D540E9F668688309B625B270C /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 4279AF271EAB272906802B59EF8E0F57 /* Info.plist */; };
+		592D04A7D1861BF2D6A3D678330FC839 /* UIControl+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 491B841C2DA0CFE52D197CC0B418C61E /* UIControl+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		650131569F780027DFBD78B39A136008 /* SensorsAnalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E528E352FB54747843373C51052A6 /* SensorsAnalyticsDatabase.m */; };
+		6608E92FE719A5053C29DB3B2559993F /* SensorsAnalyticsExtensionDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D5052AA4EEE617B54EE7DE1A379162F3 /* SensorsAnalyticsExtensionDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67A760B3009EDCF0F5AB053C7A86501F /* UIControl+SensorsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE70DD833F84576FE4F1CFFECA44355 /* UIControl+SensorsData.m */; };
+		6B3CE64BCA1D8AA3CBF71A6360C7C12C /* SensorsAnalyticsExtensionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C393B402C3CB6CEE102FA480B56AFAA3 /* SensorsAnalyticsExtensionDataManager.m */; };
+		6E2D576B5288B59C3E25BFD6BE462D94 /* SensorsAnalyticsNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8A09A279CDB2B99E7ECEAA07720D82 /* SensorsAnalyticsNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		709CB8343A6161C829D7D1288B0BCAC6 /* SensorsAnalyticsDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B190E944F6C5537792E152DA8E65171 /* SensorsAnalyticsDelegateProxy.m */; };
+		7751B2F2ECEF974580F37D417452C218 /* UICollectionView+SensorsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E978B9C5525C9A846FAD38A4D9A18E0 /* UICollectionView+SensorsData.m */; };
 		79B32D839EC43E8B7B62E4213B0EB622 /* Pods-TLTrackSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F208A36754CD207E62775AC9F92C970A /* Pods-TLTrackSDK_Example-dummy.m */; };
+		79ED679D56730001CA1CCE4280DBF38F /* SensorsAnalyticsDynamicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E51855B01ACD466AA3CD8B68750A6CA /* SensorsAnalyticsDynamicDelegate.m */; };
+		80E7F701B04F8D7AD7C84D05B5336B28 /* SensorsAnalyticsNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A43D378C184CC8B87D2B5673EB2E35 /* SensorsAnalyticsNetwork.m */; };
+		82B7AF46016D0F8758F68C9F8C86C262 /* NSObject+SASwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D44EE7F8CC4EEB4D12CBA07EC918D7 /* NSObject+SASwizzler.m */; };
+		88F3FF8C014B28AC7721DF346CC74ED9 /* UIApplication+SensorsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BAB4C1387833282FF4EE82AAE695FE /* UIApplication+SensorsData.m */; };
+		8E1FA1D0E01FD59FC5927916912FE357 /* TLTrackSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1902EBCBF29BBEBE24F11B2F54435041 /* TLTrackSDK-dummy.m */; };
 		8FEB0D8A250BB13566C14EE7F29B5623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		A60964BEEE20EC0DCA70BDB30600DB2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		91C3FA644EF017BFA4B64034AC53E883 /* UIScrollView+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = ECCABC6D6A67C63A44466BA44412E27B /* UIScrollView+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A320F447C9E5E1E52FC9350FBBCAFA06 /* sensorsdata_black_list.plist in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E559576B4A169E023EF570A034EE7 /* sensorsdata_black_list.plist */; };
+		A6BB167A4C4D24F3788A06EAD6194F9B /* SensorsAnalyticsFileStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 176987B64ADD8B0BE212A8E536853D41 /* SensorsAnalyticsFileStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F954018B2E6F15B96A2C808449AC15 /* NSObject+SASwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D360FF6C47897F4538DA99079E8033 /* NSObject+SASwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7AE5100997F9F622F3C3CB6FC2ED8C7 /* UITableView+SensorsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC75BE6AC353FEA06C8D595979051A8 /* UITableView+SensorsData.m */; };
+		AC0C5BA3D9163B9301709537E0C7C97F /* UIApplication+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D28837F48CF82FD120FCC4145DF8E77 /* UIApplication+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADD6EAE20AB4E6EA136A74498610D495 /* SensorsAnalyticsFileStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E65DE745593DE8C31CFDAAD9821F4A99 /* SensorsAnalyticsFileStore.m */; };
+		AE3C2C0E853C34C56C8C38BD007B8D1E /* UIView+SensorsData.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4D2C779890F6986B6C1C36F0EF57D /* UIView+SensorsData.m */; };
 		B07C4EA17BC87755627ECAF6E31D6E07 /* Pods-TLTrackSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7B6994A831E0DF689E58E80FDA93D55 /* Pods-TLTrackSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B74F361957684AEEBC7032E540771A5B /* NSObject+SASwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4DD15FE25B3F2EDF7C2C838CFB221 /* NSObject+SASwizzler.m */; };
-		CAB8DD4420B2D229BC9F89A0BBEB11FC /* TLTrackSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97A87DC95ED97FC8C21D90664F1335E9 /* TLTrackSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B14A3DDB8B60D6E13662FF142719CC9B /* UIView+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B0F9D28B7D2C6FE473ABC115D0286E2 /* UIView+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6AEC466CBEDAE0A32E167CDB155F1A7 /* SensorsAnalyticsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F0B74CA67F1E81521B2C5516730C70 /* SensorsAnalyticsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9C82336508DCAD9F6157730C4C21F6A /* SensorsAnalyticsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFF8103E77F4CCFBAAAEE9F5951A05 /* SensorsAnalyticsSDK.m */; };
+		E08223C3CF6CB4486877B634F1B21BA6 /* SensorsAnalyticsDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C8695E3C9D30A0DBA4117C4E77CA4015 /* SensorsAnalyticsDelegateProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E589A28102ADA514BB51B3B2D0E2284C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		F56C3074143B0A06CE678FD76F141DC1 /* TLTrackSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD215F29D985779274446FE736FBB0F /* TLTrackSDK-dummy.m */; };
+		E7CC934084AC3996D57F07E9DB2567EB /* SensorsAnalyticsExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A16F1CC6267E2C8ABBF1FCFA3E818AB6 /* SensorsAnalyticsExceptionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB1221A01E30470631136FE91CE76CE7 /* SensorsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A37B26567B684B1CEF578DA3A30AC38 /* SensorsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBC3F6FF54A165CE4A4BF00881C4F901 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EC58419863F581D0320FA7556F7ACF50 /* SensorsAnalyticsExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FAE20BAD0F94E029D0B51CCFE4B99 /* SensorsAnalyticsExceptionHandler.m */; };
+		F11EB391252EDD01ABA15387712D2479 /* sensorsdata_black_list.json in Sources */ = {isa = PBXBuildFile; fileRef = 4EB90E960D0715D11080CD4ECDCDCDFB /* sensorsdata_black_list.json */; };
+		FD11FF84C8C46FEC4EF78B9266262912 /* TLTrackSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 192608918CB03AC54D6622750955952F /* TLTrackSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE76EF0871245157B4AF988B22441B64 /* UIViewController+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = C3C960A3F006CC88141196A22DAE2029 /* UIViewController+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05C92FFC1128215CF2F36441F12BEEC3 /* PBXContainerItemProxy */ = {
+		5457EBA3173B7901B26845FCE1DA7C0A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 40568707202358987974253071C995F5;
 			remoteInfo = "Pods-TLTrackSDK_Example";
 		};
-		AB212404FD02353589961D4565CC48E6 /* PBXContainerItemProxy */ = {
+		9D00069D097BF66561829C0167CDA224 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -38,56 +76,94 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06468AE31A52258A2C854E5780427F13 /* UIGestureRecognizer+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+SensorsData.m"; path = "TLTrackSDK/Classes/UIGestureRecognizer+SensorsData.m"; sourceTree = "<group>"; };
+		0B0F9D28B7D2C6FE473ABC115D0286E2 /* UIView+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SensorsData.h"; path = "TLTrackSDK/Classes/UIView+SensorsData.h"; sourceTree = "<group>"; };
+		0C72D02E7E03C35CDA3FC57F9A02D38C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0DC75BE6AC353FEA06C8D595979051A8 /* UITableView+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SensorsData.m"; path = "TLTrackSDK/Classes/UITableView+SensorsData.m"; sourceTree = "<group>"; };
+		176987B64ADD8B0BE212A8E536853D41 /* SensorsAnalyticsFileStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsFileStore.h; path = TLTrackSDK/Classes/SensorsAnalyticsFileStore.h; sourceTree = "<group>"; };
+		1902EBCBF29BBEBE24F11B2F54435041 /* TLTrackSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLTrackSDK-dummy.m"; sourceTree = "<group>"; };
+		192608918CB03AC54D6622750955952F /* TLTrackSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-umbrella.h"; sourceTree = "<group>"; };
 		1D818016C85B03AB45BA4E80C3BF6CEF /* Pods-TLTrackSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLTrackSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3CBE37E940F05A0D4258CD17ABE54EDC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		41B09140D1A4B706B26A80FD223D089D /* TLTrackSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.debug.xcconfig; sourceTree = "<group>"; };
+		24D44EE7F8CC4EEB4D12CBA07EC918D7 /* NSObject+SASwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SASwizzler.m"; path = "TLTrackSDK/Classes/NSObject+SASwizzler.m"; sourceTree = "<group>"; };
+		2E978B9C5525C9A846FAD38A4D9A18E0 /* UICollectionView+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+SensorsData.m"; path = "TLTrackSDK/Classes/UICollectionView+SensorsData.m"; sourceTree = "<group>"; };
+		2FE70DD833F84576FE4F1CFFECA44355 /* UIControl+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+SensorsData.m"; path = "TLTrackSDK/Classes/UIControl+SensorsData.m"; sourceTree = "<group>"; };
+		367FAE20BAD0F94E029D0B51CCFE4B99 /* SensorsAnalyticsExceptionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsExceptionHandler.m; path = TLTrackSDK/Classes/SensorsAnalyticsExceptionHandler.m; sourceTree = "<group>"; };
+		3D28837F48CF82FD120FCC4145DF8E77 /* UIApplication+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+SensorsData.h"; path = "TLTrackSDK/Classes/UIApplication+SensorsData.h"; sourceTree = "<group>"; };
+		3D6E559576B4A169E023EF570A034EE7 /* sensorsdata_black_list.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = sensorsdata_black_list.plist; path = TLTrackSDK/Classes/sensorsdata_black_list.plist; sourceTree = "<group>"; };
+		3FDFF8103E77F4CCFBAAAEE9F5951A05 /* SensorsAnalyticsSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsSDK.m; path = TLTrackSDK/Classes/SensorsAnalyticsSDK.m; sourceTree = "<group>"; };
+		4279AF271EAB272906802B59EF8E0F57 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = TLTrackSDK/Classes/Info.plist; sourceTree = "<group>"; };
 		4597AB434B243008663FFE94B538F55B /* Pods-TLTrackSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLTrackSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		491B841C2DA0CFE52D197CC0B418C61E /* UIControl+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+SensorsData.h"; path = "TLTrackSDK/Classes/UIControl+SensorsData.h"; sourceTree = "<group>"; };
 		4A272306F7A73D705B8C356B4E32215B /* TLTrackSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TLTrackSDK; path = TLTrackSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBE5742AE4F79A0B9F982CF44EA8D49 /* Pods-TLTrackSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLTrackSDK_Example.modulemap"; sourceTree = "<group>"; };
-		507A2F5E2CB3A780E0EC00725C43F84B /* TLTrackSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-prefix.pch"; sourceTree = "<group>"; };
+		4CF299DB29BDB2E34004E4A68FD2E2DD /* SensorsAnalyticsDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsDatabase.h; path = TLTrackSDK/Classes/SensorsAnalyticsDatabase.h; sourceTree = "<group>"; };
+		4EB90E960D0715D11080CD4ECDCDCDFB /* sensorsdata_black_list.json */ = {isa = PBXFileReference; includeInIndex = 1; name = sensorsdata_black_list.json; path = TLTrackSDK/Classes/sensorsdata_black_list.json; sourceTree = "<group>"; };
 		59864E2DB1CE70570159C2CE88FCA134 /* Pods-TLTrackSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DD215F29D985779274446FE736FBB0F /* TLTrackSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLTrackSDK-dummy.m"; sourceTree = "<group>"; };
+		5AF45FFED93C5F44A8BD0133E693C9B1 /* TLTrackSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLTrackSDK.modulemap; sourceTree = "<group>"; };
+		5EDAA3B8E9CD932C62F29B13528C49C8 /* SensorsAnalyticsDynamicDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsDynamicDelegate.h; path = TLTrackSDK/Classes/SensorsAnalyticsDynamicDelegate.h; sourceTree = "<group>"; };
 		5FF68BB179C58176012EEEF8C6324A98 /* Pods-TLTrackSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		6829F739D76D8DCDF83A6DC1ACBF5369 /* TLTrackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TLTrackSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		683CD0ABDFD72EC3C8F72CB4FF0713A6 /* TLTrackSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.release.xcconfig; sourceTree = "<group>"; };
+		6B190E944F6C5537792E152DA8E65171 /* SensorsAnalyticsDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsDelegateProxy.m; path = TLTrackSDK/Classes/SensorsAnalyticsDelegateProxy.m; sourceTree = "<group>"; };
+		6CCBDC4E351073B386B514F8EEFB0D39 /* UICollectionView+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+SensorsData.h"; path = "TLTrackSDK/Classes/UICollectionView+SensorsData.h"; sourceTree = "<group>"; };
 		7214AEB5592E0B3CC1B2BD968932D1BE /* Pods-TLTrackSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLTrackSDK_Tests.modulemap"; sourceTree = "<group>"; };
+		72842606DCE345E6CB79F49A085A6816 /* UIGestureRecognizer+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+SensorsData.h"; path = "TLTrackSDK/Classes/UIGestureRecognizer+SensorsData.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		772D49E59B8F94B18440975C00BCA19F /* SensorsAnalyticsKeychainItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsKeychainItem.h; path = TLTrackSDK/Classes/SensorsAnalyticsKeychainItem.h; sourceTree = "<group>"; };
+		7A31BBCE55F38ED76D5D860C801DABDA /* UITableView+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+SensorsData.h"; path = "TLTrackSDK/Classes/UITableView+SensorsData.h"; sourceTree = "<group>"; };
 		7B8BDD17E27EB1CF7EE18AD7BF346A9B /* Pods-TLTrackSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TLTrackSDK_Tests"; path = Pods_TLTrackSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83A4DD15FE25B3F2EDF7C2C838CFB221 /* NSObject+SASwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SASwizzler.m"; path = "TLTrackSDK/Classes/NSObject+SASwizzler.m"; sourceTree = "<group>"; };
-		88E1C8EEC4DEE6B2D45E3A6FE2C2DFB4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7CE0EC89D52D224F35FC48E7721C4667 /* SensorsAnalyticsKeychainItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsKeychainItem.m; path = TLTrackSDK/Classes/SensorsAnalyticsKeychainItem.m; sourceTree = "<group>"; };
+		85BAB4C1387833282FF4EE82AAE695FE /* UIApplication+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+SensorsData.m"; path = "TLTrackSDK/Classes/UIApplication+SensorsData.m"; sourceTree = "<group>"; };
+		869B1BEDA94E80580FF6BEBD3C94615C /* TLTrackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TLTrackSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8B2020A865A1E246ED887FB3ABFC2F4B /* Pods-TLTrackSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8BF89ACB53352E07717A5A2995D3F586 /* TLTrackSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.release.xcconfig; sourceTree = "<group>"; };
+		8E51855B01ACD466AA3CD8B68750A6CA /* SensorsAnalyticsDynamicDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsDynamicDelegate.m; path = TLTrackSDK/Classes/SensorsAnalyticsDynamicDelegate.m; sourceTree = "<group>"; };
+		910B8E4C577E3550BAD82640BF9AC1EF /* UIViewController+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+SensorsData.m"; path = "TLTrackSDK/Classes/UIViewController+SensorsData.m"; sourceTree = "<group>"; };
 		91979C29551F8A36B4921533012864E1 /* Pods-TLTrackSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		91D360FF6C47897F4538DA99079E8033 /* NSObject+SASwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+SASwizzler.h"; path = "TLTrackSDK/Classes/NSObject+SASwizzler.h"; sourceTree = "<group>"; };
 		948E896DC876C192E237604BD46CCDC4 /* Pods-TLTrackSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TLTrackSDK_Example"; path = Pods_TLTrackSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		97A87DC95ED97FC8C21D90664F1335E9 /* TLTrackSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-umbrella.h"; sourceTree = "<group>"; };
+		9A37B26567B684B1CEF578DA3A30AC38 /* SensorsSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsSDK.h; path = TLTrackSDK/Classes/SensorsSDK.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A16F1CC6267E2C8ABBF1FCFA3E818AB6 /* SensorsAnalyticsExceptionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsExceptionHandler.h; path = TLTrackSDK/Classes/SensorsAnalyticsExceptionHandler.h; sourceTree = "<group>"; };
 		A2CFE304950FAA475E45C1E10530039C /* Pods-TLTrackSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B21638587AF05791DCDB310C81A29E03 /* NSObject+SASwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+SASwizzler.h"; path = "TLTrackSDK/Classes/NSObject+SASwizzler.h"; sourceTree = "<group>"; };
 		B46BFF0E1DC62B28298583377D8427E0 /* Pods-TLTrackSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B9F0B74CA67F1E81521B2C5516730C70 /* SensorsAnalyticsSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsSDK.h; path = TLTrackSDK/Classes/SensorsAnalyticsSDK.h; sourceTree = "<group>"; };
+		C393B402C3CB6CEE102FA480B56AFAA3 /* SensorsAnalyticsExtensionDataManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsExtensionDataManager.m; path = TLTrackSDK/Classes/SensorsAnalyticsExtensionDataManager.m; sourceTree = "<group>"; };
+		C3C960A3F006CC88141196A22DAE2029 /* UIViewController+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+SensorsData.h"; path = "TLTrackSDK/Classes/UIViewController+SensorsData.h"; sourceTree = "<group>"; };
+		C4E368BF496453B9E9A9DA374E531D6C /* TLTrackSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-prefix.pch"; sourceTree = "<group>"; };
 		C7B6994A831E0DF689E58E80FDA93D55 /* Pods-TLTrackSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTrackSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C84849A0A805F8A59A98D4CE312533A4 /* Pods-TLTrackSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		CAA60F9C612DAE1E9EE7807B4CC14C0C /* TLTrackSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TLTrackSDK-Info.plist"; sourceTree = "<group>"; };
-		D2EC6CB7BA86A279080DE31E5FE12AE6 /* TLTrackSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLTrackSDK.modulemap; sourceTree = "<group>"; };
+		C8695E3C9D30A0DBA4117C4E77CA4015 /* SensorsAnalyticsDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsDelegateProxy.h; path = TLTrackSDK/Classes/SensorsAnalyticsDelegateProxy.h; sourceTree = "<group>"; };
+		C8A43D378C184CC8B87D2B5673EB2E35 /* SensorsAnalyticsNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsNetwork.m; path = TLTrackSDK/Classes/SensorsAnalyticsNetwork.m; sourceTree = "<group>"; };
+		C937C2AFD3549CCCD6C7D101CF6AB4C6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CD8A09A279CDB2B99E7ECEAA07720D82 /* SensorsAnalyticsNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsNetwork.h; path = TLTrackSDK/Classes/SensorsAnalyticsNetwork.h; sourceTree = "<group>"; };
+		CE9E528E352FB54747843373C51052A6 /* SensorsAnalyticsDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsDatabase.m; path = TLTrackSDK/Classes/SensorsAnalyticsDatabase.m; sourceTree = "<group>"; };
+		D5052AA4EEE617B54EE7DE1A379162F3 /* SensorsAnalyticsExtensionDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsExtensionDataManager.h; path = TLTrackSDK/Classes/SensorsAnalyticsExtensionDataManager.h; sourceTree = "<group>"; };
+		D68BB3934151B1A0618B6656EAAD80D2 /* UIScrollView+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+SensorsData.m"; path = "TLTrackSDK/Classes/UIScrollView+SensorsData.m"; sourceTree = "<group>"; };
 		E1732A1253DF1487B4E606F1937A545C /* Pods-TLTrackSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTrackSDK_Tests-dummy.m"; sourceTree = "<group>"; };
 		E3EE6928CB606354E7D1981BB7AF8767 /* Pods-TLTrackSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		E5F404DD4629E2FED1BF2734E10B0A3F /* Pods-TLTrackSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLTrackSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
+		E65DE745593DE8C31CFDAAD9821F4A99 /* SensorsAnalyticsFileStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsFileStore.m; path = TLTrackSDK/Classes/SensorsAnalyticsFileStore.m; sourceTree = "<group>"; };
+		E9D4D2C779890F6986B6C1C36F0EF57D /* UIView+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SensorsData.m"; path = "TLTrackSDK/Classes/UIView+SensorsData.m"; sourceTree = "<group>"; };
+		EBDA7AB944F11F402259B4688E9763E3 /* TLTrackSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TLTrackSDK-Info.plist"; sourceTree = "<group>"; };
+		ECCABC6D6A67C63A44466BA44412E27B /* UIScrollView+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+SensorsData.h"; path = "TLTrackSDK/Classes/UIScrollView+SensorsData.h"; sourceTree = "<group>"; };
 		EE0ED1D705C974A59A7CE9EA307253AE /* Pods-TLTrackSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTrackSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		F208A36754CD207E62775AC9F92C970A /* Pods-TLTrackSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTrackSDK_Example-dummy.m"; sourceTree = "<group>"; };
+		FB9E10D1F7376A85F2E355BE5937ECED /* TLTrackSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8487A914312C4031560AC5D01D012E2B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A60964BEEE20EC0DCA70BDB30600DB2B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8CAA8C3C34969992E5070B2F88A4FEF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8FEB0D8A250BB13566C14EE7F29B5623 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945A6339C230029B5BAFF1561BC94123 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC3F6FF54A165CE4A4BF00881C4F901 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,24 +178,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0056A206AEE8000C732C697E7BE2EBD3 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				3CBE37E940F05A0D4258CD17ABE54EDC /* LICENSE */,
-				88E1C8EEC4DEE6B2D45E3A6FE2C2DFB4 /* README.md */,
-				6829F739D76D8DCDF83A6DC1ACBF5369 /* TLTrackSDK.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		21CBB0D22501DEC154F3A06EFA91D025 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F347DFD810F51EFE2609AAE6141E4D10 /* TLTrackSDK */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		2363CA74D0C1769EEC1B60D34C74A079 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +185,21 @@
 				D52377991621D315999ED15405A854FC /* Pods-TLTrackSDK_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		36BE42BF2D69A4BEB748095CDFAC7D12 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AF45FFED93C5F44A8BD0133E693C9B1 /* TLTrackSDK.modulemap */,
+				1902EBCBF29BBEBE24F11B2F54435041 /* TLTrackSDK-dummy.m */,
+				EBDA7AB944F11F402259B4688E9763E3 /* TLTrackSDK-Info.plist */,
+				C4E368BF496453B9E9A9DA374E531D6C /* TLTrackSDK-prefix.pch */,
+				192608918CB03AC54D6622750955952F /* TLTrackSDK-umbrella.h */,
+				FB9E10D1F7376A85F2E355BE5937ECED /* TLTrackSDK.debug.xcconfig */,
+				683CD0ABDFD72EC3C8F72CB4FF0713A6 /* TLTrackSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TLTrackSDK";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -147,21 +220,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		76307F5AA2DD05FFFE6D659E89027F5F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D2EC6CB7BA86A279080DE31E5FE12AE6 /* TLTrackSDK.modulemap */,
-				5DD215F29D985779274446FE736FBB0F /* TLTrackSDK-dummy.m */,
-				CAA60F9C612DAE1E9EE7807B4CC14C0C /* TLTrackSDK-Info.plist */,
-				507A2F5E2CB3A780E0EC00725C43F84B /* TLTrackSDK-prefix.pch */,
-				97A87DC95ED97FC8C21D90664F1335E9 /* TLTrackSDK-umbrella.h */,
-				41B09140D1A4B706B26A80FD223D089D /* TLTrackSDK.debug.xcconfig */,
-				8BF89ACB53352E07717A5A2995D3F586 /* TLTrackSDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TLTrackSDK";
-			sourceTree = "<group>";
-		};
 		A313D6A80AB599C6581A38E74D5918A1 /* Pods-TLTrackSDK_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,11 +237,21 @@
 			path = "Target Support Files/Pods-TLTrackSDK_Example";
 			sourceTree = "<group>";
 		};
+		A5C2777663F4CD7C5011CCEF8B42EA75 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0C72D02E7E03C35CDA3FC57F9A02D38C /* LICENSE */,
+				C937C2AFD3549CCCD6C7D101CF6AB4C6 /* README.md */,
+				869B1BEDA94E80580FF6BEBD3C94615C /* TLTrackSDK.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				21CBB0D22501DEC154F3A06EFA91D025 /* Development Pods */,
+				FA3B407D41DA54017F2AE603FB8B3E1C /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				5BDFAA28066AD9F27DA6649001B5532A /* Products */,
 				2363CA74D0C1769EEC1B60D34C74A079 /* Targets Support Files */,
@@ -214,16 +282,62 @@
 			path = "Target Support Files/Pods-TLTrackSDK_Tests";
 			sourceTree = "<group>";
 		};
-		F347DFD810F51EFE2609AAE6141E4D10 /* TLTrackSDK */ = {
+		DBF7ACBF9731A290AEBA3F6DFAC13C99 /* TLTrackSDK */ = {
 			isa = PBXGroup;
 			children = (
-				B21638587AF05791DCDB310C81A29E03 /* NSObject+SASwizzler.h */,
-				83A4DD15FE25B3F2EDF7C2C838CFB221 /* NSObject+SASwizzler.m */,
-				0056A206AEE8000C732C697E7BE2EBD3 /* Pod */,
-				76307F5AA2DD05FFFE6D659E89027F5F /* Support Files */,
+				4279AF271EAB272906802B59EF8E0F57 /* Info.plist */,
+				91D360FF6C47897F4538DA99079E8033 /* NSObject+SASwizzler.h */,
+				24D44EE7F8CC4EEB4D12CBA07EC918D7 /* NSObject+SASwizzler.m */,
+				4CF299DB29BDB2E34004E4A68FD2E2DD /* SensorsAnalyticsDatabase.h */,
+				CE9E528E352FB54747843373C51052A6 /* SensorsAnalyticsDatabase.m */,
+				C8695E3C9D30A0DBA4117C4E77CA4015 /* SensorsAnalyticsDelegateProxy.h */,
+				6B190E944F6C5537792E152DA8E65171 /* SensorsAnalyticsDelegateProxy.m */,
+				5EDAA3B8E9CD932C62F29B13528C49C8 /* SensorsAnalyticsDynamicDelegate.h */,
+				8E51855B01ACD466AA3CD8B68750A6CA /* SensorsAnalyticsDynamicDelegate.m */,
+				A16F1CC6267E2C8ABBF1FCFA3E818AB6 /* SensorsAnalyticsExceptionHandler.h */,
+				367FAE20BAD0F94E029D0B51CCFE4B99 /* SensorsAnalyticsExceptionHandler.m */,
+				D5052AA4EEE617B54EE7DE1A379162F3 /* SensorsAnalyticsExtensionDataManager.h */,
+				C393B402C3CB6CEE102FA480B56AFAA3 /* SensorsAnalyticsExtensionDataManager.m */,
+				176987B64ADD8B0BE212A8E536853D41 /* SensorsAnalyticsFileStore.h */,
+				E65DE745593DE8C31CFDAAD9821F4A99 /* SensorsAnalyticsFileStore.m */,
+				772D49E59B8F94B18440975C00BCA19F /* SensorsAnalyticsKeychainItem.h */,
+				7CE0EC89D52D224F35FC48E7721C4667 /* SensorsAnalyticsKeychainItem.m */,
+				CD8A09A279CDB2B99E7ECEAA07720D82 /* SensorsAnalyticsNetwork.h */,
+				C8A43D378C184CC8B87D2B5673EB2E35 /* SensorsAnalyticsNetwork.m */,
+				B9F0B74CA67F1E81521B2C5516730C70 /* SensorsAnalyticsSDK.h */,
+				3FDFF8103E77F4CCFBAAAEE9F5951A05 /* SensorsAnalyticsSDK.m */,
+				4EB90E960D0715D11080CD4ECDCDCDFB /* sensorsdata_black_list.json */,
+				3D6E559576B4A169E023EF570A034EE7 /* sensorsdata_black_list.plist */,
+				9A37B26567B684B1CEF578DA3A30AC38 /* SensorsSDK.h */,
+				3D28837F48CF82FD120FCC4145DF8E77 /* UIApplication+SensorsData.h */,
+				85BAB4C1387833282FF4EE82AAE695FE /* UIApplication+SensorsData.m */,
+				6CCBDC4E351073B386B514F8EEFB0D39 /* UICollectionView+SensorsData.h */,
+				2E978B9C5525C9A846FAD38A4D9A18E0 /* UICollectionView+SensorsData.m */,
+				491B841C2DA0CFE52D197CC0B418C61E /* UIControl+SensorsData.h */,
+				2FE70DD833F84576FE4F1CFFECA44355 /* UIControl+SensorsData.m */,
+				72842606DCE345E6CB79F49A085A6816 /* UIGestureRecognizer+SensorsData.h */,
+				06468AE31A52258A2C854E5780427F13 /* UIGestureRecognizer+SensorsData.m */,
+				ECCABC6D6A67C63A44466BA44412E27B /* UIScrollView+SensorsData.h */,
+				D68BB3934151B1A0618B6656EAAD80D2 /* UIScrollView+SensorsData.m */,
+				7A31BBCE55F38ED76D5D860C801DABDA /* UITableView+SensorsData.h */,
+				0DC75BE6AC353FEA06C8D595979051A8 /* UITableView+SensorsData.m */,
+				0B0F9D28B7D2C6FE473ABC115D0286E2 /* UIView+SensorsData.h */,
+				E9D4D2C779890F6986B6C1C36F0EF57D /* UIView+SensorsData.m */,
+				C3C960A3F006CC88141196A22DAE2029 /* UIViewController+SensorsData.h */,
+				910B8E4C577E3550BAD82640BF9AC1EF /* UIViewController+SensorsData.m */,
+				A5C2777663F4CD7C5011CCEF8B42EA75 /* Pod */,
+				36BE42BF2D69A4BEB748095CDFAC7D12 /* Support Files */,
 			);
 			name = TLTrackSDK;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		FA3B407D41DA54017F2AE603FB8B3E1C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBF7ACBF9731A290AEBA3F6DFAC13C99 /* TLTrackSDK */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,12 +359,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F60C3AD936B53C1FD48BA162C3D6E36F /* Headers */ = {
+		ABF2131D1592668172B62787C6FAF02A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22AE55DA7B835770C3274635B5846B75 /* NSObject+SASwizzler.h in Headers */,
-				CAB8DD4420B2D229BC9F89A0BBEB11FC /* TLTrackSDK-umbrella.h in Headers */,
+				A6F954018B2E6F15B96A2C808449AC15 /* NSObject+SASwizzler.h in Headers */,
+				4327DD7217EBB67E115392AC0B5B7953 /* SensorsAnalyticsDatabase.h in Headers */,
+				E08223C3CF6CB4486877B634F1B21BA6 /* SensorsAnalyticsDelegateProxy.h in Headers */,
+				3628D217B4DBAD926FAB99CA94A4F677 /* SensorsAnalyticsDynamicDelegate.h in Headers */,
+				E7CC934084AC3996D57F07E9DB2567EB /* SensorsAnalyticsExceptionHandler.h in Headers */,
+				6608E92FE719A5053C29DB3B2559993F /* SensorsAnalyticsExtensionDataManager.h in Headers */,
+				A6BB167A4C4D24F3788A06EAD6194F9B /* SensorsAnalyticsFileStore.h in Headers */,
+				3CCDA244DE61A03F46856766000ECBE5 /* SensorsAnalyticsKeychainItem.h in Headers */,
+				6E2D576B5288B59C3E25BFD6BE462D94 /* SensorsAnalyticsNetwork.h in Headers */,
+				B6AEC466CBEDAE0A32E167CDB155F1A7 /* SensorsAnalyticsSDK.h in Headers */,
+				EB1221A01E30470631136FE91CE76CE7 /* SensorsSDK.h in Headers */,
+				FD11FF84C8C46FEC4EF78B9266262912 /* TLTrackSDK-umbrella.h in Headers */,
+				AC0C5BA3D9163B9301709537E0C7C97F /* UIApplication+SensorsData.h in Headers */,
+				3A2F79FEAB18393E68C63D32718991EC /* UICollectionView+SensorsData.h in Headers */,
+				592D04A7D1861BF2D6A3D678330FC839 /* UIControl+SensorsData.h in Headers */,
+				11CC117DF09F74C73F91A95C26CD34C7 /* UIGestureRecognizer+SensorsData.h in Headers */,
+				91C3FA644EF017BFA4B64034AC53E883 /* UIScrollView+SensorsData.h in Headers */,
+				15173BE499FC1545DD22E6C845432084 /* UITableView+SensorsData.h in Headers */,
+				B14A3DDB8B60D6E13662FF142719CC9B /* UIView+SensorsData.h in Headers */,
+				FE76EF0871245157B4AF988B22441B64 /* UIViewController+SensorsData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +401,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A043B705369E3D3D7720CB325A707999 /* PBXTargetDependency */,
+				8E4B641C81106D73333C60AFB7F388D0 /* PBXTargetDependency */,
 			);
 			name = "Pods-TLTrackSDK_Tests";
 			productName = Pods_TLTrackSDK_Tests;
@@ -288,7 +420,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3319D4384D2F6EFEBC56A6FC405816F0 /* PBXTargetDependency */,
+				AB0E00C101C3F597F352757AE3DBFD1B /* PBXTargetDependency */,
 			);
 			name = "Pods-TLTrackSDK_Example";
 			productName = Pods_TLTrackSDK_Example;
@@ -297,12 +429,12 @@
 		};
 		CF226EC605F6907245A0E6425EBDCC54 /* TLTrackSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DC63B05AAFC79D71A4081039EAE20AB /* Build configuration list for PBXNativeTarget "TLTrackSDK" */;
+			buildConfigurationList = 6F23396E720FDC54380197180D394DA9 /* Build configuration list for PBXNativeTarget "TLTrackSDK" */;
 			buildPhases = (
-				F60C3AD936B53C1FD48BA162C3D6E36F /* Headers */,
-				6CBC5C64ECCC7F0F4E52A9CCB018A3A6 /* Sources */,
-				8487A914312C4031560AC5D01D012E2B /* Frameworks */,
-				EB9F03E35942C50D4D251EBB11548F79 /* Resources */,
+				ABF2131D1592668172B62787C6FAF02A /* Headers */,
+				7D7DE5ABEA72F1B609B9738D13D75834 /* Sources */,
+				945A6339C230029B5BAFF1561BC94123 /* Frameworks */,
+				8008FC4F3151F931FCC26F6C96BE9C81 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -350,14 +482,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A97B3011666A614F6084B306A0D1A8AF /* Resources */ = {
+		8008FC4F3151F931FCC26F6C96BE9C81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB9F03E35942C50D4D251EBB11548F79 /* Resources */ = {
+		A97B3011666A614F6084B306A0D1A8AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,12 +499,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6CBC5C64ECCC7F0F4E52A9CCB018A3A6 /* Sources */ = {
+		7D7DE5ABEA72F1B609B9738D13D75834 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B74F361957684AEEBC7032E540771A5B /* NSObject+SASwizzler.m in Sources */,
-				F56C3074143B0A06CE678FD76F141DC1 /* TLTrackSDK-dummy.m in Sources */,
+				54BBAE6D540E9F668688309B625B270C /* Info.plist in Sources */,
+				82B7AF46016D0F8758F68C9F8C86C262 /* NSObject+SASwizzler.m in Sources */,
+				650131569F780027DFBD78B39A136008 /* SensorsAnalyticsDatabase.m in Sources */,
+				709CB8343A6161C829D7D1288B0BCAC6 /* SensorsAnalyticsDelegateProxy.m in Sources */,
+				79ED679D56730001CA1CCE4280DBF38F /* SensorsAnalyticsDynamicDelegate.m in Sources */,
+				EC58419863F581D0320FA7556F7ACF50 /* SensorsAnalyticsExceptionHandler.m in Sources */,
+				6B3CE64BCA1D8AA3CBF71A6360C7C12C /* SensorsAnalyticsExtensionDataManager.m in Sources */,
+				ADD6EAE20AB4E6EA136A74498610D495 /* SensorsAnalyticsFileStore.m in Sources */,
+				3CA48B87ED80B44F472CD8257E98B567 /* SensorsAnalyticsKeychainItem.m in Sources */,
+				80E7F701B04F8D7AD7C84D05B5336B28 /* SensorsAnalyticsNetwork.m in Sources */,
+				D9C82336508DCAD9F6157730C4C21F6A /* SensorsAnalyticsSDK.m in Sources */,
+				F11EB391252EDD01ABA15387712D2479 /* sensorsdata_black_list.json in Sources */,
+				A320F447C9E5E1E52FC9350FBBCAFA06 /* sensorsdata_black_list.plist in Sources */,
+				8E1FA1D0E01FD59FC5927916912FE357 /* TLTrackSDK-dummy.m in Sources */,
+				88F3FF8C014B28AC7721DF346CC74ED9 /* UIApplication+SensorsData.m in Sources */,
+				7751B2F2ECEF974580F37D417452C218 /* UICollectionView+SensorsData.m in Sources */,
+				67A760B3009EDCF0F5AB053C7A86501F /* UIControl+SensorsData.m in Sources */,
+				103146634627B3534BDC31B8F1B6F62A /* UIGestureRecognizer+SensorsData.m in Sources */,
+				378C6C33787828FE137F8814B7AD3843 /* UIScrollView+SensorsData.m in Sources */,
+				A7AE5100997F9F622F3C3CB6FC2ED8C7 /* UITableView+SensorsData.m in Sources */,
+				AE3C2C0E853C34C56C8C38BD007B8D1E /* UIView+SensorsData.m in Sources */,
+				2193720176BC04193629BF568026BD35 /* UIViewController+SensorsData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,21 +547,52 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3319D4384D2F6EFEBC56A6FC405816F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TLTrackSDK;
-			target = CF226EC605F6907245A0E6425EBDCC54 /* TLTrackSDK */;
-			targetProxy = AB212404FD02353589961D4565CC48E6 /* PBXContainerItemProxy */;
-		};
-		A043B705369E3D3D7720CB325A707999 /* PBXTargetDependency */ = {
+		8E4B641C81106D73333C60AFB7F388D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-TLTrackSDK_Example";
 			target = 40568707202358987974253071C995F5 /* Pods-TLTrackSDK_Example */;
-			targetProxy = 05C92FFC1128215CF2F36441F12BEEC3 /* PBXContainerItemProxy */;
+			targetProxy = 5457EBA3173B7901B26845FCE1DA7C0A /* PBXContainerItemProxy */;
+		};
+		AB0E00C101C3F597F352757AE3DBFD1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TLTrackSDK;
+			target = CF226EC605F6907245A0E6425EBDCC54 /* TLTrackSDK */;
+			targetProxy = 9D00069D097BF66561829C0167CDA224 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		08D6DCB577D0AF3344CF8649C661714C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 683CD0ABDFD72EC3C8F72CB4FF0713A6 /* TLTrackSDK.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TLTrackSDK/TLTrackSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK.modulemap";
+				PRODUCT_MODULE_NAME = TLTrackSDK;
+				PRODUCT_NAME = TLTrackSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		0DE51F6CA59429FB03F69C6313EAB935 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91979C29551F8A36B4921533012864E1 /* Pods-TLTrackSDK_Tests.release.xcconfig */;
@@ -509,9 +692,9 @@
 			};
 			name = Debug;
 		};
-		4A35DB09C8C1E25DB3B080600D0A624C /* Release */ = {
+		3BF007ACC617CEB50CB5344525E7FEE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BF89ACB53352E07717A5A2995D3F586 /* TLTrackSDK.release.xcconfig */;
+			baseConfigurationReference = FB9E10D1F7376A85F2E355BE5937ECED /* TLTrackSDK.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -534,11 +717,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		6DDACB9903CB316C54847278C370BB9C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -566,36 +748,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A7CE8F6159A690465043C5B4D6C7F630 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41B09140D1A4B706B26A80FD223D089D /* TLTrackSDK.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TLTrackSDK/TLTrackSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK.modulemap";
-				PRODUCT_MODULE_NAME = TLTrackSDK;
-				PRODUCT_NAME = TLTrackSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -741,20 +893,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DC63B05AAFC79D71A4081039EAE20AB /* Build configuration list for PBXNativeTarget "TLTrackSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A7CE8F6159A690465043C5B4D6C7F630 /* Debug */,
-				4A35DB09C8C1E25DB3B080600D0A624C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
 				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F23396E720FDC54380197180D394DA9 /* Build configuration list for PBXNativeTarget "TLTrackSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BF007ACC617CEB50CB5344525E7FEE4 /* Debug */,
+				08D6DCB577D0AF3344CF8649C661714C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
