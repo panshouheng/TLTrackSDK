@@ -9,89 +9,85 @@
 /* Begin PBXBuildFile section */
 		1AB8E6889478A1F5A57A5ED21803FFA3 /* Pods-TLTrackSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0ED1D705C974A59A7CE9EA307253AE /* Pods-TLTrackSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C511DE977F688752550C097872D548C /* Pods-TLTrackSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1732A1253DF1487B4E606F1937A545C /* Pods-TLTrackSDK_Tests-dummy.m */; };
-		47B4A21A2597553F405484B0C41FE96D /* TLTrackSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74407E99F9D73D93E34AEC719F799F76 /* TLTrackSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22AE55DA7B835770C3274635B5846B75 /* NSObject+SASwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = B21638587AF05791DCDB310C81A29E03 /* NSObject+SASwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79B32D839EC43E8B7B62E4213B0EB622 /* Pods-TLTrackSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F208A36754CD207E62775AC9F92C970A /* Pods-TLTrackSDK_Example-dummy.m */; };
-		8BDB508DE6C4B526E4B91D4DB0E09300 /* SensorsAnalyticsDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A993A33624EBF8421CA816DB4660C02 /* SensorsAnalyticsDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FEB0D8A250BB13566C14EE7F29B5623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		A5EFAC9C4CB3B28DA941488D6B88D205 /* SensorsAnalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D575B89A6D81867762A399547FE76557 /* SensorsAnalyticsDatabase.m */; };
+		A60964BEEE20EC0DCA70BDB30600DB2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		B07C4EA17BC87755627ECAF6E31D6E07 /* Pods-TLTrackSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7B6994A831E0DF689E58E80FDA93D55 /* Pods-TLTrackSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B416FB2A19BBB310BAFD3256AF847B51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		D2DF9D030491C64468AA7C48671BFC5B /* TLTrackSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E26C220D305798BC81DF8AA9891DA57 /* TLTrackSDK-dummy.m */; };
-		DF54CFF79E84CD497FD719D22A8FA113 /* NSObject+SASwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A8D9F7DC1E324C7FC0630604EAC0DC5 /* NSObject+SASwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B74F361957684AEEBC7032E540771A5B /* NSObject+SASwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A4DD15FE25B3F2EDF7C2C838CFB221 /* NSObject+SASwizzler.m */; };
+		CAB8DD4420B2D229BC9F89A0BBEB11FC /* TLTrackSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97A87DC95ED97FC8C21D90664F1335E9 /* TLTrackSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E589A28102ADA514BB51B3B2D0E2284C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		EB5DCE2AD1C6BAAC7C3720502E30FE17 /* NSObject+SASwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = F37494B7F6114C2F75AFFD0E493F2C34 /* NSObject+SASwizzler.m */; };
+		F56C3074143B0A06CE678FD76F141DC1 /* TLTrackSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD215F29D985779274446FE736FBB0F /* TLTrackSDK-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3E72BEC38936B7345BB34C4C0A391FEC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CF226EC605F6907245A0E6425EBDCC54;
-			remoteInfo = TLTrackSDK;
-		};
-		B4DDCAD1C4F7999C65205C64C2726344 /* PBXContainerItemProxy */ = {
+		05C92FFC1128215CF2F36441F12BEEC3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 40568707202358987974253071C995F5;
 			remoteInfo = "Pods-TLTrackSDK_Example";
 		};
+		AB212404FD02353589961D4565CC48E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF226EC605F6907245A0E6425EBDCC54;
+			remoteInfo = TLTrackSDK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18587D99C179B3BA03C3C90A872930B9 /* TLTrackSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-prefix.pch"; sourceTree = "<group>"; };
 		1D818016C85B03AB45BA4E80C3BF6CEF /* Pods-TLTrackSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLTrackSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2ECA1397DDF65E9179DE140654B2DB30 /* TLTrackSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLTrackSDK.modulemap; sourceTree = "<group>"; };
+		3CBE37E940F05A0D4258CD17ABE54EDC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		41B09140D1A4B706B26A80FD223D089D /* TLTrackSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.debug.xcconfig; sourceTree = "<group>"; };
 		4597AB434B243008663FFE94B538F55B /* Pods-TLTrackSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLTrackSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4A272306F7A73D705B8C356B4E32215B /* TLTrackSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TLTrackSDK; path = TLTrackSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBE5742AE4F79A0B9F982CF44EA8D49 /* Pods-TLTrackSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLTrackSDK_Example.modulemap"; sourceTree = "<group>"; };
-		59481E51B8529C2B1FB2CFA9B3BCDA3C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		507A2F5E2CB3A780E0EC00725C43F84B /* TLTrackSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-prefix.pch"; sourceTree = "<group>"; };
 		59864E2DB1CE70570159C2CE88FCA134 /* Pods-TLTrackSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E26C220D305798BC81DF8AA9891DA57 /* TLTrackSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLTrackSDK-dummy.m"; sourceTree = "<group>"; };
+		5DD215F29D985779274446FE736FBB0F /* TLTrackSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLTrackSDK-dummy.m"; sourceTree = "<group>"; };
 		5FF68BB179C58176012EEEF8C6324A98 /* Pods-TLTrackSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		6A993A33624EBF8421CA816DB4660C02 /* SensorsAnalyticsDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsDatabase.h; path = TLTrackSDK/Classes/SensorsAnalyticsDatabase.h; sourceTree = "<group>"; };
+		6829F739D76D8DCDF83A6DC1ACBF5369 /* TLTrackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TLTrackSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7214AEB5592E0B3CC1B2BD968932D1BE /* Pods-TLTrackSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLTrackSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		74407E99F9D73D93E34AEC719F799F76 /* TLTrackSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-umbrella.h"; sourceTree = "<group>"; };
 		7B8BDD17E27EB1CF7EE18AD7BF346A9B /* Pods-TLTrackSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TLTrackSDK_Tests"; path = Pods_TLTrackSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85A7C05D289625A8EF149BEE5BD26184 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		8A8D9F7DC1E324C7FC0630604EAC0DC5 /* NSObject+SASwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+SASwizzler.h"; path = "TLTrackSDK/Classes/NSObject+SASwizzler.h"; sourceTree = "<group>"; };
+		83A4DD15FE25B3F2EDF7C2C838CFB221 /* NSObject+SASwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SASwizzler.m"; path = "TLTrackSDK/Classes/NSObject+SASwizzler.m"; sourceTree = "<group>"; };
+		88E1C8EEC4DEE6B2D45E3A6FE2C2DFB4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		8B2020A865A1E246ED887FB3ABFC2F4B /* Pods-TLTrackSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8BF89ACB53352E07717A5A2995D3F586 /* TLTrackSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.release.xcconfig; sourceTree = "<group>"; };
 		91979C29551F8A36B4921533012864E1 /* Pods-TLTrackSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		948E896DC876C192E237604BD46CCDC4 /* Pods-TLTrackSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TLTrackSDK_Example"; path = Pods_TLTrackSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A87DC95ED97FC8C21D90664F1335E9 /* TLTrackSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2CFE304950FAA475E45C1E10530039C /* Pods-TLTrackSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B21638587AF05791DCDB310C81A29E03 /* NSObject+SASwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+SASwizzler.h"; path = "TLTrackSDK/Classes/NSObject+SASwizzler.h"; sourceTree = "<group>"; };
 		B46BFF0E1DC62B28298583377D8427E0 /* Pods-TLTrackSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C7B6994A831E0DF689E58E80FDA93D55 /* Pods-TLTrackSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTrackSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C84849A0A805F8A59A98D4CE312533A4 /* Pods-TLTrackSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		CD18A2C593695AC921E57A023A37EE4F /* TLTrackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TLTrackSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D575B89A6D81867762A399547FE76557 /* SensorsAnalyticsDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsDatabase.m; path = TLTrackSDK/Classes/SensorsAnalyticsDatabase.m; sourceTree = "<group>"; };
-		DD0A8365635564CFA1D096ED84E74417 /* TLTrackSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TLTrackSDK-Info.plist"; sourceTree = "<group>"; };
+		CAA60F9C612DAE1E9EE7807B4CC14C0C /* TLTrackSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TLTrackSDK-Info.plist"; sourceTree = "<group>"; };
+		D2EC6CB7BA86A279080DE31E5FE12AE6 /* TLTrackSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLTrackSDK.modulemap; sourceTree = "<group>"; };
 		E1732A1253DF1487B4E606F1937A545C /* Pods-TLTrackSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTrackSDK_Tests-dummy.m"; sourceTree = "<group>"; };
 		E3EE6928CB606354E7D1981BB7AF8767 /* Pods-TLTrackSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		E5F404DD4629E2FED1BF2734E10B0A3F /* Pods-TLTrackSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLTrackSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
-		EC23B00357E764D49C06B9EE60821DBD /* TLTrackSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.release.xcconfig; sourceTree = "<group>"; };
-		ED5CC79F44A696CCFED57A7D1794524E /* TLTrackSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.debug.xcconfig; sourceTree = "<group>"; };
 		EE0ED1D705C974A59A7CE9EA307253AE /* Pods-TLTrackSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTrackSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		F208A36754CD207E62775AC9F92C970A /* Pods-TLTrackSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTrackSDK_Example-dummy.m"; sourceTree = "<group>"; };
-		F37494B7F6114C2F75AFFD0E493F2C34 /* NSObject+SASwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SASwizzler.m"; path = "TLTrackSDK/Classes/NSObject+SASwizzler.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8487A914312C4031560AC5D01D012E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60964BEEE20EC0DCA70BDB30600DB2B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8CAA8C3C34969992E5070B2F88A4FEF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8FEB0D8A250BB13566C14EE7F29B5623 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F4FEB09F85BD9CDD79926952757457D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B416FB2A19BBB310BAFD3256AF847B51 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +102,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0056A206AEE8000C732C697E7BE2EBD3 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3CBE37E940F05A0D4258CD17ABE54EDC /* LICENSE */,
+				88E1C8EEC4DEE6B2D45E3A6FE2C2DFB4 /* README.md */,
+				6829F739D76D8DCDF83A6DC1ACBF5369 /* TLTrackSDK.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		21CBB0D22501DEC154F3A06EFA91D025 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F347DFD810F51EFE2609AAE6141E4D10 /* TLTrackSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		2363CA74D0C1769EEC1B60D34C74A079 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,14 +147,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		67ADE650CB7D80DF2B5E9389556D32AB /* Pod */ = {
+		76307F5AA2DD05FFFE6D659E89027F5F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				85A7C05D289625A8EF149BEE5BD26184 /* LICENSE */,
-				59481E51B8529C2B1FB2CFA9B3BCDA3C /* README.md */,
-				CD18A2C593695AC921E57A023A37EE4F /* TLTrackSDK.podspec */,
+				D2EC6CB7BA86A279080DE31E5FE12AE6 /* TLTrackSDK.modulemap */,
+				5DD215F29D985779274446FE736FBB0F /* TLTrackSDK-dummy.m */,
+				CAA60F9C612DAE1E9EE7807B4CC14C0C /* TLTrackSDK-Info.plist */,
+				507A2F5E2CB3A780E0EC00725C43F84B /* TLTrackSDK-prefix.pch */,
+				97A87DC95ED97FC8C21D90664F1335E9 /* TLTrackSDK-umbrella.h */,
+				41B09140D1A4B706B26A80FD223D089D /* TLTrackSDK.debug.xcconfig */,
+				8BF89ACB53352E07717A5A2995D3F586 /* TLTrackSDK.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TLTrackSDK";
 			sourceTree = "<group>";
 		};
 		A313D6A80AB599C6581A38E74D5918A1 /* Pods-TLTrackSDK_Example */ = {
@@ -160,19 +179,11 @@
 			path = "Target Support Files/Pods-TLTrackSDK_Example";
 			sourceTree = "<group>";
 		};
-		A8F46EBE4CEF2FB07CD5531428A2C20D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F33FE76D02A938CFB41095317B1B7604 /* TLTrackSDK */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				A8F46EBE4CEF2FB07CD5531428A2C20D /* Development Pods */,
+				21CBB0D22501DEC154F3A06EFA91D025 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				5BDFAA28066AD9F27DA6649001B5532A /* Products */,
 				2363CA74D0C1769EEC1B60D34C74A079 /* Targets Support Files */,
@@ -203,30 +214,13 @@
 			path = "Target Support Files/Pods-TLTrackSDK_Tests";
 			sourceTree = "<group>";
 		};
-		DBDF11693C9D41B80D88C751D1B35619 /* Support Files */ = {
+		F347DFD810F51EFE2609AAE6141E4D10 /* TLTrackSDK */ = {
 			isa = PBXGroup;
 			children = (
-				2ECA1397DDF65E9179DE140654B2DB30 /* TLTrackSDK.modulemap */,
-				5E26C220D305798BC81DF8AA9891DA57 /* TLTrackSDK-dummy.m */,
-				DD0A8365635564CFA1D096ED84E74417 /* TLTrackSDK-Info.plist */,
-				18587D99C179B3BA03C3C90A872930B9 /* TLTrackSDK-prefix.pch */,
-				74407E99F9D73D93E34AEC719F799F76 /* TLTrackSDK-umbrella.h */,
-				ED5CC79F44A696CCFED57A7D1794524E /* TLTrackSDK.debug.xcconfig */,
-				EC23B00357E764D49C06B9EE60821DBD /* TLTrackSDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TLTrackSDK";
-			sourceTree = "<group>";
-		};
-		F33FE76D02A938CFB41095317B1B7604 /* TLTrackSDK */ = {
-			isa = PBXGroup;
-			children = (
-				8A8D9F7DC1E324C7FC0630604EAC0DC5 /* NSObject+SASwizzler.h */,
-				F37494B7F6114C2F75AFFD0E493F2C34 /* NSObject+SASwizzler.m */,
-				6A993A33624EBF8421CA816DB4660C02 /* SensorsAnalyticsDatabase.h */,
-				D575B89A6D81867762A399547FE76557 /* SensorsAnalyticsDatabase.m */,
-				67ADE650CB7D80DF2B5E9389556D32AB /* Pod */,
-				DBDF11693C9D41B80D88C751D1B35619 /* Support Files */,
+				B21638587AF05791DCDB310C81A29E03 /* NSObject+SASwizzler.h */,
+				83A4DD15FE25B3F2EDF7C2C838CFB221 /* NSObject+SASwizzler.m */,
+				0056A206AEE8000C732C697E7BE2EBD3 /* Pod */,
+				76307F5AA2DD05FFFE6D659E89027F5F /* Support Files */,
 			);
 			name = TLTrackSDK;
 			path = ../..;
@@ -251,13 +245,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AAA1C071D2803B1B52A09C8069C25325 /* Headers */ = {
+		F60C3AD936B53C1FD48BA162C3D6E36F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF54CFF79E84CD497FD719D22A8FA113 /* NSObject+SASwizzler.h in Headers */,
-				8BDB508DE6C4B526E4B91D4DB0E09300 /* SensorsAnalyticsDatabase.h in Headers */,
-				47B4A21A2597553F405484B0C41FE96D /* TLTrackSDK-umbrella.h in Headers */,
+				22AE55DA7B835770C3274635B5846B75 /* NSObject+SASwizzler.h in Headers */,
+				CAB8DD4420B2D229BC9F89A0BBEB11FC /* TLTrackSDK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +269,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B0F01A2FC5C043F0DB96336B4A1FFDCB /* PBXTargetDependency */,
+				A043B705369E3D3D7720CB325A707999 /* PBXTargetDependency */,
 			);
 			name = "Pods-TLTrackSDK_Tests";
 			productName = Pods_TLTrackSDK_Tests;
@@ -295,7 +288,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				ED3D200ECEBA2E5997B9348F3DA95B97 /* PBXTargetDependency */,
+				3319D4384D2F6EFEBC56A6FC405816F0 /* PBXTargetDependency */,
 			);
 			name = "Pods-TLTrackSDK_Example";
 			productName = Pods_TLTrackSDK_Example;
@@ -304,12 +297,12 @@
 		};
 		CF226EC605F6907245A0E6425EBDCC54 /* TLTrackSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B583D6A62C933B8D23C4902A64A49FBD /* Build configuration list for PBXNativeTarget "TLTrackSDK" */;
+			buildConfigurationList = 3DC63B05AAFC79D71A4081039EAE20AB /* Build configuration list for PBXNativeTarget "TLTrackSDK" */;
 			buildPhases = (
-				AAA1C071D2803B1B52A09C8069C25325 /* Headers */,
-				68E0446EEEA6C0ED8F31DF6EFBE05C5C /* Sources */,
-				9F4FEB09F85BD9CDD79926952757457D /* Frameworks */,
-				605DC3FFAF241D541617E7FC2B860720 /* Resources */,
+				F60C3AD936B53C1FD48BA162C3D6E36F /* Headers */,
+				6CBC5C64ECCC7F0F4E52A9CCB018A3A6 /* Sources */,
+				8487A914312C4031560AC5D01D012E2B /* Frameworks */,
+				EB9F03E35942C50D4D251EBB11548F79 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -357,14 +350,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		605DC3FFAF241D541617E7FC2B860720 /* Resources */ = {
+		A97B3011666A614F6084B306A0D1A8AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A97B3011666A614F6084B306A0D1A8AF /* Resources */ = {
+		EB9F03E35942C50D4D251EBB11548F79 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,13 +367,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		68E0446EEEA6C0ED8F31DF6EFBE05C5C /* Sources */ = {
+		6CBC5C64ECCC7F0F4E52A9CCB018A3A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5DCE2AD1C6BAAC7C3720502E30FE17 /* NSObject+SASwizzler.m in Sources */,
-				A5EFAC9C4CB3B28DA941488D6B88D205 /* SensorsAnalyticsDatabase.m in Sources */,
-				D2DF9D030491C64468AA7C48671BFC5B /* TLTrackSDK-dummy.m in Sources */,
+				B74F361957684AEEBC7032E540771A5B /* NSObject+SASwizzler.m in Sources */,
+				F56C3074143B0A06CE678FD76F141DC1 /* TLTrackSDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,17 +395,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B0F01A2FC5C043F0DB96336B4A1FFDCB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-TLTrackSDK_Example";
-			target = 40568707202358987974253071C995F5 /* Pods-TLTrackSDK_Example */;
-			targetProxy = B4DDCAD1C4F7999C65205C64C2726344 /* PBXContainerItemProxy */;
-		};
-		ED3D200ECEBA2E5997B9348F3DA95B97 /* PBXTargetDependency */ = {
+		3319D4384D2F6EFEBC56A6FC405816F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TLTrackSDK;
 			target = CF226EC605F6907245A0E6425EBDCC54 /* TLTrackSDK */;
-			targetProxy = 3E72BEC38936B7345BB34C4C0A391FEC /* PBXContainerItemProxy */;
+			targetProxy = AB212404FD02353589961D4565CC48E6 /* PBXContainerItemProxy */;
+		};
+		A043B705369E3D3D7720CB325A707999 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTrackSDK_Example";
+			target = 40568707202358987974253071C995F5 /* Pods-TLTrackSDK_Example */;
+			targetProxy = 05C92FFC1128215CF2F36441F12BEEC3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -517,6 +509,37 @@
 			};
 			name = Debug;
 		};
+		4A35DB09C8C1E25DB3B080600D0A624C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF89ACB53352E07717A5A2995D3F586 /* TLTrackSDK.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TLTrackSDK/TLTrackSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK.modulemap";
+				PRODUCT_MODULE_NAME = TLTrackSDK;
+				PRODUCT_NAME = TLTrackSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6DDACB9903CB316C54847278C370BB9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 59864E2DB1CE70570159C2CE88FCA134 /* Pods-TLTrackSDK_Tests.debug.xcconfig */;
@@ -549,9 +572,9 @@
 			};
 			name = Debug;
 		};
-		922609A5C740077C57A36614C6AAA0EF /* Release */ = {
+		A7CE8F6159A690465043C5B4D6C7F630 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC23B00357E764D49C06B9EE60821DBD /* TLTrackSDK.release.xcconfig */;
+			baseConfigurationReference = 41B09140D1A4B706B26A80FD223D089D /* TLTrackSDK.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -574,11 +597,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -674,36 +696,6 @@
 			};
 			name = Debug;
 		};
-		D73CFF44803A55C481317133ECD405C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED5CC79F44A696CCFED57A7D1794524E /* TLTrackSDK.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TLTrackSDK/TLTrackSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK.modulemap";
-				PRODUCT_MODULE_NAME = TLTrackSDK;
-				PRODUCT_NAME = TLTrackSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		FE71E97F621E0114FBAA73A8946148F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B46BFF0E1DC62B28298583377D8427E0 /* Pods-TLTrackSDK_Example.release.xcconfig */;
@@ -749,6 +741,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3DC63B05AAFC79D71A4081039EAE20AB /* Build configuration list for PBXNativeTarget "TLTrackSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7CE8F6159A690465043C5B4D6C7F630 /* Debug */,
+				4A35DB09C8C1E25DB3B080600D0A624C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -763,15 +764,6 @@
 			buildConfigurations = (
 				6DDACB9903CB316C54847278C370BB9C /* Debug */,
 				0DE51F6CA59429FB03F69C6313EAB935 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B583D6A62C933B8D23C4902A64A49FBD /* Build configuration list for PBXNativeTarget "TLTrackSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D73CFF44803A55C481317133ECD405C7 /* Debug */,
-				922609A5C740077C57A36614C6AAA0EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

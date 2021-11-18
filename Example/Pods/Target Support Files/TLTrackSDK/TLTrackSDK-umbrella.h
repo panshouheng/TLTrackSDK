@@ -11,7 +11,6 @@
 #endif
 
 #import "NSObject+SASwizzler.h"
-#import "SensorsAnalyticsDatabase.h"
 
 FOUNDATION_EXPORT double TLTrackSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char TLTrackSDKVersionString[];
