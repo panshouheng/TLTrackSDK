@@ -1,18 +1,11 @@
-//
-//  NSObject+SASwizzler.m
-//  SensorsSDK
-//
-//  Created by 王灼洲 on 2019/08/08.
-//  Copyright © 2019 SensorsData. All rights reserved.
-//
 
-#import "NSObject+SASwizzler.h"
+#import "NSObject+TLSwizzler.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-@implementation NSObject (SASwizzler)
+@implementation NSObject (TLSwizzler)
 
-+ (BOOL)sensorsdata_swizzleMethod:(SEL)originalSEL withMethod:(SEL)alternateSEL {
++ (BOOL)TinecoLifeData_swizzleMethod:(SEL)originalSEL withMethod:(SEL)alternateSEL {
     // 获取原始方法
     Method originalMethod = class_getInstanceMethod(self, originalSEL);
     // 当原始方法不存在时，返回 NO，表示 Swizzling 失败

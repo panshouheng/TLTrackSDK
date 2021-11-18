@@ -7,12 +7,16 @@
 //
 
 #import "TLAppDelegate.h"
-
+#import <TLTrackSDK.h>
+#import <AdSupport/AdSupport.h>
 @implementation TLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [TLAnalyticsSDK startWithServerURL:@"http://sdk-test.cloud.sensorsdata.cn:8006/sa?project=default&token=95c73ae661f85aa0"];
+    // 在系统默认的 UserAgent 值中添加默认标记（" /sa-sdk-ios "）
+    [[TLAnalyticsSDK sharedInstance] addWebViewUserAgent:nil];
     return YES;
 }
 

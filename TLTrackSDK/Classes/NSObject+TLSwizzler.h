@@ -1,16 +1,9 @@
-//
-//  NSObject+SASwizzler.h
-//  SensorsSDK
-//
-//  Created by 王灼洲 on 2019/08/08.
-//  Copyright © 2019 SensorsData. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (SASwizzler)
+@interface NSObject (TLSwizzler)
 
 /**
 交换方法名为 originalSEL 和方法名为 alternateSEL 两个方法的实现
@@ -18,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @param originalSEL 原始方法名
 @param alternateSEL 要交换的方法名称
 */
-+ (BOOL)sensorsdata_swizzleMethod:(SEL)originalSEL withMethod:(SEL)alternateSEL;
++ (BOOL)TinecoLifeData_swizzleMethod:(SEL)originalSEL withMethod:(SEL)alternateSEL;
 
 @end
 
