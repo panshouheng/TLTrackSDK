@@ -19,7 +19,6 @@
 		3CA48B87ED80B44F472CD8257E98B567 /* SensorsAnalyticsKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0EC89D52D224F35FC48E7721C4667 /* SensorsAnalyticsKeychainItem.m */; };
 		3CCDA244DE61A03F46856766000ECBE5 /* SensorsAnalyticsKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 772D49E59B8F94B18440975C00BCA19F /* SensorsAnalyticsKeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4327DD7217EBB67E115392AC0B5B7953 /* SensorsAnalyticsDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF299DB29BDB2E34004E4A68FD2E2DD /* SensorsAnalyticsDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54BBAE6D540E9F668688309B625B270C /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 4279AF271EAB272906802B59EF8E0F57 /* Info.plist */; };
 		592D04A7D1861BF2D6A3D678330FC839 /* UIControl+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 491B841C2DA0CFE52D197CC0B418C61E /* UIControl+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		650131569F780027DFBD78B39A136008 /* SensorsAnalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E528E352FB54747843373C51052A6 /* SensorsAnalyticsDatabase.m */; };
 		6608E92FE719A5053C29DB3B2559993F /* SensorsAnalyticsExtensionDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D5052AA4EEE617B54EE7DE1A379162F3 /* SensorsAnalyticsExtensionDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,7 +52,6 @@
 		EB1221A01E30470631136FE91CE76CE7 /* SensorsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A37B26567B684B1CEF578DA3A30AC38 /* SensorsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBC3F6FF54A165CE4A4BF00881C4F901 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		EC58419863F581D0320FA7556F7ACF50 /* SensorsAnalyticsExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 367FAE20BAD0F94E029D0B51CCFE4B99 /* SensorsAnalyticsExceptionHandler.m */; };
-		F11EB391252EDD01ABA15387712D2479 /* sensorsdata_black_list.json in Sources */ = {isa = PBXBuildFile; fileRef = 4EB90E960D0715D11080CD4ECDCDCDFB /* sensorsdata_black_list.json */; };
 		FD11FF84C8C46FEC4EF78B9266262912 /* TLTrackSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 192608918CB03AC54D6622750955952F /* TLTrackSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE76EF0871245157B4AF988B22441B64 /* UIViewController+SensorsData.h in Headers */ = {isa = PBXBuildFile; fileRef = C3C960A3F006CC88141196A22DAE2029 /* UIViewController+SensorsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -91,13 +89,11 @@
 		3D28837F48CF82FD120FCC4145DF8E77 /* UIApplication+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+SensorsData.h"; path = "TLTrackSDK/Classes/UIApplication+SensorsData.h"; sourceTree = "<group>"; };
 		3D6E559576B4A169E023EF570A034EE7 /* sensorsdata_black_list.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = sensorsdata_black_list.plist; path = TLTrackSDK/Classes/sensorsdata_black_list.plist; sourceTree = "<group>"; };
 		3FDFF8103E77F4CCFBAAAEE9F5951A05 /* SensorsAnalyticsSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsSDK.m; path = TLTrackSDK/Classes/SensorsAnalyticsSDK.m; sourceTree = "<group>"; };
-		4279AF271EAB272906802B59EF8E0F57 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = TLTrackSDK/Classes/Info.plist; sourceTree = "<group>"; };
 		4597AB434B243008663FFE94B538F55B /* Pods-TLTrackSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLTrackSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		491B841C2DA0CFE52D197CC0B418C61E /* UIControl+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+SensorsData.h"; path = "TLTrackSDK/Classes/UIControl+SensorsData.h"; sourceTree = "<group>"; };
 		4A272306F7A73D705B8C356B4E32215B /* TLTrackSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TLTrackSDK; path = TLTrackSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBE5742AE4F79A0B9F982CF44EA8D49 /* Pods-TLTrackSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLTrackSDK_Example.modulemap"; sourceTree = "<group>"; };
 		4CF299DB29BDB2E34004E4A68FD2E2DD /* SensorsAnalyticsDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsDatabase.h; path = TLTrackSDK/Classes/SensorsAnalyticsDatabase.h; sourceTree = "<group>"; };
-		4EB90E960D0715D11080CD4ECDCDCDFB /* sensorsdata_black_list.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = sensorsdata_black_list.json; path = TLTrackSDK/Classes/sensorsdata_black_list.json; sourceTree = "<group>"; };
 		59864E2DB1CE70570159C2CE88FCA134 /* Pods-TLTrackSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5AF45FFED93C5F44A8BD0133E693C9B1 /* TLTrackSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLTrackSDK.modulemap; sourceTree = "<group>"; };
 		5EDAA3B8E9CD932C62F29B13528C49C8 /* SensorsAnalyticsDynamicDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsDynamicDelegate.h; path = TLTrackSDK/Classes/SensorsAnalyticsDynamicDelegate.h; sourceTree = "<group>"; };
@@ -285,7 +281,6 @@
 		DBF7ACBF9731A290AEBA3F6DFAC13C99 /* TLTrackSDK */ = {
 			isa = PBXGroup;
 			children = (
-				4279AF271EAB272906802B59EF8E0F57 /* Info.plist */,
 				91D360FF6C47897F4538DA99079E8033 /* NSObject+SASwizzler.h */,
 				24D44EE7F8CC4EEB4D12CBA07EC918D7 /* NSObject+SASwizzler.m */,
 				4CF299DB29BDB2E34004E4A68FD2E2DD /* SensorsAnalyticsDatabase.h */,
@@ -306,7 +301,6 @@
 				C8A43D378C184CC8B87D2B5673EB2E35 /* SensorsAnalyticsNetwork.m */,
 				B9F0B74CA67F1E81521B2C5516730C70 /* SensorsAnalyticsSDK.h */,
 				3FDFF8103E77F4CCFBAAAEE9F5951A05 /* SensorsAnalyticsSDK.m */,
-				4EB90E960D0715D11080CD4ECDCDCDFB /* sensorsdata_black_list.json */,
 				3D6E559576B4A169E023EF570A034EE7 /* sensorsdata_black_list.plist */,
 				9A37B26567B684B1CEF578DA3A30AC38 /* SensorsSDK.h */,
 				3D28837F48CF82FD120FCC4145DF8E77 /* UIApplication+SensorsData.h */,
@@ -503,7 +497,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54BBAE6D540E9F668688309B625B270C /* Info.plist in Sources */,
 				82B7AF46016D0F8758F68C9F8C86C262 /* NSObject+SASwizzler.m in Sources */,
 				650131569F780027DFBD78B39A136008 /* SensorsAnalyticsDatabase.m in Sources */,
 				709CB8343A6161C829D7D1288B0BCAC6 /* SensorsAnalyticsDelegateProxy.m in Sources */,
@@ -514,7 +507,6 @@
 				3CA48B87ED80B44F472CD8257E98B567 /* SensorsAnalyticsKeychainItem.m in Sources */,
 				80E7F701B04F8D7AD7C84D05B5336B28 /* SensorsAnalyticsNetwork.m in Sources */,
 				D9C82336508DCAD9F6157730C4C21F6A /* SensorsAnalyticsSDK.m in Sources */,
-				F11EB391252EDD01ABA15387712D2479 /* sensorsdata_black_list.json in Sources */,
 				A320F447C9E5E1E52FC9350FBBCAFA06 /* sensorsdata_black_list.plist in Sources */,
 				8E1FA1D0E01FD59FC5927916912FE357 /* TLTrackSDK-dummy.m in Sources */,
 				88F3FF8C014B28AC7721DF346CC74ED9 /* UIApplication+SensorsData.m in Sources */,
