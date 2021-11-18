@@ -78,7 +78,7 @@
 /* Begin PBXFileReference section */
 		06468AE31A52258A2C854E5780427F13 /* UIGestureRecognizer+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+SensorsData.m"; path = "TLTrackSDK/Classes/UIGestureRecognizer+SensorsData.m"; sourceTree = "<group>"; };
 		0B0F9D28B7D2C6FE473ABC115D0286E2 /* UIView+SensorsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SensorsData.h"; path = "TLTrackSDK/Classes/UIView+SensorsData.h"; sourceTree = "<group>"; };
-		0C72D02E7E03C35CDA3FC57F9A02D38C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0C72D02E7E03C35CDA3FC57F9A02D38C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0DC75BE6AC353FEA06C8D595979051A8 /* UITableView+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SensorsData.m"; path = "TLTrackSDK/Classes/UITableView+SensorsData.m"; sourceTree = "<group>"; };
 		176987B64ADD8B0BE212A8E536853D41 /* SensorsAnalyticsFileStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsFileStore.h; path = TLTrackSDK/Classes/SensorsAnalyticsFileStore.h; sourceTree = "<group>"; };
 		1902EBCBF29BBEBE24F11B2F54435041 /* TLTrackSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLTrackSDK-dummy.m"; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		4A272306F7A73D705B8C356B4E32215B /* TLTrackSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TLTrackSDK; path = TLTrackSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBE5742AE4F79A0B9F982CF44EA8D49 /* Pods-TLTrackSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLTrackSDK_Example.modulemap"; sourceTree = "<group>"; };
 		4CF299DB29BDB2E34004E4A68FD2E2DD /* SensorsAnalyticsDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsDatabase.h; path = TLTrackSDK/Classes/SensorsAnalyticsDatabase.h; sourceTree = "<group>"; };
-		4EB90E960D0715D11080CD4ECDCDCDFB /* sensorsdata_black_list.json */ = {isa = PBXFileReference; includeInIndex = 1; name = sensorsdata_black_list.json; path = TLTrackSDK/Classes/sensorsdata_black_list.json; sourceTree = "<group>"; };
+		4EB90E960D0715D11080CD4ECDCDCDFB /* sensorsdata_black_list.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = sensorsdata_black_list.json; path = TLTrackSDK/Classes/sensorsdata_black_list.json; sourceTree = "<group>"; };
 		59864E2DB1CE70570159C2CE88FCA134 /* Pods-TLTrackSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5AF45FFED93C5F44A8BD0133E693C9B1 /* TLTrackSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLTrackSDK.modulemap; sourceTree = "<group>"; };
 		5EDAA3B8E9CD932C62F29B13528C49C8 /* SensorsAnalyticsDynamicDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsDynamicDelegate.h; path = TLTrackSDK/Classes/SensorsAnalyticsDynamicDelegate.h; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		7B8BDD17E27EB1CF7EE18AD7BF346A9B /* Pods-TLTrackSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TLTrackSDK_Tests"; path = Pods_TLTrackSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE0EC89D52D224F35FC48E7721C4667 /* SensorsAnalyticsKeychainItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsKeychainItem.m; path = TLTrackSDK/Classes/SensorsAnalyticsKeychainItem.m; sourceTree = "<group>"; };
 		85BAB4C1387833282FF4EE82AAE695FE /* UIApplication+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+SensorsData.m"; path = "TLTrackSDK/Classes/UIApplication+SensorsData.m"; sourceTree = "<group>"; };
-		869B1BEDA94E80580FF6BEBD3C94615C /* TLTrackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TLTrackSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		869B1BEDA94E80580FF6BEBD3C94615C /* TLTrackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TLTrackSDK.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		8B2020A865A1E246ED887FB3ABFC2F4B /* Pods-TLTrackSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8E51855B01ACD466AA3CD8B68750A6CA /* SensorsAnalyticsDynamicDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsDynamicDelegate.m; path = TLTrackSDK/Classes/SensorsAnalyticsDynamicDelegate.m; sourceTree = "<group>"; };
 		910B8E4C577E3550BAD82640BF9AC1EF /* UIViewController+SensorsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+SensorsData.m"; path = "TLTrackSDK/Classes/UIViewController+SensorsData.m"; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		91D360FF6C47897F4538DA99079E8033 /* NSObject+SASwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+SASwizzler.h"; path = "TLTrackSDK/Classes/NSObject+SASwizzler.h"; sourceTree = "<group>"; };
 		948E896DC876C192E237604BD46CCDC4 /* Pods-TLTrackSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TLTrackSDK_Example"; path = Pods_TLTrackSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A37B26567B684B1CEF578DA3A30AC38 /* SensorsSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsSDK.h; path = TLTrackSDK/Classes/SensorsSDK.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A16F1CC6267E2C8ABBF1FCFA3E818AB6 /* SensorsAnalyticsExceptionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsExceptionHandler.h; path = TLTrackSDK/Classes/SensorsAnalyticsExceptionHandler.h; sourceTree = "<group>"; };
 		A2CFE304950FAA475E45C1E10530039C /* Pods-TLTrackSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B46BFF0E1DC62B28298583377D8427E0 /* Pods-TLTrackSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		C84849A0A805F8A59A98D4CE312533A4 /* Pods-TLTrackSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Tests-Info.plist"; sourceTree = "<group>"; };
 		C8695E3C9D30A0DBA4117C4E77CA4015 /* SensorsAnalyticsDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsDelegateProxy.h; path = TLTrackSDK/Classes/SensorsAnalyticsDelegateProxy.h; sourceTree = "<group>"; };
 		C8A43D378C184CC8B87D2B5673EB2E35 /* SensorsAnalyticsNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsNetwork.m; path = TLTrackSDK/Classes/SensorsAnalyticsNetwork.m; sourceTree = "<group>"; };
-		C937C2AFD3549CCCD6C7D101CF6AB4C6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C937C2AFD3549CCCD6C7D101CF6AB4C6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CD8A09A279CDB2B99E7ECEAA07720D82 /* SensorsAnalyticsNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsNetwork.h; path = TLTrackSDK/Classes/SensorsAnalyticsNetwork.h; sourceTree = "<group>"; };
 		CE9E528E352FB54747843373C51052A6 /* SensorsAnalyticsDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SensorsAnalyticsDatabase.m; path = TLTrackSDK/Classes/SensorsAnalyticsDatabase.m; sourceTree = "<group>"; };
 		D5052AA4EEE617B54EE7DE1A379162F3 /* SensorsAnalyticsExtensionDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SensorsAnalyticsExtensionDataManager.h; path = TLTrackSDK/Classes/SensorsAnalyticsExtensionDataManager.h; sourceTree = "<group>"; };
@@ -809,8 +809,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
