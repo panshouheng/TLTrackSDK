@@ -33,6 +33,7 @@ typedef void(^SAURLSessionTaskCompletionHandler)(NSData * _Nullable data, NSURLR
 
        // 通过配置对象创建一个 session 对象
        _session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:queue];
+        
     }
     return self;
 }
@@ -45,9 +46,11 @@ typedef void(^SAURLSessionTaskCompletionHandler)(NSData * _Nullable data, NSURLR
     // 通过服务器 URL 地址创建请求
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.serverURL];
     // 设置请求的 body
-    request.HTTPBody = [json dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *params = [NSString stringWithFormat:@"logs=%@",json];
+    request.HTTPBody = [params dataUsingEncoding:NSUTF8StringEncoding];
     // 请求方法
     request.HTTPMethod = @"POST";
+    request.allHTTPHeaderFields = @{@"Content-Type":@"application/x-www-form-urlencoded"};
     return request;
 }
 
@@ -56,7 +59,6 @@ typedef void(^SAURLSessionTaskCompletionHandler)(NSData * _Nullable data, NSURLR
     NSString *jsonString = [self buildJSONStringWithEvents:events];
     // 创建请求对象
     NSURLRequest *request = [self buildRequestWithJSONString:jsonString];
-
     // 数据上传结果
     __block BOOL flushSuccess = NO;
     // 使用 GCD 中的信号量，实现线程锁

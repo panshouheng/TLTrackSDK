@@ -1,7 +1,7 @@
 
 #import "TLAnalyticsExtensionDataManager.h"
 
-static NSString * const kSensorsExtensionFileName = @"sensors_analytics_extension_events.plist";
+static NSString * const kTinecoExtensionFileName = @"Tineco_analytics_extension_events.plist";
 
 @implementation TLAnalyticsExtensionDataManager
 
@@ -15,7 +15,7 @@ static NSString * const kSensorsExtensionFileName = @"sensors_analytics_extensio
 }
 
 - (NSURL *)fileURLForApplicationGroupIdentifier:(NSString *)identifier {
-    return [[NSFileManager.defaultManager containerURLForSecurityApplicationGroupIdentifier:identifier] URLByAppendingPathComponent:kSensorsExtensionFileName];
+    return [[NSFileManager.defaultManager containerURLForSecurityApplicationGroupIdentifier:identifier] URLByAppendingPathComponent:kTinecoExtensionFileName];
 }
 
 /**

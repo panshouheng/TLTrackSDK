@@ -10,25 +10,25 @@
 #include <sys/sysctl.h>
 #include <objc/runtime.h>
 
-#ifndef SENSORS_ANALYTICS_UIWEBVIEW
+#ifndef Tineco_ANALYTICS_UIWEBVIEW
 #import <WebKit/WebKit.h>
 #endif
 
-static NSString * const SensorsAnalyticsVersion = @"1.0.0";
+static NSString * const TinecoAnalyticsVersion = @"1.0.0";
 
-static NSString * const SensorsAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
-static NSString * const SensorsAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
-static NSString * const SensorsAnalyticsKeychainService = @"cn.TinecoLifeData.SensorsAnalytics.id";
+static NSString * const TinecoAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
+static NSString * const TinecoAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
+static NSString * const TinecoAnalyticsKeychainService = @"cn.TinecoLifeData.TinecoAnalytics.id";
 
-static NSString * const SensorsAnalyticsEventBeginKey = @"event_begin";
-static NSString * const SensorsAnalyticsEventDurationKey = @"event_duration";
-static NSString * const SensorsAnalyticsEventIsPauseKey = @"is_pause";
-static NSString * const SensorsAnalyticsEventDidEnterBackgroundKey = @"did_enter_background";
+static NSString * const TinecoAnalyticsEventBeginKey = @"event_begin";
+static NSString * const TinecoAnalyticsEventDurationKey = @"event_duration";
+static NSString * const TinecoAnalyticsEventIsPauseKey = @"is_pause";
+static NSString * const TinecoAnalyticsEventDidEnterBackgroundKey = @"did_enter_background";
 
 // 默认上传事件条数
-static NSUInteger const SensorsAnalyticsDefalutFlushEventCount = 50;
+static NSUInteger const TinecoAnalyticsDefalutFlushEventCount = 50;
 
-static NSString * const SensorsAnalyticsJavaScriptTrackEventScheme = @"sensorsanalytics://trackEvent";
+static NSString * const TinecoAnalyticsJavaScriptTrackEventScheme = @"Tinecoanalytics://trackEvent";
 
 @interface TLAnalyticsSDK ()
 
@@ -63,7 +63,7 @@ static NSString * const SensorsAnalyticsJavaScriptTrackEventScheme = @"sensorsan
 /// 定时上传事件的 Timer
 @property (nonatomic, strong) NSTimer *flushTimer;
 
-#ifndef SENSORS_ANALYTICS_UIWEBVIEW
+#ifndef Tineco_ANALYTICS_UIWEBVIEW
 // 由于 WKWebView 获取 UserAgent 是异步过程，为了在获取过程中创建的 WKWebView 对象不被销毁，需要保存创建的临时对象
 @property (nonatomic, strong) WKWebView *webView;
 #endif
@@ -93,7 +93,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
         _enterBackgroundTrackTimerEvents = [NSMutableArray array];
         _trackTimer = [NSMutableDictionary dictionary];
 
-        _loginId = [[NSUserDefaults standardUserDefaults] objectForKey:SensorsAnalyticsLoginId];
+        _loginId = [[NSUserDefaults standardUserDefaults] objectForKey:TinecoAnalyticsLoginId];
 
         _automaticProperties = [self collectAutomaticProperties];
         // 设置是否被动启动标记
@@ -106,7 +106,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
         [self setupListeners];
 
         _fileStore = [[TLAnalyticsFileStore alloc] init];
-        // 初始化 SensorsAnalyticsDatabase 类的对象，使用默认路径
+        // 初始化 TinecoAnalyticsDatabase 类的对象，使用默认路径
         _database = [[TLAnalyticsDatabase alloc] init];
 
         _flushBulkSize = 100;
@@ -173,7 +173,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     // 设置生产商
     properties[@"manufacturer"] = @"iOS";
     // 设置 SDK 的版本
-    properties[@"lib_version"] = SensorsAnalyticsVersion;
+    properties[@"lib_version"] = TinecoAnalyticsVersion;
     // 设置本机型号
     properties[@"model"] = [self deviceModel];
     // 设置系统版本
@@ -216,18 +216,18 @@ static TLAnalyticsSDK *sharedInstance = nil;
         return _anonymousId;
     }
     // 从 NSUserDefaults 中读取设备 ID
-    _anonymousId = [[NSUserDefaults standardUserDefaults] objectForKey:SensorsAnalyticsAnonymousId];
+    _anonymousId = [[NSUserDefaults standardUserDefaults] objectForKey:TinecoAnalyticsAnonymousId];
     if (_anonymousId) {
         return _anonymousId;
     }
 
-    TLAnalyticsKeychainItem *item = [[TLAnalyticsKeychainItem alloc] initWithService:SensorsAnalyticsKeychainService key:SensorsAnalyticsAnonymousId];
+    TLAnalyticsKeychainItem *item = [[TLAnalyticsKeychainItem alloc] initWithService:TinecoAnalyticsKeychainService key:TinecoAnalyticsAnonymousId];
     // 从 Keychain 中读取设备 ID
     _anonymousId = [item value];
 
     if (_anonymousId) {
         // 将设备 ID 保存在 NSUserDefaults 中
-        [[NSUserDefaults standardUserDefaults] setObject:_anonymousId forKey:SensorsAnalyticsAnonymousId];
+        [[NSUserDefaults standardUserDefaults] setObject:_anonymousId forKey:TinecoAnalyticsAnonymousId];
         // 返回保存的设备 ID
         return _anonymousId;
     }
@@ -264,10 +264,10 @@ static TLAnalyticsSDK *sharedInstance = nil;
 
 - (void)saveAnonymousId:(NSString *)anonymousId {
     // 保存设备 ID
-    [[NSUserDefaults standardUserDefaults] setObject:anonymousId forKey:SensorsAnalyticsAnonymousId];
+    [[NSUserDefaults standardUserDefaults] setObject:anonymousId forKey:TinecoAnalyticsAnonymousId];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
-    TLAnalyticsKeychainItem *item = [[TLAnalyticsKeychainItem alloc] initWithService:SensorsAnalyticsKeychainService key:SensorsAnalyticsAnonymousId];
+    TLAnalyticsKeychainItem *item = [[TLAnalyticsKeychainItem alloc] initWithService:TinecoAnalyticsKeychainService key:TinecoAnalyticsAnonymousId];
     if (anonymousId) {
         // 当设备 ID（匿名 ID）不为空时，将其保存在 Keychain 中
         [item update:anonymousId];
@@ -341,14 +341,14 @@ static TLAnalyticsSDK *sharedInstance = nil;
 
     dispatch_async(self.serialQueue, ^{
         // 发送数据
-        [self flushByEventCount:SensorsAnalyticsDefalutFlushEventCount background:YES];
+        [self flushByEventCount:TinecoAnalyticsDefalutFlushEventCount background:YES];
         // 结束后台任务
         endBackgroundTask();
     });
 
     // 暂停所有事件时长统计
     [self.trackTimer enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSDictionary * _Nonnull obj, BOOL * _Nonnull stop) {
-        if (![obj[SensorsAnalyticsEventIsPauseKey] boolValue]) {
+        if (![obj[TinecoAnalyticsEventIsPauseKey] boolValue]) {
             [self.enterBackgroundTrackTimerEvents addObject:key];
             [self trackTimerPause:key];
         }
@@ -400,7 +400,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
 - (void)login:(NSString *)loginId {
     self.loginId = loginId;
     // 在本地保存登录 ID
-    [[NSUserDefaults standardUserDefaults] setObject:loginId forKey:SensorsAnalyticsLoginId];
+    [[NSUserDefaults standardUserDefaults] setObject:loginId forKey:TinecoAnalyticsLoginId];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -409,7 +409,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
 - (void)flush {
     dispatch_async(self.serialQueue, ^{
         // 默认一次向服务端发送 50 条数据
-        [self flushByEventCount:SensorsAnalyticsDefalutFlushEventCount background:NO];
+        [self flushByEventCount:TinecoAnalyticsDefalutFlushEventCount background:NO];
     });
 }
 
@@ -559,7 +559,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
 
 - (void)trackTimerStart:(NSString *)event {
     // 记录事件开始时间 -> 记录事件开始时系统启动时间
-    self.trackTimer[event] = @{SensorsAnalyticsEventBeginKey: @([TLAnalyticsSDK systemUpTime])};
+    self.trackTimer[event] = @{TinecoAnalyticsEventBeginKey: @([TLAnalyticsSDK systemUpTime])};
 }
 
 - (void)trackTimerPause:(NSString *)event {
@@ -569,18 +569,18 @@ static TLAnalyticsSDK *sharedInstance = nil;
         return;
     }
     // 如果该事件时长统计已经暂停，直接返回，不做任何处理
-    if ([eventTimer[SensorsAnalyticsEventIsPauseKey] boolValue]) {
+    if ([eventTimer[TinecoAnalyticsEventIsPauseKey] boolValue]) {
         return;
     }
     // 获取当前系统启动时间
     double systemUpTime = [TLAnalyticsSDK systemUpTime];
     // 获取开始时间
-    double beginTime = [eventTimer[SensorsAnalyticsEventBeginKey] doubleValue];
+    double beginTime = [eventTimer[TinecoAnalyticsEventBeginKey] doubleValue];
     // 计算暂停前统计的时长
-    double duration = [eventTimer[SensorsAnalyticsEventDurationKey] doubleValue] + systemUpTime - beginTime;
-    eventTimer[SensorsAnalyticsEventDurationKey] = @(duration);
+    double duration = [eventTimer[TinecoAnalyticsEventDurationKey] doubleValue] + systemUpTime - beginTime;
+    eventTimer[TinecoAnalyticsEventDurationKey] = @(duration);
     // 事件处于暂停状态
-    eventTimer[SensorsAnalyticsEventIsPauseKey] = @(YES);
+    eventTimer[TinecoAnalyticsEventIsPauseKey] = @(YES);
     self.trackTimer[event] = eventTimer;
 }
 
@@ -591,15 +591,15 @@ static TLAnalyticsSDK *sharedInstance = nil;
         return;
     }
     // 如果该事件时长统计没有暂停，直接返回，不做任何处理
-    if (![eventTimer[SensorsAnalyticsEventIsPauseKey] boolValue]) {
+    if (![eventTimer[TinecoAnalyticsEventIsPauseKey] boolValue]) {
         return;
     }
     // 获取当前系统启动时间
     double systemUpTime = [TLAnalyticsSDK systemUpTime];
     // 重置事件开始时间
-    eventTimer[SensorsAnalyticsEventBeginKey] = @(systemUpTime);
+    eventTimer[TinecoAnalyticsEventBeginKey] = @(systemUpTime);
     // 将事件暂停标记设置为 NO
-    eventTimer[SensorsAnalyticsEventIsPauseKey] = @(NO);
+    eventTimer[TinecoAnalyticsEventIsPauseKey] = @(NO);
     self.trackTimer[event] = eventTimer;
 }
 
@@ -614,18 +614,18 @@ static TLAnalyticsSDK *sharedInstance = nil;
     [self.trackTimer removeObjectForKey:event];
 
     // 如果该事件时长统计没有暂停，直接返回，不做任何处理
-    if ([eventTimer[SensorsAnalyticsEventIsPauseKey] boolValue]) {
+    if ([eventTimer[TinecoAnalyticsEventIsPauseKey] boolValue]) {
         // 获取事件时长
-        double eventDuration = [eventTimer[SensorsAnalyticsEventDurationKey] doubleValue];
+        double eventDuration = [eventTimer[TinecoAnalyticsEventDurationKey] doubleValue];
         // 设置事件时长属性
         p[@"event_duration"] = @([[NSString stringWithFormat:@"%.3lf", eventDuration] floatValue]);
     } else {
         // 事件开始时间
-        double beginTime = [(NSNumber *)eventTimer[SensorsAnalyticsEventBeginKey] doubleValue];
+        double beginTime = [(NSNumber *)eventTimer[TinecoAnalyticsEventBeginKey] doubleValue];
         // 获取当前时间 -> 获取当前系统启动时间
         double currentTime = [TLAnalyticsSDK systemUpTime];
         // 计算事件时长
-        double eventDuration = currentTime - beginTime + [eventTimer[SensorsAnalyticsEventDurationKey] doubleValue];
+        double eventDuration = currentTime - beginTime + [eventTimer[TinecoAnalyticsEventDurationKey] doubleValue];
         // 设置事件时长属性
         p[@"event_duration"] = @([[NSString stringWithFormat:@"%.3lf", eventDuration] floatValue]);
     }
@@ -641,7 +641,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
 
 - (void)loadUserAgent:(void(^)(NSString *))completion {
     dispatch_async(dispatch_get_main_queue(), ^{
-#ifdef SENSORS_ANALYTICS_UIWEBVIEW
+#ifdef Tineco_ANALYTICS_UIWEBVIEW
         // 创建一个空的 webView
         UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
         // 取出 webView 的 UserAgent
@@ -713,8 +713,8 @@ static TLAnalyticsSDK *sharedInstance = nil;
 - (BOOL)shouldTrackWithWebView:(id)webView request:(NSURLRequest *)request {
     // 获取请求的完整路径
     NSString *urlString = request.URL.absoluteString;
-    // 查找在完整路径中是否包含：sensorsanalytics://trackEvent，如果不包含，那就是普通请求不做处理返回 NO
-    if ([urlString rangeOfString:SensorsAnalyticsJavaScriptTrackEventScheme].location == NSNotFound) {
+    // 查找在完整路径中是否包含：Tinecoanalytics://trackEvent，如果不包含，那就是普通请求不做处理返回 NO
+    if ([urlString rangeOfString:TinecoAnalyticsJavaScriptTrackEventScheme].location == NSNotFound) {
         return NO;
     }
 

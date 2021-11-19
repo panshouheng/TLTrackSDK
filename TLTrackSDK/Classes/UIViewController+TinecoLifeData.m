@@ -16,9 +16,10 @@ static NSString * const kTinecoLifeDataBlackListFileName = @"TinecoLifeData_blac
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // 获取黑名单文件路径
-        NSString *path = [[NSBundle bundleForClass:TLAnalyticsSDK.class] pathForResource:kTinecoLifeDataBlackListFileName ofType:@"plist"];
+//        NSString *path = [[NSBundle bundleForClass:TLAnalyticsSDK.class] pathForResource:kTinecoLifeDataBlackListFileName ofType:@"plist"];
         // 读取文件中黑名单类名的数组
-        NSArray *classNames = [NSArray arrayWithContentsOfFile:path];
+//        NSArray *classNames = [NSArray arrayWithContentsOfFile:path];
+        NSArray *classNames = @[@"UIInputWindowController",@"UINavigationController"];
         NSMutableSet *set = [NSMutableSet setWithCapacity:classNames.count];
         for (NSString *className in classNames) {
             [set addObject:NSClassFromString(className)];

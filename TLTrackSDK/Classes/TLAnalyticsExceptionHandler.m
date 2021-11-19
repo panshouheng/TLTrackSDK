@@ -109,7 +109,7 @@ static void TinecoLifeData_signal_exception_handler(int sig, struct __siginfo *i
         dispatch_sync(mainQueue, trackAppEndBlock);
     }
 
-    // 获取 SensorsAnalyticsSDK 中的 serialQueue
+    // 获取 TLAnalyticsSDK 中的 serialQueue
     dispatch_queue_t serialQueue = [[TLAnalyticsSDK sharedInstance] valueForKeyPath:@"serialQueue"];
     // 阻塞当前线程，让 serialQueue 执行完成
     dispatch_sync(serialQueue, ^{});

@@ -1,7 +1,7 @@
 
 #import "TLAnalyticsFileStore.h"
 
-static NSString * const SensorsAnalyticsDefaultFileName = @"SensorsAnalyticsData.plist";
+static NSString * const TinecoAnalyticsDefaultFileName = @"TinecoAnalyticsData.plist";
 
 @interface TLAnalyticsFileStore ()
 
@@ -18,7 +18,7 @@ static NSString * const SensorsAnalyticsDefaultFileName = @"SensorsAnalyticsData
     self = [super init];
     if (self) {
         // 初始化默认事件数据存储地址
-         _filePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:SensorsAnalyticsDefaultFileName];
+         _filePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:TinecoAnalyticsDefaultFileName];
 
         // 初始化队列的唯一标识
         NSString *label = [NSString stringWithFormat:@"cn.TinecoLifeData.serialQueue.%p", self];

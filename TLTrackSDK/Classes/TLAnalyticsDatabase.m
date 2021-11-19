@@ -2,7 +2,7 @@
 
 #import "TLAnalyticsDatabase.h"
 
-static NSString * const SensorsAnalyticsDefaultDatabaseName = @"SensorsAnalyticsDatabase.sqlite";
+static NSString * const TinecoAnalyticsDefaultDatabaseName = @"TinecoAnalyticsDatabase.sqlite";
 
 @interface TLAnalyticsDatabase ()
 
@@ -23,7 +23,7 @@ static NSString * const SensorsAnalyticsDefaultDatabaseName = @"SensorsAnalytics
 - (instancetype)initWithFilePath:(NSString *)filePath {
     self = [super init];
     if (self) {
-        _filePath = filePath ?: [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:SensorsAnalyticsDefaultDatabaseName];
+        _filePath = filePath ?: [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:TinecoAnalyticsDefaultDatabaseName];
 
         // 初始化队列的唯一标识
         NSString *label = [NSString stringWithFormat:@"cn.TinecoLifeData.serialQueue.%p", self];

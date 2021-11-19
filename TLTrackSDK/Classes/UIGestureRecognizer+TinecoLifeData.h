@@ -5,12 +5,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - UITapGestureRecognizer
-@interface UITapGestureRecognizer (SensorsData)
+@interface UITapGestureRecognizer (TinecoLifeData)
 
 @end
 
 #pragma mark - UILongPressGestureRecognizer
-@interface UILongPressGestureRecognizer (SensorsData)
+@interface UILongPressGestureRecognizer (TinecoLifeData)
 
 @end
 

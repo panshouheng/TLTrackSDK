@@ -4,9 +4,9 @@
 #import <objc/runtime.h>
 
 /// Delegate 的子类前缀
-static NSString *const kSensorsDelegatePrefix = @"cn.TinecoLifeData.";
+static NSString *const kTinecoDelegatePrefix = @"cn.TinecoLifeData.";
 // tableView:didSelectRowAtIndexPath: 方法指针类型
-typedef void (*SensorsDidSelectImplementation)(id, SEL, UITableView *, NSIndexPath *);
+typedef void (*TinecoDidSelectImplementation)(id, SEL, UITableView *, NSIndexPath *);
 
 @implementation TLAnalyticsDynamicDelegate
 
@@ -21,17 +21,17 @@ typedef void (*SensorsDidSelectImplementation)(id, SEL, UITableView *, NSIndexPa
     Class originalClass = object_getClass(delegate);
     NSString *originalClassName = NSStringFromClass(originalClass);
     // 当这个 delegate 对象已经是一个动态创建的类时，无需重复设置，直接返回
-    if ([originalClassName hasPrefix:kSensorsDelegatePrefix]) {
+    if ([originalClassName hasPrefix:kTinecoDelegatePrefix]) {
         return;
     }
 
-    NSString *subclassName = [kSensorsDelegatePrefix stringByAppendingString:originalClassName];
+    NSString *subclassName = [kTinecoDelegatePrefix stringByAppendingString:originalClassName];
     Class subclass = NSClassFromString(subclassName);
     if (!subclass) {
         // 注册一个新的子类，其父类为 originalClass
         subclass = objc_allocateClassPair(originalClass, subclassName.UTF8String, 0);
 
-        // 获取 SensorsAnalyticsDynamicDelegate 中的 tableView:didSelectRowAtIndexPath: 方法指针
+        // 获取 TinecoAnalyticsDynamicDelegate 中的 tableView:didSelectRowAtIndexPath: 方法指针
         Method method = class_getInstanceMethod(self, originalSelector);
         // 获取方法的实现
         IMP methodIMP = method_getImplementation(method);
@@ -42,7 +42,7 @@ typedef void (*SensorsDidSelectImplementation)(id, SEL, UITableView *, NSIndexPa
             NSLog(@"Cannot copy method to destination selector %@ as it already exists", NSStringFromSelector(originalSelector));
         }
 
-        // 获取 SensorsAnalyticsDynamicDelegate 中的 TinecoLifeData_class 方法指针
+        // 获取 TinecoAnalyticsDynamicDelegate 中的 TinecoLifeData_class 方法指针
         Method classMethod = class_getInstanceMethod(self, @selector(TinecoLifeData_class));
         // 获取方法的实现
         IMP classIMP = method_getImplementation(classMethod);
@@ -74,7 +74,7 @@ typedef void (*SensorsDidSelectImplementation)(id, SEL, UITableView *, NSIndexPa
     // 获取对象的类
     Class class = object_getClass(self);
     // 将类名前缀替换成空字符串，获取原始类名
-    NSString *className = [NSStringFromClass(class) stringByReplacingOccurrencesOfString:kSensorsDelegatePrefix withString:@""];
+    NSString *className = [NSStringFromClass(class) stringByReplacingOccurrencesOfString:kTinecoDelegatePrefix withString:@""];
     // 通过字符串获取类，并返回
     return objc_getClass([className UTF8String]);
 }
@@ -82,7 +82,7 @@ typedef void (*SensorsDidSelectImplementation)(id, SEL, UITableView *, NSIndexPa
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 第一步：获取原始类
     Class cla = object_getClass(tableView.delegate);
-    NSString *className = [NSStringFromClass(cla) stringByReplacingOccurrencesOfString:kSensorsDelegatePrefix withString:@""];
+    NSString *className = [NSStringFromClass(cla) stringByReplacingOccurrencesOfString:kTinecoDelegatePrefix withString:@""];
     Class originalClass = objc_getClass([className UTF8String]);
 
     // 第二步：调用开发者自己实现的方法
@@ -90,7 +90,7 @@ typedef void (*SensorsDidSelectImplementation)(id, SEL, UITableView *, NSIndexPa
     Method originalMethod = class_getInstanceMethod(originalClass, originalSelector);
     IMP originalImplementation = method_getImplementation(originalMethod);
     if (originalImplementation) {
-        ((SensorsDidSelectImplementation)originalImplementation)(tableView.delegate, originalSelector, tableView, indexPath);
+        ((TinecoDidSelectImplementation)originalImplementation)(tableView.delegate, originalSelector, tableView, indexPath);
     }
 
     // 第三步：埋点
