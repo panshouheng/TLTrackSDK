@@ -510,6 +510,9 @@ static TLAnalyticsSDK *sharedInstance = nil;
     [eventProperties addEntriesFromDictionary:properties];
     // 触发 AppClick 事件
     [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:tableView properties:eventProperties];
+    if (self.delegate) {
+        [self.delegate commonTrackAppClickWithTableView:tableView didSelectRowAtIndexPath:indexPath];
+    }
 }
 
 - (void)trackAppClickWithCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath properties:(nullable NSDictionary<NSString *, id> *)properties {
@@ -526,6 +529,9 @@ static TLAnalyticsSDK *sharedInstance = nil;
     [eventProperties addEntriesFromDictionary:properties];
     // 触发 AppClick 事件
     [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:collectionView properties:eventProperties];
+    if (self.delegate) {
+        [self.delegate commonTrackAppClickWithCollectionView:collectionView didSelectItemAtIndexPath:indexPath];
+    }
 }
 
 - (void)trackFromAppExtensionForApplicationGroupIdentifier:(NSString *)identifier {

@@ -19,31 +19,10 @@
 }
 
 - (void)TinecoLifeData_setDelegate:(id<UITableViewDelegate>)delegate {
-    // 方案一：方法交换
-//    // 调用原始的设置代理的方法
-//    [self TinecoLifeData_setDelegate:delegate];
-//    // 交换 delegate 中的 tableView:didSelectRowAtIndexPath: 方法
-//    [self TinecoLifeData_swizzleDidSelectRowAtIndexPathMethodWithDelegate:delegate];
-
-    // 方案二：动态子类
 //    // 调用原始的设置代理的方法
     [self TinecoLifeData_setDelegate:delegate];
-    // 设置 delegate 的动态子类
-    [TLAnalyticsDynamicDelegate proxyWithTableViewDelegate:delegate];
-
-    // 方案三：NSProxy 消息转发
-    // 销毁保存的委托对象
-//    self.TinecoLifeData_delegateProxy = nil;
-//    if (delegate) {
-//        TLAnalyticsDelegateProxy *proxy = [TLAnalyticsDelegateProxy proxyWithTableViewDelegate:delegate];
-//        // 保存委托对象
-//        self.TinecoLifeData_delegateProxy = proxy;
-//        // 调用原始方法，将代理设置为委托对象
-//        [self TinecoLifeData_setDelegate:proxy];
-//    } else {
-//        // 调用原始方法，将代理设置为 nil
-//        [self TinecoLifeData_setDelegate:nil];
-//    }
+//    // 交换 delegate 中的 tableView:didSelectRowAtIndexPath: 方法
+    [self TinecoLifeData_swizzleDidSelectRowAtIndexPathMethodWithDelegate:delegate];
 }
 
 static void TinecoLifeData_tableViewDidSelectRow(id object, SEL selector, UITableView *tableView, NSIndexPath *indexPath) {

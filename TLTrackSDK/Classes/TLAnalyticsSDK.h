@@ -4,6 +4,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol TLAnalyticsSDKDelegate <NSObject>
+
+- (void)commonTrackAppClickWithCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
+- (void)commonTrackAppClickWithTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface TLAnalyticsSDK : NSObject
 
 /// 当本地存储的事件达到这个数量时，上传数据（默认为 100）
@@ -14,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *loginId;
 
 @property (nonatomic, copy, nullable) NSString *anonymousId;
+
+@property(nonatomic, weak)id<TLAnalyticsSDKDelegate>delegate;
 
 - (instancetype)init NS_UNAVAILABLE;
 
@@ -43,6 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
  向服务器发送本地所有数据
  */
 - (void)flush;
+
 
 @end
 
