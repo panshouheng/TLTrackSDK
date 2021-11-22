@@ -14,7 +14,7 @@
 #import <WebKit/WebKit.h>
 #endif
 
-static NSString * const TinecoAnalyticsVersion = @"1.0.0";
+static NSString * const TinecoAnalyticsVersion = @"1.1.0";
 
 static NSString * const TinecoAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
 static NSString * const TinecoAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
@@ -98,6 +98,9 @@ static TLAnalyticsSDK *sharedInstance = nil;
         _automaticProperties = [self collectAutomaticProperties];
         // 设置是否被动启动标记
         _launchedPassively = UIApplication.sharedApplication.backgroundTimeRemaining != UIApplicationBackgroundFetchIntervalNever;
+        
+        _showLogs = NO;
+        _uploadDebugLogs = NO;
 
         NSString *queueLabel = [NSString stringWithFormat:@"cn.TinecoLifeData.%@.%p", self.class, self];
         _serialQueue = dispatch_queue_create([queueLabel UTF8String], DISPATCH_QUEUE_SERIAL);
@@ -120,20 +123,24 @@ static TLAnalyticsSDK *sharedInstance = nil;
     }
     return self;
 }
-
+- (void)setUploadDebugLogs:(BOOL)uploadDebugLogs {
+    _uploadDebugLogs = uploadDebugLogs;
+}
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)printEvent:(NSDictionary *)event {
 #if DEBUG
-    NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:event options:NSJSONWritingPrettyPrinted error:&error];
-    if (error) {
-        return NSLog(@"JSON Serialized Error: %@", error);
+    if (TLAnalyticsSDK.sharedInstance.showLogs) {
+        NSError *error = nil;
+        NSData *data = [NSJSONSerialization dataWithJSONObject:event options:NSJSONWritingPrettyPrinted error:&error];
+        if (error) {
+            return NSLog(@"JSON Serialized Error: %@", error);
+        }
+        NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"[Event]: %@", json);
     }
-    NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"[Event]: %@", json);
 #endif
 }
 
@@ -144,9 +151,18 @@ static TLAnalyticsSDK *sharedInstance = nil;
     if (self.flushTimer) {
         return;
     }
+    
+#ifdef DEBUG
+    if (self.uploadDebugLogs) {
+        NSTimeInterval interval = self.flushInterval < 5 ? 5 : self.flushInterval;
+        self.flushTimer = [NSTimer timerWithTimeInterval:interval target:self selector:@selector(flush) userInfo:nil repeats:YES];
+        [NSRunLoop.currentRunLoop addTimer:self.flushTimer forMode:NSRunLoopCommonModes];
+    }
+#else
     NSTimeInterval interval = self.flushInterval < 5 ? 5 : self.flushInterval;
     self.flushTimer = [NSTimer timerWithTimeInterval:interval target:self selector:@selector(flush) userInfo:nil repeats:YES];
     [NSRunLoop.currentRunLoop addTimer:self.flushTimer forMode:NSRunLoopCommonModes];
+#endif
 }
 
 // 停止上传数据的定时器
@@ -308,8 +324,6 @@ static TLAnalyticsSDK *sharedInstance = nil;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-    NSLog(@"Application did finish launching.");
-
         // 当应用程序在后台运行时，触发被动启动事件
     if (self.isLaunchedPassively) {
         // 触发被动启动事件
@@ -318,8 +332,6 @@ static TLAnalyticsSDK *sharedInstance = nil;
 }
 
 - (void)applicationDidEnterBackground:(NSNotification *)notification {
-    NSLog(@"Application did enter background.");
-
     self.applicationWillResignActive = NO;
 
     // 触发 AppEnd 事件
@@ -359,8 +371,6 @@ static TLAnalyticsSDK *sharedInstance = nil;
 }
 
 - (void)applicationDidBecomeActive:(NSNotification *)notification {
-    NSLog(@"Application did become active.");
-
     if (self.applicationWillResignActive) {
         self.applicationWillResignActive = NO;
         return;
@@ -392,7 +402,6 @@ static TLAnalyticsSDK *sharedInstance = nil;
 }
 
 - (void)applicationWillResignActive:(NSNotification *)notification {
-    NSLog(@"Application will resign active.");
     self.applicationWillResignActive = YES;
 }
 
@@ -407,10 +416,21 @@ static TLAnalyticsSDK *sharedInstance = nil;
 #pragma mark - Flush
 
 - (void)flush {
+    
+#ifdef DEBUG
+    if (TLAnalyticsSDK.sharedInstance.uploadDebugLogs) {
+        dispatch_async(self.serialQueue, ^{
+            // 默认一次向服务端发送 50 条数据
+            [self flushByEventCount:TinecoAnalyticsDefalutFlushEventCount background:NO];
+        });
+    }
+#else
     dispatch_async(self.serialQueue, ^{
         // 默认一次向服务端发送 50 条数据
         [self flushByEventCount:TinecoAnalyticsDefalutFlushEventCount background:NO];
     });
+#endif
+    
 }
 
 - (void)flushByEventCount:(NSUInteger)count background:(BOOL)background {

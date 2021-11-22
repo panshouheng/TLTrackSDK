@@ -128,7 +128,7 @@ static sqlite3_stmt *selectStmt = NULL;
             // 将查询到的事件数据转换成 json 字符串
             NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 #ifdef DEBUG
-            NSLog(@"%@", jsonString);
+//            NSLog(@"%@", jsonString);
 #endif
             // 将 json 字符串添加到数组中
             [events addObject:jsonString];

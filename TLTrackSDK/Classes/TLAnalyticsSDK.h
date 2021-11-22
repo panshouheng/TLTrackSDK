@@ -24,6 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, weak)id<TLAnalyticsSDKDelegate>delegate;
 
+/// 是否在打印区显示log数据
+@property(nonatomic, assign)BOOL showLogs;
+/// debug 模式下 是否上传数据
+@property(nonatomic, assign)BOOL uploadDebugLogs;
+
 - (instancetype)init NS_UNAVAILABLE;
 
 /**

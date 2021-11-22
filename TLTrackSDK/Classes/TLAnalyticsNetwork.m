@@ -76,12 +76,12 @@ typedef void(^SAURLSessionTaskCompletionHandler)(NSData * _Nullable data, NSURLR
         // 当状态码为 2XX 时，表示事件发送成功
         if (statusCode >= 200 && statusCode < 300) {
             // 打印上传成功的数据
-            NSLog(@"Flush events success: %@", jsonString);
+//            NSLog(@"Flush events success: %@", jsonString);
             // 数据上传成功
             flushSuccess = YES;
         } else {
             // 事件发送失败信息
-            NSString *desc = [NSString stringWithFormat:@"Flush events error, statusCode: %d, events: %@", (int)statusCode, jsonString];
+            NSString *desc = [NSString stringWithFormat:@"Flush events error, statusCode: %d", (int)statusCode];
             NSLog(@"%@", desc);
         }
         dispatch_semaphore_signal(flushSemaphore);
