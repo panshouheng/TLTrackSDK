@@ -2,9 +2,7 @@
 
 #import "UITableView+TinecoLifeData.h"
 #import "TLAnalyticsDynamicDelegate.h"
-#import "TLAnalyticsDelegateProxy.h"
 #import "NSObject+TLSwizzler.h"
-#import "UIScrollView+TinecoLifeData.h"
 #import "TLAnalyticsSDK.h"
 #import "UIView+TinecoLifeData.h"
 #import <objc/runtime.h>

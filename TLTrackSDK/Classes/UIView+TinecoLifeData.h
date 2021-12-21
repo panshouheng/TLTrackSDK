@@ -55,5 +55,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIStepper (TinecoLifeData)
 
 @end
+#pragma mark - UIImage
+@interface UIImage (TinecoLifeData)
+
+@property(nonatomic,strong)NSString *tl_imageName;
+
+@end
+
 
 NS_ASSUME_NONNULL_END

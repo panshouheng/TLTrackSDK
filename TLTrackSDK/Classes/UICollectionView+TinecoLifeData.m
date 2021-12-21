@@ -1,7 +1,5 @@
 
 #import "UICollectionView+TinecoLifeData.h"
-#import "TLAnalyticsDelegateProxy.h"
-#import "UIScrollView+TinecoLifeData.h"
 #import "NSObject+TLSwizzler.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
@@ -16,7 +14,6 @@
 
 - (void)TinecoLifeData_setDelegate:(id<UICollectionViewDelegate>)delegate
 {
-//    [self preSwizzleForDelegate:delegate];
     [self TinecoLifeData_setDelegate:delegate];
     [self TinecoLifeData_swizzleDidSelectRowAtIndexPathMethodWithDelegate:delegate];
 }

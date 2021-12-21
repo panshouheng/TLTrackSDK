@@ -8,7 +8,7 @@
 
 #import "TLViewController.h"
 
-@interface TLViewController ()
+@interface TLViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -18,8 +18,35 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setBackgroundImage:[UIImage imageNamed:@"carpet_mode_select"] forState:UIControlStateNormal];
+    button.frame = CGRectMake(100, 100, 100, 100);
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(200, 200, 100, 1000) style:UITableViewStylePlain];
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    [tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"123123"];
+    [self.view addSubview:tableView];
+    
+}
+- (void)buttonClick {
+    
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"123123"];
+    cell.textLabel.text = @"dasdasdasd";
+    return cell;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -1,6 +1,7 @@
 
 #import "UIView+TinecoLifeData.h"
-
+#import "NSObject+TLSwizzler.h"
+#import <objc/runtime.h>
 #pragma mark - UIView
 @implementation UIView (TinecoLifeData)
 
@@ -55,10 +56,23 @@
 #pragma mark - UIButton
 @implementation UIButton (TinecoLifeData)
 
-- (NSString *)TinecoLifeData_elementContent {
-    return self.titleLabel.text ?: super.TinecoLifeData_elementContent;
++ (void)load {
+    [UIButton TinecoLifeData_swizzleMethod:@selector(setImage:forState:) withMethod:@selector(tl_setImage:forState:)];
+    [UIButton TinecoLifeData_swizzleMethod:@selector(setBackgroundImage:forState:) withMethod:@selector(tl_setBackgroundImage:forState:)];
 }
-
+- (NSString *)TinecoLifeData_elementContent {
+    return self.titleLabel.text ?: super.TinecoLifeData_elementContent ?: [self accessibilityIdentifier];
+}
+- (void)tl_setImage:(UIImage *)image forState:(UIControlState)state {
+    [self tl_setImage:image forState:state];
+    [self setAccessibilityIdentifier:[NSString stringWithFormat:@"image>%@",image.tl_imageName]];
+}
+- (void)tl_setBackgroundImage:(UIImage *)image forState:(UIControlState)state {
+    [self tl_setBackgroundImage:image forState:state];
+    if ([self accessibilityIdentifier] == nil) {
+        [self setAccessibilityIdentifier:[NSString stringWithFormat:@"image>%@",image.tl_imageName]];
+    }
+}
 @end
 
 #pragma mark - UISwitch
@@ -93,6 +107,31 @@
 
 - (NSString *)TinecoLifeData_elementContent {
     return [NSString stringWithFormat:@"%g", self.value];
+}
+
+@end
+#pragma mark - UIImage
+static NSString *imageNameKey = @"tl_imageNameKey";
+@implementation UIImage (TinecoLifeData)
+
+-(void)setTl_imageName:(NSString *)tl_imageName
+{
+    objc_setAssociatedObject(self, &imageNameKey, tl_imageName, OBJC_ASSOCIATION_COPY);
+}
+-(NSString *)tl_imageName
+{
+    return objc_getAssociatedObject(self, &imageNameKey);
+}
+
++ (void)load {
+    Method imageNameMethod = class_getClassMethod([self class], @selector(imageNamed:));
+    Method tl_imageNamedMethod = class_getClassMethod([UIImage class], @selector(tl_imageNamed:));
+    method_exchangeImplementations(imageNameMethod, tl_imageNamedMethod);
+}
++ (UIImage *)tl_imageNamed:(NSString *)name {
+    UIImage *image = [self tl_imageNamed:name];
+    image.tl_imageName = name;
+    return  image;
 }
 
 @end

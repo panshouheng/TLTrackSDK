@@ -12,7 +12,6 @@
 
 #import "NSObject+TLSwizzler.h"
 #import "TLAnalyticsDatabase.h"
-#import "TLAnalyticsDelegateProxy.h"
 #import "TLAnalyticsDynamicDelegate.h"
 #import "TLAnalyticsExceptionHandler.h"
 #import "TLAnalyticsExtensionDataManager.h"
@@ -25,7 +24,6 @@
 #import "UICollectionView+TinecoLifeData.h"
 #import "UIControl+TinecoLifeData.h"
 #import "UIGestureRecognizer+TinecoLifeData.h"
-#import "UIScrollView+TinecoLifeData.h"
 #import "UITableView+TinecoLifeData.h"
 #import "UIView+TinecoLifeData.h"
 #import "UIViewController+TinecoLifeData.h"

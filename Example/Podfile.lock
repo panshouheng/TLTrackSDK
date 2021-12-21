@@ -1,5 +1,5 @@
 PODS:
-  - TLTrackSDK (1.1.0)
+  - TLTrackSDK (1.2.0)
 
 DEPENDENCIES:
   - TLTrackSDK (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TLTrackSDK: d28430dcd8a260635c66bd2eda9390750ac198c1
+  TLTrackSDK: 37f5d2af3b229f86e1f5e6dbc41239bfea7cdb46
 
 PODFILE CHECKSUM: f2161b4f48c9547d26ebdc72a34de67f0b109410
 

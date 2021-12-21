@@ -8,7 +8,6 @@
 + (void)load {
     [UIControl TinecoLifeData_swizzleMethod:@selector(didMoveToSuperview) withMethod:@selector(TinecoLifeData_didMoveToSuperview)];
 }
-
 - (void)TinecoLifeData_didMoveToSuperview {
     // 调用交换前的原始方法实现
     [self TinecoLifeData_didMoveToSuperview];
