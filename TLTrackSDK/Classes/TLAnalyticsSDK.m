@@ -9,12 +9,12 @@
 #import "TLAnalyticsKeychainItem.h"
 #include <sys/sysctl.h>
 #include <objc/runtime.h>
-
+#import "TLDeviceType.h"
 #ifndef Tineco_ANALYTICS_UIWEBVIEW
 #import <WebKit/WebKit.h>
 #endif
 
-static NSString * const TinecoAnalyticsVersion = @"1.1.0";
+static NSString * const TinecoAnalyticsVersion = @"1.2.1";
 
 static NSString * const TinecoAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
 static NSString * const TinecoAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
@@ -62,6 +62,8 @@ static NSString * const TinecoAnalyticsJavaScriptTrackEventScheme = @"Tinecoanal
 @property (nonatomic, strong) TLAnalyticsNetwork *network;
 /// 定时上传事件的 Timer
 @property (nonatomic, strong) NSTimer *flushTimer;
+
+@property (nonatomic, strong) NSString *phone_type;
 
 #ifndef Tineco_ANALYTICS_UIWEBVIEW
 // 由于 WKWebView 获取 UserAgent 是异步过程，为了在获取过程中创建的 WKWebView 对象不被销毁，需要保存创建的临时对象
@@ -192,6 +194,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     properties[@"lib_version"] = TinecoAnalyticsVersion;
     // 设置本机型号
     properties[@"model"] = [self deviceModel];
+    properties[@"phone_type"] = TLDeviceType.deviceName;
     // 设置系统版本
     properties[@"os_version"] = UIDevice.currentDevice.systemVersion;
     // 设置应用版本
@@ -509,7 +512,9 @@ static TLAnalyticsSDK *sharedInstance = nil;
     UIViewController *vc = view.TinecoLifeData_viewController;
     // 设置页面相关属性
     eventProperties[@"screen_name"] = NSStringFromClass(vc.class);
-
+    if (vc.navigationController) {
+        eventProperties[@"screen_title"] = vc.navigationController.title;
+    }
     // 添加自定义属性
     [eventProperties addEntriesFromDictionary:properties];
     // 触发 AppClick 事件
@@ -711,7 +716,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
         return;
     }
 
-    NSMutableDictionary *properties = [event[@"properties"] mutableCopy];
+    NSMutableDictionary *properties = [event[@"properties"] mutableCopy] ? [event[@"properties"] mutableCopy] : NSMutableDictionary.new;
     // 预置属性以 SDK 中采集的为主
     [properties addEntriesFromDictionary:self.automaticProperties];
     event[@"properties"] = properties;

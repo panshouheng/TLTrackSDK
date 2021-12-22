@@ -7,7 +7,7 @@
 //
 
 #import "TLViewController.h"
-
+#import "TLSecondViewController.h"
 @interface TLViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = UIColor.whiteColor;
+    self.title = @"首页";
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setBackgroundImage:[UIImage imageNamed:@"carpet_mode_select"] forState:UIControlStateNormal];
@@ -33,7 +35,8 @@
     
 }
 - (void)buttonClick {
-    
+    TLSecondViewController *second = [[TLSecondViewController alloc] init];
+    [self.navigationController pushViewController:second animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

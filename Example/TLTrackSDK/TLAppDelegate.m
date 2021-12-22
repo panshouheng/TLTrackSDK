@@ -9,6 +9,7 @@
 #import "TLAppDelegate.h"
 #import <TLTrackSDK.h>
 #import <AdSupport/AdSupport.h>
+#import "TLViewController.h"
 @implementation TLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -16,9 +17,13 @@
     // Override point for customization after application launch.
     [TLAnalyticsSDK startWithServerURL:@"https://qas-gl-cn-api.tineco.com/v1/private/CN/ZH_CN/d6fdc8acc4cb1949aa38c7356db535fa/global_e/1.1.29/c_huawei/1/common/track/full?authAppkey=1538105560006&authSign=8a1d43c584bddbd8cd68f942d5fb9970&authTimeZone=Asia/Shanghai&authTimespan=1622531049056&userId=20201112162015_eaa1cfa31d108cec1109b2ed9e16419a&accessToken=35b1720ed5e9028ae0e53ffe16bee8cf"];
     // 在系统默认的 UserAgent 值中添加默认标记（" /sa-sdk-ios "）
-    [[TLAnalyticsSDK sharedInstance] addWebViewUserAgent:nil];
+//    [[TLAnalyticsSDK sharedInstance] addWebViewUserAgent:nil];
     [TLAnalyticsSDK sharedInstance].showLogs = YES;
     [TLAnalyticsSDK sharedInstance].uploadDebugLogs = NO;
+    
+    
+    TLViewController *vc = [[TLViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     return YES;
 }
 

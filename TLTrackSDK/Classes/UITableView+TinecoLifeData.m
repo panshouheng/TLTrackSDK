@@ -1,7 +1,6 @@
 
 
 #import "UITableView+TinecoLifeData.h"
-#import "TLAnalyticsDynamicDelegate.h"
 #import "NSObject+TLSwizzler.h"
 #import "TLAnalyticsSDK.h"
 #import "UIView+TinecoLifeData.h"

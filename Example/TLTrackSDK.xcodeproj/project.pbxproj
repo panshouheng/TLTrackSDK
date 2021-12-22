@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5191702A2772B4B800468499 /* TLSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519170292772B4B800468499 /* TLSecondViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		0798AFE8F873BE8E4A9BB92E /* Pods-TLTrackSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLTrackSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TLTrackSDK_Tests/Pods-TLTrackSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0FB5A870E6D6A662E6C1A886 /* Pods-TLTrackSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLTrackSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-TLTrackSDK_Example/Pods-TLTrackSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		519170282772B4B800468499 /* TLSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLSecondViewController.h; sourceTree = "<group>"; };
+		519170292772B4B800468499 /* TLSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLSecondViewController.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* TLTrackSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLTrackSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,6 +151,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* TLViewController.h */,
 				6003F5A6195388D20070C39A /* TLViewController.m */,
+				519170282772B4B800468499 /* TLSecondViewController.h */,
+				519170292772B4B800468499 /* TLSecondViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -369,6 +374,7 @@
 			files = (
 				6003F59E195388D20070C39A /* TLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* TLViewController.m in Sources */,
+				5191702A2772B4B800468499 /* TLSecondViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

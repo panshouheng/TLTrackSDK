@@ -2,7 +2,7 @@
 #import "UIViewController+TinecoLifeData.h"
 #import "TLAnalyticsSDK.h"
 #import "NSObject+TLSwizzler.h"
-
+#import <WebKit/WebKit.h>
 static NSString * const kTinecoLifeDataBlackListFileName = @"TinecoLifeData_black_list";
 
 @implementation UIViewController (TinecoLifeData)
@@ -41,10 +41,24 @@ static NSString * const kTinecoLifeDataBlackListFileName = @"TinecoLifeData_blac
 
     if ([self shouldTrackAppViewScreen]) {
         // 触发 $AppViewScreen
-        [[TLAnalyticsSDK sharedInstance] track:@"AppViewScreen" properties:@{@"screen_name": NSStringFromClass([self class])}];
+        NSMutableDictionary *params = @{@"screen_name": NSStringFromClass([self class]),@"screen_title":self.navigationController ? self.navigationController.title:@""}.mutableCopy;
+        NSString *urlString = [self webH5urlString];
+        if (urlString.length) {
+            params[@"url"] = urlString;
+        }
+        [[TLAnalyticsSDK sharedInstance] track:@"AppViewScreen" properties:params];
     }
 }
-
+- (NSString *)webH5urlString {
+    NSString *returnString = @"";
+    for (int i = 0; i < self.view.subviews.count; i++) {
+        if ([self.view.subviews[i] isKindOfClass:WKWebView.class]) {
+            WKWebView *webView = (WKWebView *)self.view.subviews[i];
+            returnString = webView.URL.absoluteString;
+        }
+    }
+    return returnString;
+}
 - (NSString *)contentFromView:(UIView *)rootView {
     if (rootView.isHidden) {
         return nil;
