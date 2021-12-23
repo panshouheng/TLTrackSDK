@@ -33,10 +33,10 @@
     // 获取手势识别器的控件
     UIView *view = sender.view;
     // 暂定只采集 UILabel 和 UIImageView
-    BOOL isTrackClass = [view isKindOfClass:UILabel.class] || [view isKindOfClass:UIImageView.class];
-    if (!isTrackClass) {
-        return;
-    }
+//    BOOL isTrackClass = [view isKindOfClass:UILabel.class] || [view isKindOfClass:UIImageView.class];
+//    if (!isTrackClass) {
+//        return;
+//    }
 
     // $AppClick 事件的属性，这里只需要设置 $element_type，其他的事件属性在 trackAppClickWithView:properties: 中可自动获取
     NSDictionary *properties = @{@"element_type": NSStringFromClass(self.class)};
@@ -79,10 +79,10 @@
     // 获取手势识别器的控件
     UIView *view = sender.view;
     // 暂定只采集 UILabel 和 UIImageView
-    BOOL isTrackClass = [view isKindOfClass:UILabel.class] || [view isKindOfClass:UIImageView.class];
-    if (!isTrackClass) {
-        return;
-    }
+//    BOOL isTrackClass = [view isKindOfClass:UILabel.class] || [view isKindOfClass:UIImageView.class];
+//    if (!isTrackClass) {
+//        return;
+//    }
 
     // $AppClick 事件的属性，这里只需要设置 $element_type，其他的事件属性在 trackAppClickWithView:properties: 中可自动获取
     NSDictionary *properties = @{@"element_type": NSStringFromClass(self.class)};

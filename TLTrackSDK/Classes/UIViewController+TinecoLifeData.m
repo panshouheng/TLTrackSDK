@@ -19,7 +19,7 @@ static NSString * const kTinecoLifeDataBlackListFileName = @"TinecoLifeData_blac
 //        NSString *path = [[NSBundle bundleForClass:TLAnalyticsSDK.class] pathForResource:kTinecoLifeDataBlackListFileName ofType:@"plist"];
         // 读取文件中黑名单类名的数组
 //        NSArray *classNames = [NSArray arrayWithContentsOfFile:path];
-        NSArray *classNames = @[@"UIInputWindowController",@"UINavigationController"];
+        NSArray *classNames = @[@"UIInputWindowController",@"UINavigationController",@"UICompatibilityInputViewController",@"_UIRemoteInputViewController",@"UISystemInputAssistantViewController",@"UIPredictionViewController"];
         NSMutableSet *set = [NSMutableSet setWithCapacity:classNames.count];
         for (NSString *className in classNames) {
             [set addObject:NSClassFromString(className)];
