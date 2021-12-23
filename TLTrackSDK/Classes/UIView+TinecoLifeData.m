@@ -127,11 +127,16 @@ static NSString *imageNameKey = @"tl_imageNameKey";
     Method imageNameMethod = class_getClassMethod([self class], @selector(imageNamed:));
     Method tl_imageNamedMethod = class_getClassMethod([UIImage class], @selector(tl_imageNamed:));
     method_exchangeImplementations(imageNameMethod, tl_imageNamedMethod);
+    [UIImage TinecoLifeData_swizzleMethod:@selector(imageWithRenderingMode:) withMethod:@selector(tl_imageWithRenderingMode:)];
 }
 + (UIImage *)tl_imageNamed:(NSString *)name {
     UIImage *image = [self tl_imageNamed:name];
     image.tl_imageName = name;
     return  image;
 }
-
+- (UIImage *)tl_imageWithRenderingMode:(UIImageRenderingMode)renderingMode {
+    UIImage *image = [self tl_imageWithRenderingMode:renderingMode];
+    image.tl_imageName = self.tl_imageName;
+    return image;
+}
 @end
