@@ -41,7 +41,7 @@ static NSString * const kTinecoLifeDataBlackListFileName = @"TinecoLifeData_blac
 
     if ([self shouldTrackAppViewScreen]) {
         // 触发 $AppViewScreen
-        NSMutableDictionary *params = @{@"screen_name": NSStringFromClass([self class]),@"screen_title":self.title}.mutableCopy;
+        NSMutableDictionary *params = @{@"screen_name": NSStringFromClass([self class]),@"screen_title":self.title ? self.title:@""}.mutableCopy;
         NSString *urlString = [self webH5urlString];
         if (urlString.length) {
             params[@"url"] = urlString;

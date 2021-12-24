@@ -486,7 +486,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     }
     // 设置事件属性
     event[@"properties"] = eventProperties;
-
+    event[@"device_id"] = self.anonymousId;
     // 设置事件的 distinct_id，用于唯一标识一个用户
     event[@"distinct_id"] = self.loginId ?: self.anonymousId;
 
