@@ -14,7 +14,7 @@
 #import <WebKit/WebKit.h>
 #endif
 
-static NSString * const TinecoAnalyticsVersion = @"1.2.3";
+static NSString * const TinecoAnalyticsVersion = @"1.2.4";
 
 static NSString * const TinecoAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
 static NSString * const TinecoAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
@@ -513,7 +513,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     // 设置页面相关属性
     eventProperties[@"screen_name"] = NSStringFromClass(vc.class);
     if (vc.navigationController) {
-        eventProperties[@"screen_title"] = vc.navigationController.title ? vc.navigationController.title:vc.title;
+        eventProperties[@"screen_title"] = vc.title;
     }
     // 添加自定义属性
     [eventProperties addEntriesFromDictionary:properties];
