@@ -14,7 +14,7 @@
 #import <WebKit/WebKit.h>
 #endif
 
-static NSString * const TinecoAnalyticsVersion = @"1.2.4";
+static NSString * const TinecoAnalyticsVersion = @"1.2.5";
 
 static NSString * const TinecoAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
 static NSString * const TinecoAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
