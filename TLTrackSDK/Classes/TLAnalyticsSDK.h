@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TLAnalyticsSDK : NSObject
 
-/// 当本地存储的事件达到这个数量时，上传数据（默认为 100）
+/// 当本地存储的事件达到这个数量时，上传数据
 @property (nonatomic) NSUInteger flushBulkSize;
 /// 两次数据发送的时间间隔，单位秒
 @property (nonatomic) NSUInteger flushInterval;
@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign)BOOL showLogs;
 /// debug 模式下 是否上传数据
 @property(nonatomic, assign)BOOL uploadDebugLogs;
+
+@property(nonatomic, assign)BOOL needTrack;
 
 - (instancetype)init NS_UNAVAILABLE;
 

@@ -22,7 +22,9 @@ static NSString * const kTinecoLifeDataBlackListFileName = @"TinecoLifeData_blac
         NSArray *classNames = @[@"UIInputWindowController",@"UINavigationController",@"UICompatibilityInputViewController",@"_UIRemoteInputViewController",@"UISystemInputAssistantViewController",@"UIPredictionViewController"];
         NSMutableSet *set = [NSMutableSet setWithCapacity:classNames.count];
         for (NSString *className in classNames) {
-            [set addObject:NSClassFromString(className)];
+            if (NSClassFromString(className)) {
+                [set addObject:NSClassFromString(className)];
+            }
         }
         blackList = [set copy];
     });

@@ -14,7 +14,7 @@
 #import <WebKit/WebKit.h>
 #endif
 
-static NSString * const TinecoAnalyticsVersion = @"1.2.5";
+static NSString * const TinecoAnalyticsVersion = @"1.2.6";
 
 static NSString * const TinecoAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
 static NSString * const TinecoAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
@@ -103,6 +103,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
         
         _showLogs = NO;
         _uploadDebugLogs = NO;
+        _needTrack = YES;
 
         NSString *queueLabel = [NSString stringWithFormat:@"cn.TinecoLifeData.%@.%p", self.class, self];
         _serialQueue = dispatch_queue_create([queueLabel UTF8String], DISPATCH_QUEUE_SERIAL);
@@ -468,6 +469,9 @@ static TLAnalyticsSDK *sharedInstance = nil;
 @implementation TLAnalyticsSDK (Track)
 
 - (void)track:(NSString *)eventName properties:(NSDictionary<NSString *,id> *)properties {
+    
+    if (self.needTrack == false) {  return; }
+    
     NSMutableDictionary *event = [NSMutableDictionary dictionary];
     // 设置事件名称
     event[@"event"] = eventName;
@@ -553,6 +557,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     // 添加自定义属性
     [eventProperties addEntriesFromDictionary:properties];
     // 触发 AppClick 事件
+    
     [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:collectionView properties:eventProperties];
     if (self.delegate) {
         [self.delegate commonTrackAppClickWithCollectionView:collectionView didSelectItemAtIndexPath:indexPath];

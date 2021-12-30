@@ -20,6 +20,7 @@
 //    [[TLAnalyticsSDK sharedInstance] addWebViewUserAgent:nil];
     [TLAnalyticsSDK sharedInstance].showLogs = YES;
     [TLAnalyticsSDK sharedInstance].uploadDebugLogs = NO;
+    [TLAnalyticsSDK sharedInstance].needTrack = NO;
     TLViewController *vc = [[TLViewController alloc] init];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     return YES;
