@@ -14,7 +14,7 @@
 #import <WebKit/WebKit.h>
 #endif
 
-static NSString * const TinecoAnalyticsVersion = @"1.2.6";
+static NSString * const TinecoAnalyticsVersion = @"1.2.7";
 
 static NSString * const TinecoAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
 static NSString * const TinecoAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
@@ -161,10 +161,13 @@ static TLAnalyticsSDK *sharedInstance = nil;
         self.flushTimer = [NSTimer timerWithTimeInterval:interval target:self selector:@selector(flush) userInfo:nil repeats:YES];
         [NSRunLoop.currentRunLoop addTimer:self.flushTimer forMode:NSRunLoopCommonModes];
     }
+    
 #else
-    NSTimeInterval interval = self.flushInterval < 5 ? 5 : self.flushInterval;
-    self.flushTimer = [NSTimer timerWithTimeInterval:interval target:self selector:@selector(flush) userInfo:nil repeats:YES];
-    [NSRunLoop.currentRunLoop addTimer:self.flushTimer forMode:NSRunLoopCommonModes];
+    if (self.needTrack) {
+        NSTimeInterval interval = self.flushInterval < 5 ? 5 : self.flushInterval;
+        self.flushTimer = [NSTimer timerWithTimeInterval:interval target:self selector:@selector(flush) userInfo:nil repeats:YES];
+        [NSRunLoop.currentRunLoop addTimer:self.flushTimer forMode:NSRunLoopCommonModes];
+    }
 #endif
 }
 
@@ -200,6 +203,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     properties[@"os_version"] = UIDevice.currentDevice.systemVersion;
     // 设置应用版本
     properties[@"app_version"] = NSBundle.mainBundle.infoDictionary[@"CFBundleShortVersionString"];
+    
     return [properties copy];
 }
 
@@ -448,7 +452,9 @@ static TLAnalyticsSDK *sharedInstance = nil;
             return;
         }
     }
-
+    if (self.needTrack == NO) {
+        return;
+    }
     // 获取本地数据
     NSArray<NSString *> *events = [self.database selectEventsForCount:count];
     // 当本地存储的数据为 0 或者上传失败时，直接返回，退出递归调用
@@ -464,6 +470,12 @@ static TLAnalyticsSDK *sharedInstance = nil;
     [self flushByEventCount:count background:background];
 }
 
+- (void)registerSuperProperties:(NSDictionary *)superProperties {
+    if (superProperties.allKeys.count == 0) {  return; }
+    NSMutableDictionary *properties = [NSMutableDictionary dictionaryWithDictionary:self.automaticProperties];
+    [properties addEntriesFromDictionary:superProperties];
+    self.automaticProperties = properties;
+}
 @end
 
 @implementation TLAnalyticsSDK (Track)
@@ -493,7 +505,6 @@ static TLAnalyticsSDK *sharedInstance = nil;
     event[@"device_id"] = self.anonymousId;
     // 设置事件的 distinct_id，用于唯一标识一个用户
     event[@"distinct_id"] = self.loginId ?: self.anonymousId;
-
     dispatch_async(self.serialQueue, ^{
         [self printEvent:event];
         [self.fileStore saveEvent:event];

@@ -60,6 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)flush;
 
+- (void)registerSuperProperties:(NSDictionary *)superProperties;
 
 @end
 
