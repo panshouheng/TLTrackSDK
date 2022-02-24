@@ -3,7 +3,7 @@
 #import "NSObject+TLSwizzler.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
-#import "TLAnalyticsSDK.h"
+#import "TLTrackSDK.h"
 #import "UIView+TinecoLifeData.h"
 
 @implementation UICollectionView (TinecoLifeData)
@@ -24,7 +24,7 @@ static void TinecoLifeData_collectionViewDidSelectItem(id object, SEL selector, 
     ((void(*)(id, SEL, id, id))objc_msgSend)(object, destinationSelector, collectionView, indexPath);
 
     // TODO: 触发 $AppClick 事件
-    [[TLAnalyticsSDK sharedInstance] trackAppClickWithCollectionView:collectionView didSelectItemAtIndexPath:indexPath properties:nil];
+    [[TLTrackSDK sharedInstance] trackAppClickWithCollectionView:collectionView didSelectItemAtIndexPath:indexPath properties:nil];
 
 }
 

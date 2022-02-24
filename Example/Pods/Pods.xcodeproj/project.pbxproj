@@ -7,59 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02FD2A9D627B3246F3584DDD93A2B170 /* TLTrackSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CD0FDB1C6CF6B7B32956F58D5898A8 /* TLTrackSDK-dummy.m */; };
-		03817D047097899671DB19248847B316 /* TLAnalyticsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E36695A6C9C9272B6DED6DAD6CC218 /* TLAnalyticsSDK.m */; };
-		0DF3F77A6B8986DB222404676E613A93 /* TLAnalyticsKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 03781531E599ABC019336B8240B0398F /* TLAnalyticsKeychainItem.m */; };
-		0FA79238A3FF54FFF39B20B608B3219A /* UITableView+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B09CC796EE4B24FA204386743002EC7 /* UITableView+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0749D85B6C1DCAEC0EB6A1B5BEDA4603 /* TLTrackExtensionDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE6623A8BD5C1B825912275949DECE0 /* TLTrackExtensionDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14052F2F90D3D7EA298356276FEC8B4B /* UICollectionView+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BE027C2C93DE97BEEC44A8A982A73C /* UICollectionView+TinecoLifeData.m */; };
+		1A703215A0B70F27ABAF3D89CE1CAE93 /* UIGestureRecognizer+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 03C108B3ECD63DE3E12D86E28574B926 /* UIGestureRecognizer+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AB8E6889478A1F5A57A5ED21803FFA3 /* Pods-TLTrackSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0ED1D705C974A59A7CE9EA307253AE /* Pods-TLTrackSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C511DE977F688752550C097872D548C /* Pods-TLTrackSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1732A1253DF1487B4E606F1937A545C /* Pods-TLTrackSDK_Tests-dummy.m */; };
-		1E242E1EAF00CBE69350B02CF60E5BF7 /* UIApplication+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 23ECC303825D929C88664AF6CACAEAC0 /* UIApplication+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2FF4672355211F3192C89E541C1B9672 /* TLDeviceType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D123EB64576CB590B59702A0C678D19 /* TLDeviceType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3011449483BB17376AA676C5E26EEF02 /* TLTrackSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D02057FAB6BA14288F1DD7B82F9774EE /* TLTrackSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		421C0BFBE9CE760C6795B2EAAC4FDB86 /* UIViewController+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC02260BE5E9F181EE1484E394980D /* UIViewController+TinecoLifeData.m */; };
-		45BB6F299EAE6309D3010D5A1CBE1090 /* TLAnalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CE352DD42811088D6991DFA9DB7B91 /* TLAnalyticsDatabase.m */; };
-		4B70A86701980E8894E7B8906AC27AB1 /* UIApplication+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = A517D15557A2B86770A16D8E198AFC15 /* UIApplication+TinecoLifeData.m */; };
-		4EBAD2AC1DE30FD2601117D129D259E9 /* TLAnalyticsDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = DE71D6706A19C1F0DE2F8F39BF314192 /* TLAnalyticsDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		573A7C333A12D74075148449CE05BBA3 /* UIViewController+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = FBFDA9AE1E871FBE2D0A58B72A0AE10C /* UIViewController+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5776DC43EB5673958ABD2387F3D02FB2 /* TLTrackSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52DEDA72937B068C521486F61CF69370 /* TLTrackSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A374E341A232F095246AA1349A52C72 /* TLAnalyticsExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B850002043D7321C8AC9CB9DA3CD395B /* TLAnalyticsExceptionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BDB3408DE48CA344D7192D11CA715ED /* TLAnalyticsFileStore.h in Headers */ = {isa = PBXBuildFile; fileRef = F51D28C9CD80A81072410280CC26EFAA /* TLAnalyticsFileStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		799E4259B0D91CC8A591FF661AADEB61 /* TLAnalyticsKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9F8D15C87030D4DAAEAD967385505D /* TLAnalyticsKeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4F7C7F062BD4DFA92F2E1851813A8C /* TLTrackFileStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 01263AC37F4A190283D1835BEE6B5150 /* TLTrackFileStore.m */; };
+		1D8415AA5FA2998828AF8509460D5806 /* TLTrackFileStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 60D3D5B12D3D4485D93BA974ED73D042 /* TLTrackFileStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		370F42DB55AED3EDE3CF25A079443256 /* TLTrackExtensionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A0E656D8604139B9512FCC22E724F2 /* TLTrackExtensionDataManager.m */; };
+		3E4301F38C3623B1A00C73A8FC6F02FD /* UIView+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA9A9E987391AE9CF47DDE35CCB2881 /* UIView+TinecoLifeData.m */; };
+		45A14802C5ABC181FF1FAB579CF790AF /* TLTrackExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC4730909716C530DAAA0B02AD38FE6 /* TLTrackExceptionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BD6D951BB495F623E1DA2B392E88409 /* UIViewController+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B969CB784E796C4AA9EF16A477CC9 /* UIViewController+TinecoLifeData.m */; };
+		529EF8BF0C545985A1730693EC405DFF /* TLTrackNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = D309AE2CC5A5445F24BCC7C7E0011C4A /* TLTrackNetwork.m */; };
+		5B953D8D35F7EE91AD897D091C428213 /* NSObject+TLSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC3F70CF6D756DE67766AAA183DDFE5 /* NSObject+TLSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E76FE1C6C1B3EEF3C7F3CAD893E845F /* TLDeviceType.h in Headers */ = {isa = PBXBuildFile; fileRef = B4B9CFB49E9E5AEE27910D5EFF08ED2E /* TLDeviceType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79B32D839EC43E8B7B62E4213B0EB622 /* Pods-TLTrackSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F208A36754CD207E62775AC9F92C970A /* Pods-TLTrackSDK_Example-dummy.m */; };
-		8E69675A2C391742D85F2FDA1083F18D /* TLAnalyticsExtensionDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F382D80CDB81C432A12EAE4B8A04B4 /* TLAnalyticsExtensionDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B7FFEB811E5AA79C4E07F75D67AFA03 /* UICollectionView+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C5BEAB94756CE1F48D1C92BFCACB692 /* UICollectionView+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8ACA80D2823334043F2D2202765B5605 /* TLDeviceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C936D5703CCDA4DC00F75E88A42AE /* TLDeviceType.m */; };
 		8FEB0D8A250BB13566C14EE7F29B5623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		91727138DEE8D85B0C643724AD9B07D4 /* TLAnalyticsExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B225980D02B2F2B625AC39AD7D31A7 /* TLAnalyticsExceptionHandler.m */; };
-		988F615E97BA1A71C953513EDF0539EC /* UIControl+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = D015F76DD957F84A787735994C64DB01 /* UIControl+TinecoLifeData.m */; };
-		9BDC8B4698D89D16B3C0C0C33378249D /* UITableView+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6C601080D71D74295C732B41123A48 /* UITableView+TinecoLifeData.m */; };
-		9C2C6FAD99E5D93C00E6CEEBC5049BD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		A03BD1E5BC8B43DB99FD698DC3BF72ED /* UICollectionView+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 97AFE3D92902826DD203C31B82F98227 /* UICollectionView+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A15721A82F338EC68710655012460C9F /* UIView+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F786532C875F8CEA97D6C318F8AA50 /* UIView+TinecoLifeData.m */; };
-		AAB4775F92C1AF7458345DC3A2603DEA /* UIGestureRecognizer+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = D1B66FFE6333CB1976F223B9D6450E97 /* UIGestureRecognizer+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFD94C3A84E2C7969C490904F574721B /* TLAnalyticsFileStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F18304125C7A1E66872DDA420D0B6FB /* TLAnalyticsFileStore.m */; };
+		9182E191799D84EB1D072FFDD2580F3C /* TLTrackSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = BF18F4F8403DB05B1112C124E58682A5 /* TLTrackSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		966D359432BB535BDCFAF00E210F83AC /* UIGestureRecognizer+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = C47732CC7E30BF37DF221AFD2B22A1D0 /* UIGestureRecognizer+TinecoLifeData.m */; };
+		99AB9CEE3B2C136AADD7D62B364A931A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		B07C4EA17BC87755627ECAF6E31D6E07 /* Pods-TLTrackSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7B6994A831E0DF689E58E80FDA93D55 /* Pods-TLTrackSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B148431A22D390E41AA35AB5B0243F2A /* TLDeviceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 743D6F7A9AE8F2F25B3C8AFFB104748E /* TLDeviceType.m */; };
-		C6884F53E80DA54F28916644DF9CDDA0 /* UIControl+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 896807F9C8EE2C0317C75E6D207959E4 /* UIControl+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D50B536B5DC46E163C104B59BE66D291 /* TLAnalyticsNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DF1CEFAC75CAF88F6E259136FA70A1 /* TLAnalyticsNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D78789986A2E18071D28046939829F05 /* TLAnalyticsExtensionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E039D46757BA0081BA9636BE0915C1 /* TLAnalyticsExtensionDataManager.m */; };
-		E0DD9FCD30CD67ABB21459641919A6DB /* UICollectionView+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A2F3B651625C8E6D47BE26073602F /* UICollectionView+TinecoLifeData.m */; };
+		BB2833F7C9795F28565BAE87E057812D /* TLTrackExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B28C376167D924062A4CBA606BCB0AA /* TLTrackExceptionHandler.m */; };
+		BB4F4B13F27DD54962C38D627F6F090E /* UIViewController+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 1656FF29908938C5DD447BC50370191D /* UIViewController+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7599FCBEF763AB3018DD16C66509306 /* UIControl+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9BCAE48A8BA3CC21ECA6BF94999CED /* UIControl+TinecoLifeData.m */; };
+		CE5437482036F888A8E1838EF2633EEB /* TLTrackDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = EE3A5C454C236D241F01DA47B0EE1CA6 /* TLTrackDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE6B986D881FD53467D9549ECF539071 /* UIControl+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = E5AC64F68B93298726CCCE4D93B8B6C6 /* UIControl+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D25F2706055881645FAD3D65D2262239 /* UITableView+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ECF31AE0A63FBBD410833DFF0A7ACC4 /* UITableView+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6E2ACF76459A4F17F56B3C32903E5D6 /* TLTrackSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A2CA4C09F7FDEA27AAA483DB74DB9B3 /* TLTrackSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9E6BF2A9645B64A0F04759EF7A83B98 /* TLTrackSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FCB892D85F4FFEFF9702A263FF59DE /* TLTrackSDK-dummy.m */; };
+		DABE670FF2333552884465F7A3213F48 /* UITableView+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F69FAF3C924368695EBCB095CC40A3 /* UITableView+TinecoLifeData.m */; };
+		DB698F2D3AF1A066FFE1894F85AEDE07 /* TLTrackDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BF08169FC7B44C5A6D62483CACEFEE /* TLTrackDatabase.m */; };
+		DFA8EC0C071D3F543DDDA95DA7D5674A /* TLTrackNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 25ED767D255693767AF0362C28F19672 /* TLTrackNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1A0E1EAB7F3DE1179D723F415BBA015 /* TLTrackKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 588B74FEF33AE514417099020987BBFF /* TLTrackKeychainItem.m */; };
+		E53005D72863A7819E473D7F7A44ECD9 /* NSObject+TLSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4B3776CC3049AF7B3B3168D0D8813 /* NSObject+TLSwizzler.m */; };
 		E589A28102ADA514BB51B3B2D0E2284C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E94E8562F5CC7700FD3DEB1F6CE0988D /* NSObject+TLSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C8FDA0432AE92A714A9F72652E4413 /* NSObject+TLSwizzler.m */; };
-		EA004CA36971443749CAE9201A4AD931 /* TLAnalyticsNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A62753C101C926E7068B10E8142F67 /* TLAnalyticsNetwork.m */; };
-		EC5CA822AF3721BA02F23D12369DD906 /* NSObject+TLSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 505313949DD4B3E55FAD46CC88C7837C /* NSObject+TLSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F38ED5988F5477146B5FD724D5B7E1F4 /* UIView+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = C92FB4D12236368DA39FCF217A91060B /* UIView+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB4DF763B4B4913C1F31A2BA23C34865 /* TLAnalyticsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EE814B5AB335B8EF0817DF51DD5D4A06 /* TLAnalyticsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD5F4A2DF30B4A063DF65B90B87962E2 /* UIGestureRecognizer+TinecoLifeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 912F16DC13404C8435F1149C9553037A /* UIGestureRecognizer+TinecoLifeData.m */; };
+		EC82B99437231F6DCAED552BF46DB5B2 /* TLTrackSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3950E1A1FBEABA3400F23EBDCABB4BAA /* TLTrackSDK.m */; };
+		F75B393792069E734BEA4E467393AA8E /* UIView+TinecoLifeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 78B8D39D0A9657009EB11465BBBBE9C0 /* UIView+TinecoLifeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F990A340DD0DF24B9A54EC7F1B8E80C9 /* TLTrackKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 4630529122134123F73DCA38D438E4AD /* TLTrackKeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		13DA6FDDD6DA384C37524D7F5002DD42 /* PBXContainerItemProxy */ = {
+		2152717C4513FFDED8CB314653D3CA55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 40568707202358987974253071C995F5;
 			remoteInfo = "Pods-TLTrackSDK_Example";
 		};
-		8499A692689ECB2E7C88D9F85463F5DE /* PBXContainerItemProxy */ = {
+		51EE07AEFB8E333BA0C66B1F0A6E67FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -69,74 +66,79 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03781531E599ABC019336B8240B0398F /* TLAnalyticsKeychainItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLAnalyticsKeychainItem.m; path = TLTrackSDK/Classes/TLAnalyticsKeychainItem.m; sourceTree = "<group>"; };
-		09BC02260BE5E9F181EE1484E394980D /* UIViewController+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UIViewController+TinecoLifeData.m"; sourceTree = "<group>"; };
-		14D72DC7B7C06723B680FED76CDF4DAF /* TLTrackSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.debug.xcconfig; sourceTree = "<group>"; };
-		18730BA97285056202B192F2E9D65D4C /* TLTrackSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-prefix.pch"; sourceTree = "<group>"; };
+		01263AC37F4A190283D1835BEE6B5150 /* TLTrackFileStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLTrackFileStore.m; path = TLTrackSDK/Classes/TLTrackFileStore.m; sourceTree = "<group>"; };
+		03C108B3ECD63DE3E12D86E28574B926 /* UIGestureRecognizer+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UIGestureRecognizer+TinecoLifeData.h"; sourceTree = "<group>"; };
+		14FCB892D85F4FFEFF9702A263FF59DE /* TLTrackSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLTrackSDK-dummy.m"; sourceTree = "<group>"; };
+		1656FF29908938C5DD447BC50370191D /* UIViewController+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UIViewController+TinecoLifeData.h"; sourceTree = "<group>"; };
 		1D818016C85B03AB45BA4E80C3BF6CEF /* Pods-TLTrackSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLTrackSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		23ECC303825D929C88664AF6CACAEAC0 /* UIApplication+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UIApplication+TinecoLifeData.h"; sourceTree = "<group>"; };
-		2879C8B78505FEA797B07D3F0229F0B8 /* TLTrackSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLTrackSDK.modulemap; sourceTree = "<group>"; };
-		2B9F8D15C87030D4DAAEAD967385505D /* TLAnalyticsKeychainItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLAnalyticsKeychainItem.h; path = TLTrackSDK/Classes/TLAnalyticsKeychainItem.h; sourceTree = "<group>"; };
+		25ED767D255693767AF0362C28F19672 /* TLTrackNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLTrackNetwork.h; path = TLTrackSDK/Classes/TLTrackNetwork.h; sourceTree = "<group>"; };
+		2BC3F70CF6D756DE67766AAA183DDFE5 /* NSObject+TLSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+TLSwizzler.h"; path = "TLTrackSDK/Classes/NSObject+TLSwizzler.h"; sourceTree = "<group>"; };
+		2ECF31AE0A63FBBD410833DFF0A7ACC4 /* UITableView+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UITableView+TinecoLifeData.h"; sourceTree = "<group>"; };
+		34CF2F86A7D18C50028F9F24EBD2DEA7 /* TLTrackSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TLTrackSDK-Info.plist"; sourceTree = "<group>"; };
+		3950E1A1FBEABA3400F23EBDCABB4BAA /* TLTrackSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLTrackSDK.m; path = TLTrackSDK/Classes/TLTrackSDK.m; sourceTree = "<group>"; };
 		4597AB434B243008663FFE94B538F55B /* Pods-TLTrackSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLTrackSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4630529122134123F73DCA38D438E4AD /* TLTrackKeychainItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLTrackKeychainItem.h; path = TLTrackSDK/Classes/TLTrackKeychainItem.h; sourceTree = "<group>"; };
 		4A272306F7A73D705B8C356B4E32215B /* TLTrackSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TLTrackSDK; path = TLTrackSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B09CC796EE4B24FA204386743002EC7 /* UITableView+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UITableView+TinecoLifeData.h"; sourceTree = "<group>"; };
+		4B3C936D5703CCDA4DC00F75E88A42AE /* TLDeviceType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLDeviceType.m; path = TLTrackSDK/Classes/TLDeviceType.m; sourceTree = "<group>"; };
 		4CBE5742AE4F79A0B9F982CF44EA8D49 /* Pods-TLTrackSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLTrackSDK_Example.modulemap"; sourceTree = "<group>"; };
-		505313949DD4B3E55FAD46CC88C7837C /* NSObject+TLSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+TLSwizzler.h"; path = "TLTrackSDK/Classes/NSObject+TLSwizzler.h"; sourceTree = "<group>"; };
-		51C8FDA0432AE92A714A9F72652E4413 /* NSObject+TLSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+TLSwizzler.m"; path = "TLTrackSDK/Classes/NSObject+TLSwizzler.m"; sourceTree = "<group>"; };
-		52DEDA72937B068C521486F61CF69370 /* TLTrackSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-umbrella.h"; sourceTree = "<group>"; };
+		588B74FEF33AE514417099020987BBFF /* TLTrackKeychainItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLTrackKeychainItem.m; path = TLTrackSDK/Classes/TLTrackKeychainItem.m; sourceTree = "<group>"; };
 		59864E2DB1CE70570159C2CE88FCA134 /* Pods-TLTrackSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		59E36695A6C9C9272B6DED6DAD6CC218 /* TLAnalyticsSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLAnalyticsSDK.m; path = TLTrackSDK/Classes/TLAnalyticsSDK.m; sourceTree = "<group>"; };
-		5D123EB64576CB590B59702A0C678D19 /* TLDeviceType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLDeviceType.h; path = TLTrackSDK/Classes/TLDeviceType.h; sourceTree = "<group>"; };
+		5A2CA4C09F7FDEA27AAA483DB74DB9B3 /* TLTrackSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-umbrella.h"; sourceTree = "<group>"; };
+		5C5BEAB94756CE1F48D1C92BFCACB692 /* UICollectionView+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UICollectionView+TinecoLifeData.h"; sourceTree = "<group>"; };
+		5C5F7A0F30B1BD0DDD9FF89D4AAAFC08 /* TLTrackSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.release.xcconfig; sourceTree = "<group>"; };
 		5FF68BB179C58176012EEEF8C6324A98 /* Pods-TLTrackSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		64DF1CEFAC75CAF88F6E259136FA70A1 /* TLAnalyticsNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLAnalyticsNetwork.h; path = TLTrackSDK/Classes/TLAnalyticsNetwork.h; sourceTree = "<group>"; };
+		60A0E656D8604139B9512FCC22E724F2 /* TLTrackExtensionDataManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLTrackExtensionDataManager.m; path = TLTrackSDK/Classes/TLTrackExtensionDataManager.m; sourceTree = "<group>"; };
+		60D3D5B12D3D4485D93BA974ED73D042 /* TLTrackFileStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLTrackFileStore.h; path = TLTrackSDK/Classes/TLTrackFileStore.h; sourceTree = "<group>"; };
+		6B28C376167D924062A4CBA606BCB0AA /* TLTrackExceptionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLTrackExceptionHandler.m; path = TLTrackSDK/Classes/TLTrackExceptionHandler.m; sourceTree = "<group>"; };
 		7214AEB5592E0B3CC1B2BD968932D1BE /* Pods-TLTrackSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TLTrackSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		743D6F7A9AE8F2F25B3C8AFFB104748E /* TLDeviceType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLDeviceType.m; path = TLTrackSDK/Classes/TLDeviceType.m; sourceTree = "<group>"; };
-		75E039D46757BA0081BA9636BE0915C1 /* TLAnalyticsExtensionDataManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLAnalyticsExtensionDataManager.m; path = TLTrackSDK/Classes/TLAnalyticsExtensionDataManager.m; sourceTree = "<group>"; };
-		76CD0FDB1C6CF6B7B32956F58D5898A8 /* TLTrackSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLTrackSDK-dummy.m"; sourceTree = "<group>"; };
-		78F382D80CDB81C432A12EAE4B8A04B4 /* TLAnalyticsExtensionDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLAnalyticsExtensionDataManager.h; path = TLTrackSDK/Classes/TLAnalyticsExtensionDataManager.h; sourceTree = "<group>"; };
+		78B8D39D0A9657009EB11465BBBBE9C0 /* UIView+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UIView+TinecoLifeData.h"; sourceTree = "<group>"; };
 		7B8BDD17E27EB1CF7EE18AD7BF346A9B /* Pods-TLTrackSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TLTrackSDK_Tests"; path = Pods_TLTrackSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		896807F9C8EE2C0317C75E6D207959E4 /* UIControl+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UIControl+TinecoLifeData.h"; sourceTree = "<group>"; };
+		86BF08169FC7B44C5A6D62483CACEFEE /* TLTrackDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLTrackDatabase.m; path = TLTrackSDK/Classes/TLTrackDatabase.m; sourceTree = "<group>"; };
+		8AC4730909716C530DAAA0B02AD38FE6 /* TLTrackExceptionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLTrackExceptionHandler.h; path = TLTrackSDK/Classes/TLTrackExceptionHandler.h; sourceTree = "<group>"; };
 		8B2020A865A1E246ED887FB3ABFC2F4B /* Pods-TLTrackSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8F18304125C7A1E66872DDA420D0B6FB /* TLAnalyticsFileStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLAnalyticsFileStore.m; path = TLTrackSDK/Classes/TLAnalyticsFileStore.m; sourceTree = "<group>"; };
-		912F16DC13404C8435F1149C9553037A /* UIGestureRecognizer+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UIGestureRecognizer+TinecoLifeData.m"; sourceTree = "<group>"; };
 		91979C29551F8A36B4921533012864E1 /* Pods-TLTrackSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		948E896DC876C192E237604BD46CCDC4 /* Pods-TLTrackSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TLTrackSDK_Example"; path = Pods_TLTrackSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96F786532C875F8CEA97D6C318F8AA50 /* UIView+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UIView+TinecoLifeData.m"; sourceTree = "<group>"; };
-		97AFE3D92902826DD203C31B82F98227 /* UICollectionView+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UICollectionView+TinecoLifeData.h"; sourceTree = "<group>"; };
+		9CB4B3776CC3049AF7B3B3168D0D8813 /* NSObject+TLSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+TLSwizzler.m"; path = "TLTrackSDK/Classes/NSObject+TLSwizzler.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2CFE304950FAA475E45C1E10530039C /* Pods-TLTrackSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A517D15557A2B86770A16D8E198AFC15 /* UIApplication+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UIApplication+TinecoLifeData.m"; sourceTree = "<group>"; };
-		A803D97BF2642EBC21E474A5A6801BC2 /* TLTrackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TLTrackSDK.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		AD9BCAE48A8BA3CC21ECA6BF94999CED /* UIControl+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UIControl+TinecoLifeData.m"; sourceTree = "<group>"; };
 		B46BFF0E1DC62B28298583377D8427E0 /* Pods-TLTrackSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTrackSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B7CE352DD42811088D6991DFA9DB7B91 /* TLAnalyticsDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLAnalyticsDatabase.m; path = TLTrackSDK/Classes/TLAnalyticsDatabase.m; sourceTree = "<group>"; };
-		B850002043D7321C8AC9CB9DA3CD395B /* TLAnalyticsExceptionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLAnalyticsExceptionHandler.h; path = TLTrackSDK/Classes/TLAnalyticsExceptionHandler.h; sourceTree = "<group>"; };
+		B4B9CFB49E9E5AEE27910D5EFF08ED2E /* TLDeviceType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLDeviceType.h; path = TLTrackSDK/Classes/TLDeviceType.h; sourceTree = "<group>"; };
+		BF18F4F8403DB05B1112C124E58682A5 /* TLTrackSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLTrackSDK.h; path = TLTrackSDK/Classes/TLTrackSDK.h; sourceTree = "<group>"; };
+		C21EDD92FC0F36906D1BAABAA7F8FA16 /* TLTrackSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.debug.xcconfig; sourceTree = "<group>"; };
+		C27EC106A6875CDF6CCBDB849EAEA0A8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C47732CC7E30BF37DF221AFD2B22A1D0 /* UIGestureRecognizer+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UIGestureRecognizer+TinecoLifeData.m"; sourceTree = "<group>"; };
+		C617AA438EF61B0F10C3E63A684B52A9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C7B6994A831E0DF689E58E80FDA93D55 /* Pods-TLTrackSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTrackSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C84849A0A805F8A59A98D4CE312533A4 /* Pods-TLTrackSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		C92FB4D12236368DA39FCF217A91060B /* UIView+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UIView+TinecoLifeData.h"; sourceTree = "<group>"; };
-		CD6C601080D71D74295C732B41123A48 /* UITableView+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UITableView+TinecoLifeData.m"; sourceTree = "<group>"; };
-		D015F76DD957F84A787735994C64DB01 /* UIControl+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UIControl+TinecoLifeData.m"; sourceTree = "<group>"; };
-		D02057FAB6BA14288F1DD7B82F9774EE /* TLTrackSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLTrackSDK.h; path = TLTrackSDK/Classes/TLTrackSDK.h; sourceTree = "<group>"; };
-		D0A62753C101C926E7068B10E8142F67 /* TLAnalyticsNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLAnalyticsNetwork.m; path = TLTrackSDK/Classes/TLAnalyticsNetwork.m; sourceTree = "<group>"; };
-		D1B66FFE6333CB1976F223B9D6450E97 /* UIGestureRecognizer+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UIGestureRecognizer+TinecoLifeData.h"; sourceTree = "<group>"; };
-		D81141E504D8E20846187426F63157A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		DE71D6706A19C1F0DE2F8F39BF314192 /* TLAnalyticsDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLAnalyticsDatabase.h; path = TLTrackSDK/Classes/TLAnalyticsDatabase.h; sourceTree = "<group>"; };
-		E0E419E449C915C2EF714D2975907C68 /* TLTrackSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTrackSDK.release.xcconfig; sourceTree = "<group>"; };
-		E11A2F3B651625C8E6D47BE26073602F /* UICollectionView+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UICollectionView+TinecoLifeData.m"; sourceTree = "<group>"; };
+		C8BE027C2C93DE97BEEC44A8A982A73C /* UICollectionView+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UICollectionView+TinecoLifeData.m"; sourceTree = "<group>"; };
+		CDE6623A8BD5C1B825912275949DECE0 /* TLTrackExtensionDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLTrackExtensionDataManager.h; path = TLTrackSDK/Classes/TLTrackExtensionDataManager.h; sourceTree = "<group>"; };
+		D0BC6F6AFF8D5ECDB870084C28DA5740 /* TLTrackSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLTrackSDK-prefix.pch"; sourceTree = "<group>"; };
+		D1F69FAF3C924368695EBCB095CC40A3 /* UITableView+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UITableView+TinecoLifeData.m"; sourceTree = "<group>"; };
+		D309AE2CC5A5445F24BCC7C7E0011C4A /* TLTrackNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLTrackNetwork.m; path = TLTrackSDK/Classes/TLTrackNetwork.m; sourceTree = "<group>"; };
+		D6485633912BF5702DF0F05BD8F26260 /* TLTrackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TLTrackSDK.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		DD1B969CB784E796C4AA9EF16A477CC9 /* UIViewController+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UIViewController+TinecoLifeData.m"; sourceTree = "<group>"; };
+		DFCD8BC13B1408BF0BC494A5A506E638 /* TLTrackSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TLTrackSDK.modulemap; sourceTree = "<group>"; };
 		E1732A1253DF1487B4E606F1937A545C /* Pods-TLTrackSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTrackSDK_Tests-dummy.m"; sourceTree = "<group>"; };
 		E3EE6928CB606354E7D1981BB7AF8767 /* Pods-TLTrackSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TLTrackSDK_Example-Info.plist"; sourceTree = "<group>"; };
+		E5AC64F68B93298726CCCE4D93B8B6C6 /* UIControl+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UIControl+TinecoLifeData.h"; sourceTree = "<group>"; };
 		E5F404DD4629E2FED1BF2734E10B0A3F /* Pods-TLTrackSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLTrackSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
-		E6735D662165C0ACC7DCEA32A2E8C2B8 /* TLTrackSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TLTrackSDK-Info.plist"; sourceTree = "<group>"; };
-		E96749594BE8A21AEF1CA95F27B08120 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EBA9A9E987391AE9CF47DDE35CCB2881 /* UIView+TinecoLifeData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TinecoLifeData.m"; path = "TLTrackSDK/Classes/UIView+TinecoLifeData.m"; sourceTree = "<group>"; };
 		EE0ED1D705C974A59A7CE9EA307253AE /* Pods-TLTrackSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTrackSDK_Example-umbrella.h"; sourceTree = "<group>"; };
-		EE814B5AB335B8EF0817DF51DD5D4A06 /* TLAnalyticsSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLAnalyticsSDK.h; path = TLTrackSDK/Classes/TLAnalyticsSDK.h; sourceTree = "<group>"; };
+		EE3A5C454C236D241F01DA47B0EE1CA6 /* TLTrackDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLTrackDatabase.h; path = TLTrackSDK/Classes/TLTrackDatabase.h; sourceTree = "<group>"; };
 		F208A36754CD207E62775AC9F92C970A /* Pods-TLTrackSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLTrackSDK_Example-dummy.m"; sourceTree = "<group>"; };
-		F51D28C9CD80A81072410280CC26EFAA /* TLAnalyticsFileStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TLAnalyticsFileStore.h; path = TLTrackSDK/Classes/TLAnalyticsFileStore.h; sourceTree = "<group>"; };
-		F7B225980D02B2F2B625AC39AD7D31A7 /* TLAnalyticsExceptionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TLAnalyticsExceptionHandler.m; path = TLTrackSDK/Classes/TLAnalyticsExceptionHandler.m; sourceTree = "<group>"; };
-		FBFDA9AE1E871FBE2D0A58B72A0AE10C /* UIViewController+TinecoLifeData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TinecoLifeData.h"; path = "TLTrackSDK/Classes/UIViewController+TinecoLifeData.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6768428EF96CCE2A0F7069F9D22AB66C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99AB9CEE3B2C136AADD7D62B364A931A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8CAA8C3C34969992E5070B2F88A4FEF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,58 +155,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B52735ECD994A2D0F20117E39ABE4F2A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C2C6FAD99E5D93C00E6CEEBC5049BD8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11822DAFDD6063F0A7F1BA4B3B96FB19 /* TLTrackSDK */ = {
+		22760D193A29D3184C9A2823E234A72C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				505313949DD4B3E55FAD46CC88C7837C /* NSObject+TLSwizzler.h */,
-				51C8FDA0432AE92A714A9F72652E4413 /* NSObject+TLSwizzler.m */,
-				DE71D6706A19C1F0DE2F8F39BF314192 /* TLAnalyticsDatabase.h */,
-				B7CE352DD42811088D6991DFA9DB7B91 /* TLAnalyticsDatabase.m */,
-				B850002043D7321C8AC9CB9DA3CD395B /* TLAnalyticsExceptionHandler.h */,
-				F7B225980D02B2F2B625AC39AD7D31A7 /* TLAnalyticsExceptionHandler.m */,
-				78F382D80CDB81C432A12EAE4B8A04B4 /* TLAnalyticsExtensionDataManager.h */,
-				75E039D46757BA0081BA9636BE0915C1 /* TLAnalyticsExtensionDataManager.m */,
-				F51D28C9CD80A81072410280CC26EFAA /* TLAnalyticsFileStore.h */,
-				8F18304125C7A1E66872DDA420D0B6FB /* TLAnalyticsFileStore.m */,
-				2B9F8D15C87030D4DAAEAD967385505D /* TLAnalyticsKeychainItem.h */,
-				03781531E599ABC019336B8240B0398F /* TLAnalyticsKeychainItem.m */,
-				64DF1CEFAC75CAF88F6E259136FA70A1 /* TLAnalyticsNetwork.h */,
-				D0A62753C101C926E7068B10E8142F67 /* TLAnalyticsNetwork.m */,
-				EE814B5AB335B8EF0817DF51DD5D4A06 /* TLAnalyticsSDK.h */,
-				59E36695A6C9C9272B6DED6DAD6CC218 /* TLAnalyticsSDK.m */,
-				5D123EB64576CB590B59702A0C678D19 /* TLDeviceType.h */,
-				743D6F7A9AE8F2F25B3C8AFFB104748E /* TLDeviceType.m */,
-				D02057FAB6BA14288F1DD7B82F9774EE /* TLTrackSDK.h */,
-				23ECC303825D929C88664AF6CACAEAC0 /* UIApplication+TinecoLifeData.h */,
-				A517D15557A2B86770A16D8E198AFC15 /* UIApplication+TinecoLifeData.m */,
-				97AFE3D92902826DD203C31B82F98227 /* UICollectionView+TinecoLifeData.h */,
-				E11A2F3B651625C8E6D47BE26073602F /* UICollectionView+TinecoLifeData.m */,
-				896807F9C8EE2C0317C75E6D207959E4 /* UIControl+TinecoLifeData.h */,
-				D015F76DD957F84A787735994C64DB01 /* UIControl+TinecoLifeData.m */,
-				D1B66FFE6333CB1976F223B9D6450E97 /* UIGestureRecognizer+TinecoLifeData.h */,
-				912F16DC13404C8435F1149C9553037A /* UIGestureRecognizer+TinecoLifeData.m */,
-				4B09CC796EE4B24FA204386743002EC7 /* UITableView+TinecoLifeData.h */,
-				CD6C601080D71D74295C732B41123A48 /* UITableView+TinecoLifeData.m */,
-				C92FB4D12236368DA39FCF217A91060B /* UIView+TinecoLifeData.h */,
-				96F786532C875F8CEA97D6C318F8AA50 /* UIView+TinecoLifeData.m */,
-				FBFDA9AE1E871FBE2D0A58B72A0AE10C /* UIViewController+TinecoLifeData.h */,
-				09BC02260BE5E9F181EE1484E394980D /* UIViewController+TinecoLifeData.m */,
-				41271AA27BE2CAC4FC7EF024A9F2FE72 /* Pod */,
-				721114A055A841724924F52E24570490 /* Support Files */,
+				F9DA4B46CCDCD2D0741234DD605DD186 /* TLTrackSDK */,
 			);
-			name = TLTrackSDK;
-			path = ../..;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		2363CA74D0C1769EEC1B60D34C74A079 /* Targets Support Files */ = {
@@ -216,14 +175,19 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		41271AA27BE2CAC4FC7EF024A9F2FE72 /* Pod */ = {
+		3306E0163B6DB6899750202D7C57EB40 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E96749594BE8A21AEF1CA95F27B08120 /* LICENSE */,
-				D81141E504D8E20846187426F63157A7 /* README.md */,
-				A803D97BF2642EBC21E474A5A6801BC2 /* TLTrackSDK.podspec */,
+				DFCD8BC13B1408BF0BC494A5A506E638 /* TLTrackSDK.modulemap */,
+				14FCB892D85F4FFEFF9702A263FF59DE /* TLTrackSDK-dummy.m */,
+				34CF2F86A7D18C50028F9F24EBD2DEA7 /* TLTrackSDK-Info.plist */,
+				D0BC6F6AFF8D5ECDB870084C28DA5740 /* TLTrackSDK-prefix.pch */,
+				5A2CA4C09F7FDEA27AAA483DB74DB9B3 /* TLTrackSDK-umbrella.h */,
+				C21EDD92FC0F36906D1BAABAA7F8FA16 /* TLTrackSDK.debug.xcconfig */,
+				5C5F7A0F30B1BD0DDD9FF89D4AAAFC08 /* TLTrackSDK.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TLTrackSDK";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -244,27 +208,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		721114A055A841724924F52E24570490 /* Support Files */ = {
+		8F786CE532DEFE2CB811E5F673ED155C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				2879C8B78505FEA797B07D3F0229F0B8 /* TLTrackSDK.modulemap */,
-				76CD0FDB1C6CF6B7B32956F58D5898A8 /* TLTrackSDK-dummy.m */,
-				E6735D662165C0ACC7DCEA32A2E8C2B8 /* TLTrackSDK-Info.plist */,
-				18730BA97285056202B192F2E9D65D4C /* TLTrackSDK-prefix.pch */,
-				52DEDA72937B068C521486F61CF69370 /* TLTrackSDK-umbrella.h */,
-				14D72DC7B7C06723B680FED76CDF4DAF /* TLTrackSDK.debug.xcconfig */,
-				E0E419E449C915C2EF714D2975907C68 /* TLTrackSDK.release.xcconfig */,
+				C27EC106A6875CDF6CCBDB849EAEA0A8 /* LICENSE */,
+				C617AA438EF61B0F10C3E63A684B52A9 /* README.md */,
+				D6485633912BF5702DF0F05BD8F26260 /* TLTrackSDK.podspec */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TLTrackSDK";
-			sourceTree = "<group>";
-		};
-		7D0D6ACF47AF76523F7DA22FF5516870 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				11822DAFDD6063F0A7F1BA4B3B96FB19 /* TLTrackSDK */,
-			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		A313D6A80AB599C6581A38E74D5918A1 /* Pods-TLTrackSDK_Example */ = {
@@ -288,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				7D0D6ACF47AF76523F7DA22FF5516870 /* Development Pods */,
+				22760D193A29D3184C9A2823E234A72C /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				5BDFAA28066AD9F27DA6649001B5532A /* Products */,
 				2363CA74D0C1769EEC1B60D34C74A079 /* Targets Support Files */,
@@ -319,9 +270,72 @@
 			path = "Target Support Files/Pods-TLTrackSDK_Tests";
 			sourceTree = "<group>";
 		};
+		F9DA4B46CCDCD2D0741234DD605DD186 /* TLTrackSDK */ = {
+			isa = PBXGroup;
+			children = (
+				2BC3F70CF6D756DE67766AAA183DDFE5 /* NSObject+TLSwizzler.h */,
+				9CB4B3776CC3049AF7B3B3168D0D8813 /* NSObject+TLSwizzler.m */,
+				B4B9CFB49E9E5AEE27910D5EFF08ED2E /* TLDeviceType.h */,
+				4B3C936D5703CCDA4DC00F75E88A42AE /* TLDeviceType.m */,
+				EE3A5C454C236D241F01DA47B0EE1CA6 /* TLTrackDatabase.h */,
+				86BF08169FC7B44C5A6D62483CACEFEE /* TLTrackDatabase.m */,
+				8AC4730909716C530DAAA0B02AD38FE6 /* TLTrackExceptionHandler.h */,
+				6B28C376167D924062A4CBA606BCB0AA /* TLTrackExceptionHandler.m */,
+				CDE6623A8BD5C1B825912275949DECE0 /* TLTrackExtensionDataManager.h */,
+				60A0E656D8604139B9512FCC22E724F2 /* TLTrackExtensionDataManager.m */,
+				60D3D5B12D3D4485D93BA974ED73D042 /* TLTrackFileStore.h */,
+				01263AC37F4A190283D1835BEE6B5150 /* TLTrackFileStore.m */,
+				4630529122134123F73DCA38D438E4AD /* TLTrackKeychainItem.h */,
+				588B74FEF33AE514417099020987BBFF /* TLTrackKeychainItem.m */,
+				25ED767D255693767AF0362C28F19672 /* TLTrackNetwork.h */,
+				D309AE2CC5A5445F24BCC7C7E0011C4A /* TLTrackNetwork.m */,
+				BF18F4F8403DB05B1112C124E58682A5 /* TLTrackSDK.h */,
+				3950E1A1FBEABA3400F23EBDCABB4BAA /* TLTrackSDK.m */,
+				5C5BEAB94756CE1F48D1C92BFCACB692 /* UICollectionView+TinecoLifeData.h */,
+				C8BE027C2C93DE97BEEC44A8A982A73C /* UICollectionView+TinecoLifeData.m */,
+				E5AC64F68B93298726CCCE4D93B8B6C6 /* UIControl+TinecoLifeData.h */,
+				AD9BCAE48A8BA3CC21ECA6BF94999CED /* UIControl+TinecoLifeData.m */,
+				03C108B3ECD63DE3E12D86E28574B926 /* UIGestureRecognizer+TinecoLifeData.h */,
+				C47732CC7E30BF37DF221AFD2B22A1D0 /* UIGestureRecognizer+TinecoLifeData.m */,
+				2ECF31AE0A63FBBD410833DFF0A7ACC4 /* UITableView+TinecoLifeData.h */,
+				D1F69FAF3C924368695EBCB095CC40A3 /* UITableView+TinecoLifeData.m */,
+				78B8D39D0A9657009EB11465BBBBE9C0 /* UIView+TinecoLifeData.h */,
+				EBA9A9E987391AE9CF47DDE35CCB2881 /* UIView+TinecoLifeData.m */,
+				1656FF29908938C5DD447BC50370191D /* UIViewController+TinecoLifeData.h */,
+				DD1B969CB784E796C4AA9EF16A477CC9 /* UIViewController+TinecoLifeData.m */,
+				8F786CE532DEFE2CB811E5F673ED155C /* Pod */,
+				3306E0163B6DB6899750202D7C57EB40 /* Support Files */,
+			);
+			name = TLTrackSDK;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1913DEE96B8E8EC3A3656342B2018318 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B953D8D35F7EE91AD897D091C428213 /* NSObject+TLSwizzler.h in Headers */,
+				5E76FE1C6C1B3EEF3C7F3CAD893E845F /* TLDeviceType.h in Headers */,
+				CE5437482036F888A8E1838EF2633EEB /* TLTrackDatabase.h in Headers */,
+				45A14802C5ABC181FF1FAB579CF790AF /* TLTrackExceptionHandler.h in Headers */,
+				0749D85B6C1DCAEC0EB6A1B5BEDA4603 /* TLTrackExtensionDataManager.h in Headers */,
+				1D8415AA5FA2998828AF8509460D5806 /* TLTrackFileStore.h in Headers */,
+				F990A340DD0DF24B9A54EC7F1B8E80C9 /* TLTrackKeychainItem.h in Headers */,
+				DFA8EC0C071D3F543DDDA95DA7D5674A /* TLTrackNetwork.h in Headers */,
+				9182E191799D84EB1D072FFDD2580F3C /* TLTrackSDK.h in Headers */,
+				D6E2ACF76459A4F17F56B3C32903E5D6 /* TLTrackSDK-umbrella.h in Headers */,
+				7B7FFEB811E5AA79C4E07F75D67AFA03 /* UICollectionView+TinecoLifeData.h in Headers */,
+				CE6B986D881FD53467D9549ECF539071 /* UIControl+TinecoLifeData.h in Headers */,
+				1A703215A0B70F27ABAF3D89CE1CAE93 /* UIGestureRecognizer+TinecoLifeData.h in Headers */,
+				D25F2706055881645FAD3D65D2262239 /* UITableView+TinecoLifeData.h in Headers */,
+				F75B393792069E734BEA4E467393AA8E /* UIView+TinecoLifeData.h in Headers */,
+				BB4F4B13F27DD54962C38D627F6F090E /* UIViewController+TinecoLifeData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C93B53BFD7B2D1728AD139C1A173CE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,31 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB8E6889478A1F5A57A5ED21803FFA3 /* Pods-TLTrackSDK_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F389D3A496A06C5E16214ADF9802B252 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC5CA822AF3721BA02F23D12369DD906 /* NSObject+TLSwizzler.h in Headers */,
-				4EBAD2AC1DE30FD2601117D129D259E9 /* TLAnalyticsDatabase.h in Headers */,
-				5A374E341A232F095246AA1349A52C72 /* TLAnalyticsExceptionHandler.h in Headers */,
-				8E69675A2C391742D85F2FDA1083F18D /* TLAnalyticsExtensionDataManager.h in Headers */,
-				6BDB3408DE48CA344D7192D11CA715ED /* TLAnalyticsFileStore.h in Headers */,
-				799E4259B0D91CC8A591FF661AADEB61 /* TLAnalyticsKeychainItem.h in Headers */,
-				D50B536B5DC46E163C104B59BE66D291 /* TLAnalyticsNetwork.h in Headers */,
-				FB4DF763B4B4913C1F31A2BA23C34865 /* TLAnalyticsSDK.h in Headers */,
-				2FF4672355211F3192C89E541C1B9672 /* TLDeviceType.h in Headers */,
-				3011449483BB17376AA676C5E26EEF02 /* TLTrackSDK.h in Headers */,
-				5776DC43EB5673958ABD2387F3D02FB2 /* TLTrackSDK-umbrella.h in Headers */,
-				1E242E1EAF00CBE69350B02CF60E5BF7 /* UIApplication+TinecoLifeData.h in Headers */,
-				A03BD1E5BC8B43DB99FD698DC3BF72ED /* UICollectionView+TinecoLifeData.h in Headers */,
-				C6884F53E80DA54F28916644DF9CDDA0 /* UIControl+TinecoLifeData.h in Headers */,
-				AAB4775F92C1AF7458345DC3A2603DEA /* UIGestureRecognizer+TinecoLifeData.h in Headers */,
-				0FA79238A3FF54FFF39B20B608B3219A /* UITableView+TinecoLifeData.h in Headers */,
-				F38ED5988F5477146B5FD724D5B7E1F4 /* UIView+TinecoLifeData.h in Headers */,
-				573A7C333A12D74075148449CE05BBA3 /* UIViewController+TinecoLifeData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +367,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				160264B1ABEC3396E3F6D4C5062C6016 /* PBXTargetDependency */,
+				FC27A477E28DB25830D0F231F1D40CE5 /* PBXTargetDependency */,
 			);
 			name = "Pods-TLTrackSDK_Tests";
 			productName = Pods_TLTrackSDK_Tests;
@@ -397,7 +386,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				7BC1E69F795F43889D9DC802E2E1619E /* PBXTargetDependency */,
+				AD14D0EC345ED39A0A828533E5295BC4 /* PBXTargetDependency */,
 			);
 			name = "Pods-TLTrackSDK_Example";
 			productName = Pods_TLTrackSDK_Example;
@@ -406,12 +395,12 @@
 		};
 		CF226EC605F6907245A0E6425EBDCC54 /* TLTrackSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3E7FF7B35E975D8F5D6DEED684A013D /* Build configuration list for PBXNativeTarget "TLTrackSDK" */;
+			buildConfigurationList = 876E34533231F62B2A53319EBA10ED93 /* Build configuration list for PBXNativeTarget "TLTrackSDK" */;
 			buildPhases = (
-				F389D3A496A06C5E16214ADF9802B252 /* Headers */,
-				4AE9E95A175755A9BFA608DAF6043DA0 /* Sources */,
-				B52735ECD994A2D0F20117E39ABE4F2A /* Frameworks */,
-				A0C759DA5FB07E4BD3641BFAC57CD102 /* Resources */,
+				1913DEE96B8E8EC3A3656342B2018318 /* Headers */,
+				211F84DF12DE90A31479910C16AB7326 /* Sources */,
+				6768428EF96CCE2A0F7069F9D22AB66C /* Frameworks */,
+				FD8F484F86CEE9E46BF7AB92626E6D4C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -459,14 +448,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0C759DA5FB07E4BD3641BFAC57CD102 /* Resources */ = {
+		A97B3011666A614F6084B306A0D1A8AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A97B3011666A614F6084B306A0D1A8AF /* Resources */ = {
+		FD8F484F86CEE9E46BF7AB92626E6D4C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -476,27 +465,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4AE9E95A175755A9BFA608DAF6043DA0 /* Sources */ = {
+		211F84DF12DE90A31479910C16AB7326 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E94E8562F5CC7700FD3DEB1F6CE0988D /* NSObject+TLSwizzler.m in Sources */,
-				45BB6F299EAE6309D3010D5A1CBE1090 /* TLAnalyticsDatabase.m in Sources */,
-				91727138DEE8D85B0C643724AD9B07D4 /* TLAnalyticsExceptionHandler.m in Sources */,
-				D78789986A2E18071D28046939829F05 /* TLAnalyticsExtensionDataManager.m in Sources */,
-				AFD94C3A84E2C7969C490904F574721B /* TLAnalyticsFileStore.m in Sources */,
-				0DF3F77A6B8986DB222404676E613A93 /* TLAnalyticsKeychainItem.m in Sources */,
-				EA004CA36971443749CAE9201A4AD931 /* TLAnalyticsNetwork.m in Sources */,
-				03817D047097899671DB19248847B316 /* TLAnalyticsSDK.m in Sources */,
-				B148431A22D390E41AA35AB5B0243F2A /* TLDeviceType.m in Sources */,
-				02FD2A9D627B3246F3584DDD93A2B170 /* TLTrackSDK-dummy.m in Sources */,
-				4B70A86701980E8894E7B8906AC27AB1 /* UIApplication+TinecoLifeData.m in Sources */,
-				E0DD9FCD30CD67ABB21459641919A6DB /* UICollectionView+TinecoLifeData.m in Sources */,
-				988F615E97BA1A71C953513EDF0539EC /* UIControl+TinecoLifeData.m in Sources */,
-				FD5F4A2DF30B4A063DF65B90B87962E2 /* UIGestureRecognizer+TinecoLifeData.m in Sources */,
-				9BDC8B4698D89D16B3C0C0C33378249D /* UITableView+TinecoLifeData.m in Sources */,
-				A15721A82F338EC68710655012460C9F /* UIView+TinecoLifeData.m in Sources */,
-				421C0BFBE9CE760C6795B2EAAC4FDB86 /* UIViewController+TinecoLifeData.m in Sources */,
+				E53005D72863A7819E473D7F7A44ECD9 /* NSObject+TLSwizzler.m in Sources */,
+				8ACA80D2823334043F2D2202765B5605 /* TLDeviceType.m in Sources */,
+				DB698F2D3AF1A066FFE1894F85AEDE07 /* TLTrackDatabase.m in Sources */,
+				BB2833F7C9795F28565BAE87E057812D /* TLTrackExceptionHandler.m in Sources */,
+				370F42DB55AED3EDE3CF25A079443256 /* TLTrackExtensionDataManager.m in Sources */,
+				1D4F7C7F062BD4DFA92F2E1851813A8C /* TLTrackFileStore.m in Sources */,
+				E1A0E1EAB7F3DE1179D723F415BBA015 /* TLTrackKeychainItem.m in Sources */,
+				529EF8BF0C545985A1730693EC405DFF /* TLTrackNetwork.m in Sources */,
+				EC82B99437231F6DCAED552BF46DB5B2 /* TLTrackSDK.m in Sources */,
+				D9E6BF2A9645B64A0F04759EF7A83B98 /* TLTrackSDK-dummy.m in Sources */,
+				14052F2F90D3D7EA298356276FEC8B4B /* UICollectionView+TinecoLifeData.m in Sources */,
+				C7599FCBEF763AB3018DD16C66509306 /* UIControl+TinecoLifeData.m in Sources */,
+				966D359432BB535BDCFAF00E210F83AC /* UIGestureRecognizer+TinecoLifeData.m in Sources */,
+				DABE670FF2333552884465F7A3213F48 /* UITableView+TinecoLifeData.m in Sources */,
+				3E4301F38C3623B1A00C73A8FC6F02FD /* UIView+TinecoLifeData.m in Sources */,
+				4BD6D951BB495F623E1DA2B392E88409 /* UIViewController+TinecoLifeData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,26 +507,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		160264B1ABEC3396E3F6D4C5062C6016 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-TLTrackSDK_Example";
-			target = 40568707202358987974253071C995F5 /* Pods-TLTrackSDK_Example */;
-			targetProxy = 13DA6FDDD6DA384C37524D7F5002DD42 /* PBXContainerItemProxy */;
-		};
-		7BC1E69F795F43889D9DC802E2E1619E /* PBXTargetDependency */ = {
+		AD14D0EC345ED39A0A828533E5295BC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TLTrackSDK;
 			target = CF226EC605F6907245A0E6425EBDCC54 /* TLTrackSDK */;
-			targetProxy = 8499A692689ECB2E7C88D9F85463F5DE /* PBXContainerItemProxy */;
+			targetProxy = 51EE07AEFB8E333BA0C66B1F0A6E67FA /* PBXContainerItemProxy */;
+		};
+		FC27A477E28DB25830D0F231F1D40CE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TLTrackSDK_Example";
+			target = 40568707202358987974253071C995F5 /* Pods-TLTrackSDK_Example */;
+			targetProxy = 2152717C4513FFDED8CB314653D3CA55 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0DE51F6CA59429FB03F69C6313EAB935 /* Release */ = {
+		06DA3AE15DBE7F5E2440793E9955A89A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91979C29551F8A36B4921533012864E1 /* Pods-TLTrackSDK_Tests.release.xcconfig */;
+			baseConfigurationReference = 59864E2DB1CE70570159C2CE88FCA134 /* Pods-TLTrackSDK_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -549,7 +539,204 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TLTrackSDK_Tests/Pods-TLTrackSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TLTrackSDK_Tests/Pods-TLTrackSDK_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52FFB4C118B037CCBC94508CDC906830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B46BFF0E1DC62B28298583377D8427E0 /* Pods-TLTrackSDK_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TLTrackSDK_Example/Pods-TLTrackSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TLTrackSDK_Example/Pods-TLTrackSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		973AAD8003133201177412DF06517343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C5F7A0F30B1BD0DDD9FF89D4AAAFC08 /* TLTrackSDK.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TLTrackSDK/TLTrackSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK.modulemap";
+				PRODUCT_MODULE_NAME = TLTrackSDK;
+				PRODUCT_NAME = TLTrackSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A896E34B89CB5BCBB98DC892D3774694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2CFE304950FAA475E45C1E10530039C /* Pods-TLTrackSDK_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TLTrackSDK_Example/Pods-TLTrackSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TLTrackSDK_Example/Pods-TLTrackSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB7AD895FE2531DF1F983C668ADEA8F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91979C29551F8A36B4921533012864E1 /* Pods-TLTrackSDK_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TLTrackSDK_Tests/Pods-TLTrackSDK_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TLTrackSDK_Tests/Pods-TLTrackSDK_Tests.modulemap";
@@ -567,7 +754,7 @@
 			};
 			name = Release;
 		};
-		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -620,7 +807,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -633,74 +820,11 @@
 			};
 			name = Debug;
 		};
-		6DDACB9903CB316C54847278C370BB9C /* Debug */ = {
+		C3374936E76F68385441AFBAE467C758 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59864E2DB1CE70570159C2CE88FCA134 /* Pods-TLTrackSDK_Tests.debug.xcconfig */;
+			baseConfigurationReference = C21EDD92FC0F36906D1BAABAA7F8FA16 /* TLTrackSDK.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TLTrackSDK_Tests/Pods-TLTrackSDK_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TLTrackSDK_Tests/Pods-TLTrackSDK_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A168332172226B1ABF09778D766E2E4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0E419E449C915C2EF714D2975907C68 /* TLTrackSDK.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TLTrackSDK/TLTrackSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TLTrackSDK/TLTrackSDK.modulemap";
-				PRODUCT_MODULE_NAME = TLTrackSDK;
-				PRODUCT_NAME = TLTrackSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C9E57DD74EBC090D9EB944F491F3BAB0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14D72DC7B7C06723B680FED76CDF4DAF /* TLTrackSDK.debug.xcconfig */;
-			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -727,132 +851,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		CE63CFD1D7D0A01913C06D5DFC1B0510 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2CFE304950FAA475E45C1E10530039C /* Pods-TLTrackSDK_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TLTrackSDK_Example/Pods-TLTrackSDK_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TLTrackSDK_Example/Pods-TLTrackSDK_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FE71E97F621E0114FBAA73A8946148F3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B46BFF0E1DC62B28298583377D8427E0 /* Pods-TLTrackSDK_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TLTrackSDK_Example/Pods-TLTrackSDK_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TLTrackSDK_Example/Pods-TLTrackSDK_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -860,8 +858,8 @@
 		0CAA9E49008961EFF422325A5B1CDF4B /* Build configuration list for PBXNativeTarget "Pods-TLTrackSDK_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE63CFD1D7D0A01913C06D5DFC1B0510 /* Debug */,
-				FE71E97F621E0114FBAA73A8946148F3 /* Release */,
+				A896E34B89CB5BCBB98DC892D3774694 /* Debug */,
+				52FFB4C118B037CCBC94508CDC906830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -869,8 +867,17 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
-				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		876E34533231F62B2A53319EBA10ED93 /* Build configuration list for PBXNativeTarget "TLTrackSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3374936E76F68385441AFBAE467C758 /* Debug */,
+				973AAD8003133201177412DF06517343 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -878,17 +885,8 @@
 		97B929CC398904149DCE1C9D6AAF7C0A /* Build configuration list for PBXNativeTarget "Pods-TLTrackSDK_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6DDACB9903CB316C54847278C370BB9C /* Debug */,
-				0DE51F6CA59429FB03F69C6313EAB935 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B3E7FF7B35E975D8F5D6DEED684A013D /* Build configuration list for PBXNativeTarget "TLTrackSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9E57DD74EBC090D9EB944F491F3BAB0 /* Debug */,
-				A168332172226B1ABF09778D766E2E4B /* Release */,
+				06DA3AE15DBE7F5E2440793E9955A89A /* Debug */,
+				AB7AD895FE2531DF1F983C668ADEA8F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

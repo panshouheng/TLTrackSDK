@@ -1,10 +1,10 @@
 
 
-#import "TLAnalyticsDatabase.h"
+#import "TLTrackDatabase.h"
 
 static NSString * const TinecoAnalyticsDefaultDatabaseName = @"TinecoAnalyticsDatabase.sqlite";
 
-@interface TLAnalyticsDatabase ()
+@interface TLTrackDatabase ()
 
 @property (nonatomic, copy) NSString *filePath;
 
@@ -12,7 +12,7 @@ static NSString * const TinecoAnalyticsDefaultDatabaseName = @"TinecoAnalyticsDa
 
 @end
 
-@implementation TLAnalyticsDatabase {
+@implementation TLTrackDatabase {
     sqlite3 *_database;
 }
 
@@ -127,11 +127,18 @@ static sqlite3_stmt *selectStmt = NULL;
             NSData *data = [[NSData alloc] initWithBytes:sqlite3_column_blob(selectStmt, 1) length:sqlite3_column_bytes(selectStmt, 1)];
             // 将查询到的事件数据转换成 json 字符串
             NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSMutableString *mutStr = [NSMutableString stringWithString:jsonString];
+            NSRange range = {0,jsonString.length};
+            //去掉字符串中的空格
+            [mutStr replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:range];
+            NSRange range2 = {0,mutStr.length};
+            //去掉字符串中的换行符
+            [mutStr replaceOccurrencesOfString:@"\n" withString:@"" options:NSLiteralSearch range:range2];
 #ifdef DEBUG
 //            NSLog(@"%@", jsonString);
 #endif
             // 将 json 字符串添加到数组中
-            [events addObject:jsonString];
+            [events addObject:mutStr];
         }
     });
     return events;

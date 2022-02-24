@@ -3,7 +3,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TLAnalyticsExceptionHandler : NSObject
+@interface TLTrackExceptionHandler : NSObject
 
 + (instancetype)sharedInstance;
 

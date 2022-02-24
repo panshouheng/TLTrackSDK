@@ -3,7 +3,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TLAnalyticsKeychainItem : NSObject
+@interface TLTrackKeychainItem : NSObject
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithService:(NSString *)service key:(NSString *)key;

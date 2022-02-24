@@ -1,8 +1,8 @@
 
-#import "TLAnalyticsKeychainItem.h"
+#import "TLTrackKeychainItem.h"
 #import <Security/Security.h>
 
-@interface TLAnalyticsKeychainItem ()
+@interface TLTrackKeychainItem ()
 
 @property (nonatomic, strong) NSString *service;
 @property (nonatomic, strong) NSString *accessGroup;
@@ -10,7 +10,7 @@
 
 @end
 
-@implementation TLAnalyticsKeychainItem
+@implementation TLTrackKeychainItem
 
 - (instancetype)initWithService:(NSString *)service key:(NSString *)key {
     return [self initWithService:service accessGroup:nil key:key];
@@ -27,7 +27,7 @@
 }
 
 - (nullable NSString *)value {
-    NSMutableDictionary *query = [TLAnalyticsKeychainItem keychainQueryWithService:self.service accessGroup:self.accessGroup key:self.key];
+    NSMutableDictionary *query = [TLTrackKeychainItem keychainQueryWithService:self.service accessGroup:self.accessGroup key:self.key];
     query[(NSString *)kSecMatchLimit] = (id)kSecMatchLimitOne;
     query[(NSString *)kSecReturnAttributes] = (id)kCFBooleanTrue;
     query[(NSString *)kSecReturnData] = (id)kCFBooleanTrue;
@@ -56,7 +56,7 @@
 - (void)update:(NSString *)value {
     NSData *encodedValue = [value dataUsingEncoding:NSUTF8StringEncoding];
 
-    NSMutableDictionary *query = [TLAnalyticsKeychainItem keychainQueryWithService:self.service accessGroup:self.accessGroup key:self.key];
+    NSMutableDictionary *query = [TLTrackKeychainItem keychainQueryWithService:self.service accessGroup:self.accessGroup key:self.key];
 
     NSString *originalValue = [self value];
     if (originalValue) {
@@ -81,7 +81,7 @@
 }
 
 - (void)remove {
-    NSMutableDictionary *query = [TLAnalyticsKeychainItem keychainQueryWithService:self.service accessGroup:self.accessGroup key:self.key];
+    NSMutableDictionary *query = [TLTrackKeychainItem keychainQueryWithService:self.service accessGroup:self.accessGroup key:self.key];
     OSStatus status = SecItemDelete((__bridge CFDictionaryRef)query);
 
     if (status != noErr && status != errSecItemNotFound) {

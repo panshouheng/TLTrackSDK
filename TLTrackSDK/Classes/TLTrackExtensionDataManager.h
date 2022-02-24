@@ -3,7 +3,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TLAnalyticsExtensionDataManager : NSObject
+@interface TLTrackExtensionDataManager : NSObject
 
 + (instancetype)sharedInstance;
 

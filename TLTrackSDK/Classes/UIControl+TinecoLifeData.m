@@ -1,7 +1,7 @@
 
 #import "UIControl+TinecoLifeData.h"
 #import "NSObject+TLSwizzler.h"
-#import "TLAnalyticsSDK.h"
+#import "TLTrackSDK.h"
 
 @implementation UIControl (TinecoLifeData)
 
@@ -52,14 +52,14 @@
     }
     if ([self TinecoLifeData_isAddMultipleTargetActionsWithDefaultControlEvent:UIControlEventValueChanged]) {
         // 触发 $AppClick 事件
-        [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:sender properties:nil];
+        [[TLTrackSDK sharedInstance] trackAppClickWithView:sender properties:nil];
     }
 }
 
 - (void)TinecoLifeData_touchDownAction:(UIControl *)sender event:(UIEvent *)event {
     if ([self TinecoLifeData_isAddMultipleTargetActionsWithDefaultControlEvent:UIControlEventTouchDown]) {
         // 触发 $AppClick 事件
-        [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:sender properties:nil];
+        [[TLTrackSDK sharedInstance] trackAppClickWithView:sender properties:nil];
     }
 }
 

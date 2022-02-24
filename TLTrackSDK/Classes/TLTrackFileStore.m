@@ -1,9 +1,9 @@
 
-#import "TLAnalyticsFileStore.h"
+#import "TLTrackFileStore.h"
 
 static NSString * const TinecoAnalyticsDefaultFileName = @"TinecoAnalyticsData.plist";
 
-@interface TLAnalyticsFileStore ()
+@interface TLTrackFileStore ()
 
 @property (nonatomic, strong) NSMutableArray<NSDictionary *> *events;
 
@@ -12,7 +12,7 @@ static NSString * const TinecoAnalyticsDefaultFileName = @"TinecoAnalyticsData.p
 
 @end
 
-@implementation TLAnalyticsFileStore
+@implementation TLTrackFileStore
 
 - (instancetype)init {
     self = [super init];

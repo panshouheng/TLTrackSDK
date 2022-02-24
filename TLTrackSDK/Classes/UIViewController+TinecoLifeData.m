@@ -1,6 +1,6 @@
 
 #import "UIViewController+TinecoLifeData.h"
-#import "TLAnalyticsSDK.h"
+#import "TLTrackSDK.h"
 #import "NSObject+TLSwizzler.h"
 #import <WebKit/WebKit.h>
 static NSString * const kTinecoLifeDataBlackListFileName = @"TinecoLifeData_black_list";
@@ -48,7 +48,7 @@ static NSString * const kTinecoLifeDataBlackListFileName = @"TinecoLifeData_blac
         if (urlString.length) {
             params[@"url"] = urlString;
         }
-        [[TLAnalyticsSDK sharedInstance] track:@"AppViewScreen" properties:params];
+        [[TLTrackSDK sharedInstance] track:@"AppViewScreen" properties:params];
     }
 }
 - (NSString *)webH5urlString {

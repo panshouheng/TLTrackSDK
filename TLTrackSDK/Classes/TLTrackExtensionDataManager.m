@@ -1,15 +1,15 @@
 
-#import "TLAnalyticsExtensionDataManager.h"
+#import "TLTrackExtensionDataManager.h"
 
 static NSString * const kTinecoExtensionFileName = @"Tineco_analytics_extension_events.plist";
 
-@implementation TLAnalyticsExtensionDataManager
+@implementation TLTrackExtensionDataManager
 
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
-    static TLAnalyticsExtensionDataManager *manager = nil;
+    static TLTrackExtensionDataManager *manager = nil;
     dispatch_once(&onceToken, ^{
-        manager = [[TLAnalyticsExtensionDataManager alloc] init];
+        manager = [[TLTrackExtensionDataManager alloc] init];
     });
     return manager;
 }

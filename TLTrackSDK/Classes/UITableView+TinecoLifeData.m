@@ -2,7 +2,7 @@
 
 #import "UITableView+TinecoLifeData.h"
 #import "NSObject+TLSwizzler.h"
-#import "TLAnalyticsSDK.h"
+#import "TLTrackSDK.h"
 #import "UIView+TinecoLifeData.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
@@ -28,7 +28,7 @@ static void TinecoLifeData_tableViewDidSelectRow(id object, SEL selector, UITabl
     ((void(*)(id, SEL, id, id))objc_msgSend)(object, destinationSelector, tableView, indexPath);
 
     // TODO: 触发 $AppClick 事件
-    [[TLAnalyticsSDK sharedInstance] trackAppClickWithTableView:tableView didSelectRowAtIndexPath:indexPath properties:nil];
+    [[TLTrackSDK sharedInstance] trackAppClickWithTableView:tableView didSelectRowAtIndexPath:indexPath properties:nil];
 }
 
 - (void)TinecoLifeData_swizzleDidSelectRowAtIndexPathMethodWithDelegate:(id)delegate {

@@ -8,6 +8,7 @@
 
 #import "TLViewController.h"
 #import "TLSecondViewController.h"
+#import <TLTrackSDK.h>
 @interface TLViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
@@ -33,10 +34,13 @@
     [tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"123123"];
     [self.view addSubview:tableView];
     
+    
+    
 }
 - (void)buttonClick {
     TLSecondViewController *second = [[TLSecondViewController alloc] init];
     [self.navigationController pushViewController:second animated:YES];
+    [TLTrackSDK.sharedInstance deleteSuperPropertiesByKeys:@[@"自己添加的属性5"]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -48,7 +52,7 @@
     return 10;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+        [TLTrackSDK.sharedInstance registerSuperProperties:@{[NSString stringWithFormat:@"自己添加的属性%ld",indexPath.row]:@"自己添加的超级属性"}];
 }
 - (void)didReceiveMemoryWarning
 {

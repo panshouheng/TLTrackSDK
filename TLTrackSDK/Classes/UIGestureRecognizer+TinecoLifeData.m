@@ -1,6 +1,6 @@
 
 #import "UIGestureRecognizer+TinecoLifeData.h"
-#import "TLAnalyticsSDK.h"
+#import "TLTrackSDK.h"
 #import "NSObject+TLSwizzler.h"
 
 #pragma mark - UITapGestureRecognizer
@@ -41,7 +41,7 @@
     // $AppClick 事件的属性，这里只需要设置 $element_type，其他的事件属性在 trackAppClickWithView:properties: 中可自动获取
     NSDictionary *properties = @{@"element_type": NSStringFromClass(self.class)};
     // 触发 $AppClick 事件
-    [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:view properties:properties];
+    [[TLTrackSDK sharedInstance] trackAppClickWithView:view properties:properties];
 }
 
 @end
@@ -87,7 +87,7 @@
     // $AppClick 事件的属性，这里只需要设置 $element_type，其他的事件属性在 trackAppClickWithView:properties: 中可自动获取
     NSDictionary *properties = @{@"element_type": NSStringFromClass(self.class)};
     // 触发 $AppClick 事件
-    [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:view properties:properties];
+    [[TLTrackSDK sharedInstance] trackAppClickWithView:view properties:properties];
 }
 
 @end

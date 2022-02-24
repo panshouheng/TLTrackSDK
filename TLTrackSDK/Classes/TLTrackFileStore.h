@@ -4,7 +4,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TLAnalyticsFileStore : NSObject
+@interface TLTrackFileStore : NSObject
 
 @property (nonatomic, copy) NSString *filePath;
 

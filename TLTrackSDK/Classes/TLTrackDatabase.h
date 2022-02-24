@@ -4,7 +4,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TLAnalyticsDatabase : NSObject
+@interface TLTrackDatabase : NSObject
 
 /// 数据库文件路径
 @property (nonatomic, copy, readonly) NSString *filePath;

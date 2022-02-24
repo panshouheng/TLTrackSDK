@@ -1,23 +1,23 @@
 
-#import "TLAnalyticsExceptionHandler.h"
-#import "TLAnalyticsSDK.h"
+#import "TLTrackExceptionHandler.h"
+#import "TLTrackSDK.h"
 
 static NSString * const SensorDataSignalExceptionHandlerName = @"SignalExceptionHandler";
 static NSString * const SensorDataSignalExceptionHandlerUserInfo = @"SignalExceptionHandlerUserInfo";
 
-@interface TLAnalyticsExceptionHandler ()
+@interface TLTrackExceptionHandler ()
 
 @property (nonatomic) NSUncaughtExceptionHandler *previousExceptionHandler;
 
 @end
 
-@implementation TLAnalyticsExceptionHandler
+@implementation TLTrackExceptionHandler
 
 + (instancetype)sharedInstance {
-    static TLAnalyticsExceptionHandler *instance = nil;
+    static TLTrackExceptionHandler *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[TLAnalyticsExceptionHandler alloc] init];
+        instance = [[TLTrackExceptionHandler alloc] init];
     });
     return instance;
 }
@@ -51,9 +51,9 @@ static NSString * const SensorDataSignalExceptionHandlerUserInfo = @"SignalExcep
 
 static void TinecoLifeData_uncaught_exception_handler(NSException *exception) {
     // 采集 AppCrashed 事件
-    [[TLAnalyticsExceptionHandler sharedInstance] trackAppCrashedWithException:exception];
+    [[TLTrackExceptionHandler sharedInstance] trackAppCrashedWithException:exception];
 
-    NSUncaughtExceptionHandler *handle = [TLAnalyticsExceptionHandler sharedInstance].previousExceptionHandler;
+    NSUncaughtExceptionHandler *handle = [TLTrackExceptionHandler sharedInstance].previousExceptionHandler;
     if (handle) {
         handle(exception);
     }
@@ -65,7 +65,7 @@ static void TinecoLifeData_signal_exception_handler(int sig, struct __siginfo *i
     // 创建一个异常对象，用于采集崩溃信息数据
     NSException *exception = [NSException exceptionWithName:SensorDataSignalExceptionHandlerName reason:reason userInfo:userInfo];
 
-    TLAnalyticsExceptionHandler *handler = [TLAnalyticsExceptionHandler sharedInstance];
+    TLTrackExceptionHandler *handler = [TLTrackExceptionHandler sharedInstance];
     [handler trackAppCrashedWithException:exception];
 }
 
@@ -88,14 +88,14 @@ static void TinecoLifeData_signal_exception_handler(int sig, struct __siginfo *i
     [defaults synchronize];
 #endif
 
-    [[TLAnalyticsSDK sharedInstance] track:@"AppCrashed" properties:properties];
+    [[TLTrackSDK sharedInstance] track:@"AppCrashed" properties:properties];
 
     // 采集 $AppEnd 回调 block
     dispatch_block_t trackAppEndBlock = ^ {
         // 判断应用是否处于运行状态
         if (UIApplication.sharedApplication.applicationState == UIApplicationStateActive) {
             // 触发事件
-            [[TLAnalyticsSDK sharedInstance] track:@"AppEnd" properties:nil];
+            [[TLTrackSDK sharedInstance] track:@"AppEnd" properties:nil];
         }
     };
     // 获取主线程
@@ -110,11 +110,11 @@ static void TinecoLifeData_signal_exception_handler(int sig, struct __siginfo *i
     }
 
     // 获取 TLAnalyticsSDK 中的 serialQueue
-    dispatch_queue_t serialQueue = [[TLAnalyticsSDK sharedInstance] valueForKeyPath:@"serialQueue"];
+    dispatch_queue_t serialQueue = [[TLTrackSDK sharedInstance] valueForKeyPath:@"serialQueue"];
     // 阻塞当前线程，让 serialQueue 执行完成
     dispatch_sync(serialQueue, ^{});
     // 获取数据存储时的线程
-    dispatch_queue_t databaseQueue = [[TLAnalyticsSDK sharedInstance] valueForKeyPath:@"database.queue"];
+    dispatch_queue_t databaseQueue = [[TLTrackSDK sharedInstance] valueForKeyPath:@"database.queue"];
     // 阻塞当前线程，让 $AppCrashed 及 $AppEnd 事件完成入库
     dispatch_sync(databaseQueue, ^{});
 

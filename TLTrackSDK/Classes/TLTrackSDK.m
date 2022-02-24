@@ -1,12 +1,12 @@
 
-#import "TLAnalyticsSDK.h"
+#import "TLTrackSDK.h"
 #import "UIView+TinecoLifeData.h"
-#import "TLAnalyticsFileStore.h"
-#import "TLAnalyticsDatabase.h"
-#import "TLAnalyticsNetwork.h"
-#import "TLAnalyticsExceptionHandler.h"
-#import "TLAnalyticsExtensionDataManager.h"
-#import "TLAnalyticsKeychainItem.h"
+#import "TLTrackFileStore.h"
+#import "TLTrackDatabase.h"
+#import "TLTrackNetwork.h"
+#import "TLTrackExceptionHandler.h"
+#import "TLTrackExtensionDataManager.h"
+#import "TLTrackKeychainItem.h"
 #include <sys/sysctl.h>
 #include <objc/runtime.h>
 #import "TLDeviceType.h"
@@ -14,7 +14,7 @@
 #import <WebKit/WebKit.h>
 #endif
 
-static NSString * const TinecoAnalyticsVersion = @"1.2.8";
+static NSString * const TinecoAnalyticsVersion = @"1.2.9";
 
 static NSString * const TinecoAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
 static NSString * const TinecoAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
@@ -29,8 +29,10 @@ static NSString * const TinecoAnalyticsEventDidEnterBackgroundKey = @"did_enter_
 static NSUInteger const TinecoAnalyticsDefalutFlushEventCount = 50;
 
 static NSString * const TinecoAnalyticsJavaScriptTrackEventScheme = @"Tinecoanalytics://trackEvent";
+// 自定义的超级属性，app 卸载之后消除
+static NSString * const TinecoAnalyticsEventRegisterSuperPropertiesKey = @"TinecoAnalyticsEventRegisterSuperPropertiesKey";
 
-@interface TLAnalyticsSDK ()
+@interface TLTrackSDK ()
 
 /// 由 SDK 自动采集的事件属性，即预置属性
 @property (nonatomic, copy) NSDictionary<NSString *, id> *automaticProperties;
@@ -44,27 +46,22 @@ static NSString * const TinecoAnalyticsJavaScriptTrackEventScheme = @"Tinecoanal
 
 /// 登录 ID
 @property (nonatomic, copy) NSString *loginId;
-
 /// 保存进入后台时，未暂停的事件
 @property (nonatomic, strong) NSMutableArray<NSString *> *enterBackgroundTrackTimerEvents;
 /// 事件时长计算
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSDictionary *> *trackTimer;
-
 @property (nonatomic, strong) dispatch_queue_t serialQueue;
-
 /// 文件缓存事件数据对象
-@property (nonatomic, strong) TLAnalyticsFileStore *fileStore;
+@property (nonatomic, strong) TLTrackFileStore *fileStore;
 /// 数据库存储对象
-@property (nonatomic, strong) TLAnalyticsDatabase *database;
-
+@property (nonatomic, strong) TLTrackDatabase *database;
 @property (nonatomic, strong) NSURL *serverURL;
 /// 数据上传等网络请求对象
-@property (nonatomic, strong) TLAnalyticsNetwork *network;
+@property (nonatomic, strong) TLTrackNetwork *network;
 /// 定时上传事件的 Timer
 @property (nonatomic, strong) NSTimer *flushTimer;
-
 @property (nonatomic, strong) NSString *phone_type;
-
+@property (nonatomic, strong) NSDictionary *customSuperProperties;
 #ifndef Tineco_ANALYTICS_UIWEBVIEW
 // 由于 WKWebView 获取 UserAgent 是异步过程，为了在获取过程中创建的 WKWebView 对象不被销毁，需要保存创建的临时对象
 @property (nonatomic, strong) WKWebView *webView;
@@ -72,19 +69,19 @@ static NSString * const TinecoAnalyticsJavaScriptTrackEventScheme = @"Tinecoanal
 
 @end
 
-@implementation TLAnalyticsSDK {
+@implementation TLTrackSDK {
     NSString *_anonymousId;
 }
 
-static TLAnalyticsSDK *sharedInstance = nil;
+static TLTrackSDK *sharedInstance = nil;
 + (void)startWithServerURL:(NSString *)urlString {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[TLAnalyticsSDK alloc] initWithServerURL:urlString];
+        sharedInstance = [[TLTrackSDK alloc] initWithServerURL:urlString];
     });
 }
 
-+ (TLAnalyticsSDK *)sharedInstance {
++ (TLTrackSDK *)sharedInstance {
     return sharedInstance;
 }
 
@@ -111,16 +108,16 @@ static TLAnalyticsSDK *sharedInstance = nil;
         // 添加应用程序状态监听
         [self setupListeners];
 
-        _fileStore = [[TLAnalyticsFileStore alloc] init];
+        _fileStore = [[TLTrackFileStore alloc] init];
         // 初始化 TinecoAnalyticsDatabase 类的对象，使用默认路径
-        _database = [[TLAnalyticsDatabase alloc] init];
+        _database = [[TLTrackDatabase alloc] init];
 
         _flushBulkSize = 100;
         _flushInterval = 15;
-        _network = [[TLAnalyticsNetwork alloc] initWithServerURL:[NSURL URLWithString:urlString]];
+        _network = [[TLTrackNetwork alloc] initWithServerURL:[NSURL URLWithString:urlString]];
 
         // 调用异常处理单例对象，进行初始化
-        [TLAnalyticsExceptionHandler sharedInstance];
+        [TLTrackExceptionHandler sharedInstance];
 
         [self startFlushTimer];
     }
@@ -135,7 +132,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
 
 - (void)printEvent:(NSDictionary *)event {
 #if DEBUG
-    if (TLAnalyticsSDK.sharedInstance.showLogs) {
+    if (TLTrackSDK.sharedInstance.showLogs) {
         NSError *error = nil;
         NSData *data = [NSJSONSerialization dataWithJSONObject:event options:NSJSONWritingPrettyPrinted error:&error];
         if (error) {
@@ -203,6 +200,16 @@ static TLAnalyticsSDK *sharedInstance = nil;
     properties[@"os_version"] = UIDevice.currentDevice.systemVersion;
     // 设置应用版本
     properties[@"app_version"] = NSBundle.mainBundle.infoDictionary[@"CFBundleShortVersionString"];
+
+    if (_customSuperProperties && _customSuperProperties.allKeys.count) {
+        [properties addEntriesFromDictionary:_customSuperProperties];
+    }else {
+        NSDictionary *superProperties = [NSUserDefaults.standardUserDefaults dictionaryForKey:TinecoAnalyticsEventRegisterSuperPropertiesKey];
+        if (superProperties && superProperties.allKeys.count) {
+            _customSuperProperties = superProperties;
+            [properties addEntriesFromDictionary:superProperties];
+        }
+    }
     
     return [properties copy];
 }
@@ -245,7 +252,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
         return _anonymousId;
     }
 
-    TLAnalyticsKeychainItem *item = [[TLAnalyticsKeychainItem alloc] initWithService:TinecoAnalyticsKeychainService key:TinecoAnalyticsAnonymousId];
+    TLTrackKeychainItem *item = [[TLTrackKeychainItem alloc] initWithService:TinecoAnalyticsKeychainService key:TinecoAnalyticsAnonymousId];
     // 从 Keychain 中读取设备 ID
     _anonymousId = [item value];
 
@@ -291,7 +298,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     [[NSUserDefaults standardUserDefaults] setObject:anonymousId forKey:TinecoAnalyticsAnonymousId];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
-    TLAnalyticsKeychainItem *item = [[TLAnalyticsKeychainItem alloc] initWithService:TinecoAnalyticsKeychainService key:TinecoAnalyticsAnonymousId];
+    TLTrackKeychainItem *item = [[TLTrackKeychainItem alloc] initWithService:TinecoAnalyticsKeychainService key:TinecoAnalyticsAnonymousId];
     if (anonymousId) {
         // 当设备 ID（匿名 ID）不为空时，将其保存在 Keychain 中
         [item update:anonymousId];
@@ -426,7 +433,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
 - (void)flush {
     
 #ifdef DEBUG
-    if (TLAnalyticsSDK.sharedInstance.uploadDebugLogs) {
+    if (TLTrackSDK.sharedInstance.uploadDebugLogs) {
         dispatch_async(self.serialQueue, ^{
             // 默认一次向服务端发送 50 条数据
             [self flushByEventCount:TinecoAnalyticsDefalutFlushEventCount background:NO];
@@ -472,13 +479,33 @@ static TLAnalyticsSDK *sharedInstance = nil;
 
 - (void)registerSuperProperties:(NSDictionary *)superProperties {
     if (superProperties.allKeys.count == 0) {  return; }
-    NSMutableDictionary *properties = [NSMutableDictionary dictionaryWithDictionary:self.automaticProperties];
-    [properties addEntriesFromDictionary:superProperties];
-    self.automaticProperties = properties;
+    NSMutableDictionary *haveSavedProperties = [NSUserDefaults.standardUserDefaults dictionaryForKey:TinecoAnalyticsEventRegisterSuperPropertiesKey].mutableCopy;
+    if (haveSavedProperties && haveSavedProperties.allKeys.count) {
+        [haveSavedProperties addEntriesFromDictionary:superProperties];
+        [NSUserDefaults.standardUserDefaults setValue:haveSavedProperties forKey:TinecoAnalyticsEventRegisterSuperPropertiesKey];
+        _customSuperProperties = haveSavedProperties;
+    }else {
+        [NSUserDefaults.standardUserDefaults setValue:superProperties forKey:TinecoAnalyticsEventRegisterSuperPropertiesKey];
+        _customSuperProperties = superProperties;
+    }
+    
+    self.automaticProperties = [self collectAutomaticProperties];
+}
+
+- (void)deleteSuperPropertiesByKeys:(NSArray <NSString *>*)keys {
+    NSMutableDictionary *savedDic = [NSUserDefaults.standardUserDefaults dictionaryForKey:TinecoAnalyticsEventRegisterSuperPropertiesKey].mutableCopy;
+    for (NSString *key in keys) {
+        if ([savedDic.allKeys containsObject:key]) {
+            [savedDic removeObjectForKey:key];
+        }
+    }
+    [NSUserDefaults.standardUserDefaults setValue:savedDic forKey:TinecoAnalyticsEventRegisterSuperPropertiesKey];
+    _customSuperProperties = savedDic;
+    self.automaticProperties = [self collectAutomaticProperties];
 }
 @end
 
-@implementation TLAnalyticsSDK (Track)
+@implementation TLTrackSDK (Track)
 
 - (void)track:(NSString *)eventName properties:(NSDictionary<NSString *,id> *)properties {
     
@@ -533,7 +560,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     // 添加自定义属性
     [eventProperties addEntriesFromDictionary:properties];
     // 触发 AppClick 事件
-    [[TLAnalyticsSDK sharedInstance] track:@"AppClick" properties:eventProperties];
+    [[TLTrackSDK sharedInstance] track:@"AppClick" properties:eventProperties];
 }
 
 - (void)trackAppClickWithTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath properties:(nullable NSDictionary<NSString *, id> *)properties {
@@ -549,7 +576,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     // 添加自定义属性
     [eventProperties addEntriesFromDictionary:properties];
     // 触发 AppClick 事件
-    [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:tableView properties:eventProperties];
+    [[TLTrackSDK sharedInstance] trackAppClickWithView:tableView properties:eventProperties];
     if (self.delegate) {
         [self.delegate commonTrackAppClickWithTableView:tableView didSelectRowAtIndexPath:indexPath];
     }
@@ -569,7 +596,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
     [eventProperties addEntriesFromDictionary:properties];
     // 触发 AppClick 事件
     
-    [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:collectionView properties:eventProperties];
+    [[TLTrackSDK sharedInstance] trackAppClickWithView:collectionView properties:eventProperties];
     if (self.delegate) {
         [self.delegate commonTrackAppClickWithCollectionView:collectionView didSelectItemAtIndexPath:indexPath];
     }
@@ -578,7 +605,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
 - (void)trackFromAppExtensionForApplicationGroupIdentifier:(NSString *)identifier {
     dispatch_async(self.serialQueue, ^{
         // 获取 App Group Identifier 对应的应用扩展中采集的事件数据
-        NSArray *allEvents = [[TLAnalyticsExtensionDataManager sharedInstance] allEventsForApplicationGroupIdentifier:identifier];
+        NSArray *allEvents = [[TLTrackExtensionDataManager sharedInstance] allEventsForApplicationGroupIdentifier:identifier];
         for (NSDictionary *dic in allEvents) {
             NSMutableDictionary *properties = [dic[@"properties"] mutableCopy];
             // 在采集的事件属性中加入预置属性
@@ -592,7 +619,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
             [self.database insertEvent:event];
         }
         // 将已经处理完成的数据删除
-        [[TLAnalyticsExtensionDataManager sharedInstance] deleteAllEventsWithApplicationGroupIdentifier:identifier];
+        [[TLTrackExtensionDataManager sharedInstance] deleteAllEventsWithApplicationGroupIdentifier:identifier];
 
         // 将事件上传
         [self flush];
@@ -602,11 +629,11 @@ static TLAnalyticsSDK *sharedInstance = nil;
 @end
 
 #pragma mark - Timer
-@implementation TLAnalyticsSDK (Timer)
+@implementation TLTrackSDK (Timer)
 
 - (void)trackTimerStart:(NSString *)event {
     // 记录事件开始时间 -> 记录事件开始时系统启动时间
-    self.trackTimer[event] = @{TinecoAnalyticsEventBeginKey: @([TLAnalyticsSDK systemUpTime])};
+    self.trackTimer[event] = @{TinecoAnalyticsEventBeginKey: @([TLTrackSDK systemUpTime])};
 }
 
 - (void)trackTimerPause:(NSString *)event {
@@ -620,7 +647,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
         return;
     }
     // 获取当前系统启动时间
-    double systemUpTime = [TLAnalyticsSDK systemUpTime];
+    double systemUpTime = [TLTrackSDK systemUpTime];
     // 获取开始时间
     double beginTime = [eventTimer[TinecoAnalyticsEventBeginKey] doubleValue];
     // 计算暂停前统计的时长
@@ -642,7 +669,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
         return;
     }
     // 获取当前系统启动时间
-    double systemUpTime = [TLAnalyticsSDK systemUpTime];
+    double systemUpTime = [TLTrackSDK systemUpTime];
     // 重置事件开始时间
     eventTimer[TinecoAnalyticsEventBeginKey] = @(systemUpTime);
     // 将事件暂停标记设置为 NO
@@ -670,7 +697,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
         // 事件开始时间
         double beginTime = [(NSNumber *)eventTimer[TinecoAnalyticsEventBeginKey] doubleValue];
         // 获取当前时间 -> 获取当前系统启动时间
-        double currentTime = [TLAnalyticsSDK systemUpTime];
+        double currentTime = [TLTrackSDK systemUpTime];
         // 计算事件时长
         double eventDuration = currentTime - beginTime + [eventTimer[TinecoAnalyticsEventDurationKey] doubleValue];
         // 设置事件时长属性
@@ -684,7 +711,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
 @end
 
 #pragma mark - WebView
-@implementation TLAnalyticsSDK (WebView)
+@implementation TLTrackSDK (WebView)
 
 - (void)loadUserAgent:(void(^)(NSString *))completion {
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -784,7 +811,7 @@ static TLAnalyticsSDK *sharedInstance = nil;
 @end
 
 #pragma mark - ReactNative
-@implementation TLAnalyticsSDK (ReactNative)
+@implementation TLTrackSDK (ReactNative)
 
 /**
 * 交换两个方法的实现
@@ -839,7 +866,7 @@ static void TinecoLifeData_setJSResponder(id obj, SEL cmd, NSNumber *reactTag, B
             return;
         }
         // 触发 AppClick 事件
-        [[TLAnalyticsSDK sharedInstance] trackAppClickWithView:view properties:nil];
+        [[TLTrackSDK sharedInstance] trackAppClickWithView:view properties:nil];
     });
 }
 

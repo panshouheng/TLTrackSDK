@@ -1,16 +1,16 @@
 
-#import "TLAnalyticsNetwork.h"
+#import "TLTrackNetwork.h"
 
 /// 网络请求结束处理回调类型
 typedef void(^SAURLSessionTaskCompletionHandler)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error);
 
-@interface TLAnalyticsNetwork () <NSURLSessionDelegate>
+@interface TLTrackNetwork () <NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
 
 @end
 
-@implementation TLAnalyticsNetwork
+@implementation TLTrackNetwork
 
 - (instancetype)initWithServerURL:(NSURL *)serverURL {
     self = [super init];
@@ -39,7 +39,7 @@ typedef void(^SAURLSessionTaskCompletionHandler)(NSData * _Nullable data, NSURLR
 }
 
 - (NSString *)buildJSONStringWithEvents:(NSArray<NSString *> *)events {
-    return [NSString stringWithFormat:@"[\n%@\n]", [events componentsJoinedByString:@",\n"]];
+    return [NSString stringWithFormat:@"[%@]", [events componentsJoinedByString:@","]];
 }
 
 - (NSURLRequest *)buildRequestWithJSONString:(NSString *)json {
@@ -53,29 +53,9 @@ typedef void(^SAURLSessionTaskCompletionHandler)(NSData * _Nullable data, NSURLR
     request.allHTTPHeaderFields = @{@"Content-Type":@"application/x-www-form-urlencoded"};
     return request;
 }
--(NSString *)convertToJsonData:(NSArray *)arr
-{
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:&error];
-    NSString *jsonString;
-    if (!jsonData) {
-        NSLog(@"%@",error);
-    }else{
-        jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }
-    NSMutableString *mutStr = [NSMutableString stringWithString:jsonString];
-    NSRange range = {0,jsonString.length};
-    //去掉字符串中的空格
-    [mutStr replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:range];
-    NSRange range2 = {0,mutStr.length};
-    //去掉字符串中的换行符
-    [mutStr replaceOccurrencesOfString:@"\n" withString:@"" options:NSLiteralSearch range:range2];
-    return mutStr;
-
-}
 - (BOOL)flushEvents:(NSArray<NSString *> *)events {
     // 将事件数组组装成 json 字符串
-    NSString *jsonString = [self convertToJsonData:events];
+    NSString *jsonString = [self buildJSONStringWithEvents:events];
     // 创建请求对象
     NSURLRequest *request = [self buildRequestWithJSONString:jsonString];
     // 数据上传结果
