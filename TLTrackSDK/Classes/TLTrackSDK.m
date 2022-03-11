@@ -1,7 +1,6 @@
 
 #import "TLTrackSDK.h"
 #import "UIView+TinecoLifeData.h"
-#import "TLTrackFileStore.h"
 #import "TLTrackDatabase.h"
 #import "TLTrackNetwork.h"
 #import "TLTrackExceptionHandler.h"
@@ -14,7 +13,7 @@
 #import <WebKit/WebKit.h>
 #endif
 
-static NSString * const TinecoAnalyticsVersion = @"1.2.9";
+static NSString * const TinecoAnalyticsVersion = @"1.3.0";
 
 static NSString * const TinecoAnalyticsLoginId = @"cn.TinecoLifeData.login_id";
 static NSString * const TinecoAnalyticsAnonymousId = @"cn.TinecoLifeData.anonymous_id";
@@ -51,8 +50,6 @@ static NSString * const TinecoAnalyticsEventRegisterSuperPropertiesKey = @"Tinec
 /// 事件时长计算
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSDictionary *> *trackTimer;
 @property (nonatomic, strong) dispatch_queue_t serialQueue;
-/// 文件缓存事件数据对象
-@property (nonatomic, strong) TLTrackFileStore *fileStore;
 /// 数据库存储对象
 @property (nonatomic, strong) TLTrackDatabase *database;
 @property (nonatomic, strong) NSURL *serverURL;
@@ -107,8 +104,6 @@ static TLTrackSDK *sharedInstance = nil;
 
         // 添加应用程序状态监听
         [self setupListeners];
-
-        _fileStore = [[TLTrackFileStore alloc] init];
         // 初始化 TinecoAnalyticsDatabase 类的对象，使用默认路径
         _database = [[TLTrackDatabase alloc] init];
 
@@ -190,7 +185,7 @@ static TLTrackSDK *sharedInstance = nil;
     // 设置 SDK 的平台
     properties[@"lib"] = @"iOS";
     // 设置生产商
-    properties[@"manufacturer"] = @"iOS";
+    properties[@"manufacturer"] = @"Apple";
     // 设置 SDK 的版本
     properties[@"lib_version"] = TinecoAnalyticsVersion;
     // 设置本机型号
@@ -534,7 +529,6 @@ static TLTrackSDK *sharedInstance = nil;
     event[@"distinct_id"] = self.loginId ?: self.anonymousId;
     dispatch_async(self.serialQueue, ^{
         [self printEvent:event];
-        [self.fileStore saveEvent:event];
         [self.database insertEvent:event];
     });
 
@@ -613,9 +607,7 @@ static TLTrackSDK *sharedInstance = nil;
 
             NSMutableDictionary *event = [dic mutableCopy];
             event[@"properties"] = properties;
-
-            // 将事件入库
-            // [self.fileStore saveEvent:event];
+            
             [self.database insertEvent:event];
         }
         // 将已经处理完成的数据删除
@@ -774,11 +766,9 @@ static TLTrackSDK *sharedInstance = nil;
     [self printEvent:event];
 
     // 本地保存事件数据
-    // [self.fileStore saveEvent:event];
     [self.database insertEvent:event];
 
     // 在本地事件数据总量大于最大缓存数时，发送数据
-    // if (self.fileStore.allEvents.count >= self.flushBulkSize) {
     if (self.database.eventCount >= self.flushBulkSize) {
         [self flush];
     }
