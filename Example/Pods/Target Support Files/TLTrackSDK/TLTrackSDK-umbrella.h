@@ -24,6 +24,7 @@
 #import "UITableView+TinecoLifeData.h"
 #import "UIView+TinecoLifeData.h"
 #import "UIViewController+TinecoLifeData.h"
+#import "UIViewController+TinecoLifeData_Category.h"
 
 FOUNDATION_EXPORT double TLTrackSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char TLTrackSDKVersionString[];
